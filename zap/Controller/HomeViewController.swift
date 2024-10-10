@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var titleLabelView: UIStackView!
     @IBOutlet weak var balloonView: UIImageView!
     
+    @IBOutlet weak var bubbleView: UIView!
     @IBOutlet weak var streakCircleView: UIImageView!
     @IBOutlet weak var streakLabelView: UIStackView!
     @IBOutlet weak var streakView: UIImageView!
@@ -31,9 +32,6 @@ class HomeViewController: UIViewController {
         makeCircular(view: streakView, borderColor: UIColor.white, borderWidth: 0.5)
         addBlurredBackground(streakView)
         
-        //animateBalloon(balloonView, radius: 5, duration: 20, clockwise: true)
-        //animateBalloon(titleLabelView, radius: 5, duration: 20, clockwise: true)
-        
         animateBalloon(learningNowView, radius: 3, duration: 12, clockwise: false)
         animateBalloon(learningLabelView, radius: 3, duration: 12, clockwise: false)
         
@@ -41,10 +39,12 @@ class HomeViewController: UIViewController {
         animateBalloon(streakView, radius: 5, duration: 15, clockwise: true)
         animateBalloon(streakLabelView, radius: 5, duration: 15, clockwise: true)
         animateBalloon(streakCircleView, radius: 5, duration: 15, clockwise: true)
-
         
-        //createPulse(view: backgroundView)
+        createPulse(view: bubbleView)
     }
+    
+    
+    //MARK: - UI Updates
     
     func addLabelsAroundCircle(view: UIView, radius: CGFloat, count: Int) {
         let center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
@@ -109,18 +109,23 @@ class HomeViewController: UIViewController {
     }
     
     func createPulse(view: UIView) {
+        let screenWidth = UIScreen.main.bounds.size.width
+        let radius = screenWidth / 2.0
+
         for _ in 0...2 {
-            let circularPath = UIBezierPath(arcCenter: .zero, radius: UIScreen.main.bounds.size.width/2.0, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
+            let circularPath = UIBezierPath(arcCenter: .zero, radius: radius, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
             let pulseLayer = CAShapeLayer()
             pulseLayer.path = circularPath.cgPath
-            pulseLayer.lineWidth = 2.0
+            pulseLayer.lineWidth = 3.0
             pulseLayer.fillColor = UIColor.clear.cgColor
             pulseLayer.lineCap = CAShapeLayerLineCap.round
-            pulseLayer.position = CGPoint(x: view.frame.size.width/2.0, y: view.frame.size.height/2.0)
-            print(pulseLayer.position)
-            view.layer.addSublayer(pulseLayer)
+            pulseLayer.position = CGPoint(x: view.frame.size.width / 2.0, y: view.frame.size.height / 2.0)
+
+            view.layer.insertSublayer(pulseLayer, at: 0)
+            
             pulseLayers.append(pulseLayer)
         }
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.animatePulse(index: 0)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
@@ -151,6 +156,5 @@ class HomeViewController: UIViewController {
         opacityAnimation.repeatCount = .greatestFiniteMagnitude
         pulseLayers[index].add(opacityAnimation, forKey: "opacity")
     }
-
 }
 

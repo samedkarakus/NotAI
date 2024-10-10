@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xpe-Pv-AI4" userLabel="Title View">
                                 <rect key="frame" x="80.000000000000014" y="124.00000000000001" width="233.33333333333337" height="54.666666666666671"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba _______," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STA-gC-fSW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba Hayriye," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STA-gC-fSW">
                                         <rect key="frame" x="0.0" y="0.0" width="233.33333333333334" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
@@ -214,6 +214,7 @@
                     <connections>
                         <outlet property="backgroundView" destination="GBu-ll-hrF" id="X4W-aj-hb3"/>
                         <outlet property="balloonView" destination="Ihn-9t-U5q" id="n75-Pv-K13"/>
+                        <outlet property="bubbleView" destination="OsZ-Sq-Bu2" id="I2F-jl-zPc"/>
                         <outlet property="learningLabelView" destination="8cg-9N-tyk" id="bmX-te-vOO"/>
                         <outlet property="learningNowView" destination="rhZ-L4-25I" id="PQn-cd-Yuk"/>
                         <outlet property="streakCircleView" destination="iC7-Gn-z6s" id="SDI-on-dRw"/>
