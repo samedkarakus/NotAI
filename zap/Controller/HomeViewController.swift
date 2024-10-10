@@ -21,7 +21,29 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var learningLabelView: UIStackView!
     @IBOutlet weak var learningNowView: UIImageView!
     
-    var pulseLayers = [CAShapeLayer]()
+    var pulseLayers: [CAShapeLayer] = []
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !pulseLayers.isEmpty {
+            for i in 0..<pulseLayers.count {
+                self.animatePulse(index: i)
+            }
+        } else {
+            createPulse(view: bubbleView)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        for layer in pulseLayers {
+            layer.removeFromSuperlayer()
+        }
+        pulseLayers.removeAll()
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +61,8 @@ class HomeViewController: UIViewController {
         animateBalloon(streakView, radius: 5, duration: 15, clockwise: true)
         animateBalloon(streakLabelView, radius: 5, duration: 15, clockwise: true)
         animateBalloon(streakCircleView, radius: 5, duration: 15, clockwise: true)
-        
-        createPulse(view: bubbleView)
     }
+    
     
     
     //MARK: - UI Updates
@@ -126,11 +147,11 @@ class HomeViewController: UIViewController {
             pulseLayers.append(pulseLayer)
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
             self.animatePulse(index: 0)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 self.animatePulse(index: 1)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                     self.animatePulse(index: 2)
                 }
             }
