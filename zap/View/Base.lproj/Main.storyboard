@@ -14,23 +14,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="zap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="GBu-ll-hrF">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xpe-Pv-AI4" userLabel="Title View">
-                                <rect key="frame" x="80.000000000000014" y="115.00000000000001" width="233.33333333333337" height="54.666666666666671"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xpe-Pv-AI4" userLabel="Title View">
+                                <rect key="frame" x="80.000000000000014" y="125.00000000000001" width="233.33333333333337" height="51.666666666666671"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba Alp," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STA-gC-fSW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba Samed," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STA-gC-fSW">
                                         <rect key="frame" x="0.0" y="0.0" width="233.33333333333334" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni notunu paylaş" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF3-DT-w2N">
-                                        <rect key="frame" x="0.0" y="20.999999999999996" width="233.33333333333334" height="33.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="17.999999999999996" width="233.33333333333334" height="33.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MU9-2i-X9Q" userLabel="Content View">
-                                <rect key="frame" x="39" y="149.66666666666663" width="315" height="543"/>
+                                <rect key="frame" x="39" y="154.66666666666663" width="315" height="543"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jF4-j2-68o" userLabel="Streak View">
                                         <rect key="frame" x="115" y="343" width="200" height="200"/>
@@ -217,7 +217,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8t-KY-iTp">
-                                <rect key="frame" x="40" y="797" width="90" height="35"/>
+                                <rect key="frame" x="40" y="773" width="90" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8ZU-eZ-B5q"/>
                                     <constraint firstAttribute="width" constant="90" id="GQh-wv-YfU"/>
@@ -229,14 +229,14 @@
                                 </buttonConfiguration>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoji3" translatesAutoresizingMaskIntoConstraints="NO" id="rTs-8q-KYM">
-                                <rect key="frame" x="318" y="797" width="35" height="35"/>
+                                <rect key="frame" x="318" y="773" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="XuF-ym-487"/>
                                     <constraint firstAttribute="width" constant="35" id="zch-rR-ZTG"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szr-DF-RzK" userLabel="NotificationView">
-                                <rect key="frame" x="338" y="793" width="30" height="17"/>
+                                <rect key="frame" x="338" y="769" width="30" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Yj-f5-NNF">
                                         <rect key="frame" x="6" y="2" width="18" height="12"/>
@@ -255,7 +255,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rTs-8q-KYM" secondAttribute="bottom" constant="10" id="CQ9-RL-7OY"/>
-                            <constraint firstItem="Xpe-Pv-AI4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="115" id="DQX-Io-0Sf"/>
+                            <constraint firstItem="Xpe-Pv-AI4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="125" id="DQX-Io-0Sf"/>
                             <constraint firstItem="Xpe-Pv-AI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DSt-NC-tbX"/>
                             <constraint firstItem="MU9-2i-X9Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GkE-Sn-9Yr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R8t-KY-iTp" secondAttribute="bottom" constant="10" id="HXu-cV-jes"/>
@@ -295,25 +295,25 @@
             <objects>
                 <viewController id="j0Y-mt-sdx" customClass="NoteViewController" customModule="zap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IyM-ko-A6F">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-UF-pLO" userLabel="Bg">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" red="0.44705885649999999" green="0.20784312490000001" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nRY-y5-1b7" userLabel="Note Details">
-                                <rect key="frame" x="20" y="135" width="353" height="707"/>
+                                <rect key="frame" x="20" y="135" width="353" height="717"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HY9-ud-LkH">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="97"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Designing for minimal physical strain" translatesAutoresizingMaskIntoConstraints="NO" id="HY9-ud-LkH">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="107"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuh-bi-8Sv">
-                                        <rect key="frame" x="0.0" y="109" width="353" height="598"/>
-                                        <mutableString key="text">The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!</mutableString>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuh-bi-8Sv">
+                                        <rect key="frame" x="0.0" y="119" width="353" height="598"/>
+                                        <string key="text">The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -324,7 +324,7 @@
                                 <rect key="frame" x="20" y="75" width="110" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SWZ-iv-Pt1">
-                                        <rect key="frame" x="13" y="10" width="84.333333333333329" height="20"/>
+                                        <rect key="frame" x="10" y="10" width="90" height="20"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Time Icon" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-5c-n8Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -333,8 +333,11 @@
                                                     <constraint firstAttribute="width" constant="20" id="zV5-IU-Auf"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:11:48" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDa-eP-Ww4">
-                                                <rect key="frame" x="25.000000000000004" y="0.0" width="59.333333333333343" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--:--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDa-eP-Ww4">
+                                                <rect key="frame" x="25" y="0.0" width="65" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="CVE-lj-Gql"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -366,15 +369,35 @@
                                 </state>
                                 <connections>
                                     <action selector="cancelBtnPressed:" destination="j0Y-mt-sdx" eventType="touchUpInside" id="oiX-Tu-28e"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ToHomeSegue" id="2qV-mZ-mtC"/>
                                 </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kA0-Vk-yE7">
+                                <rect key="frame" x="0.0" y="652" width="393" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fHH-RP-e4k"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGf-1d-ee6">
+                                <rect key="frame" x="323" y="777" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="EGV-MJ-5hn"/>
+                                    <constraint firstAttribute="height" constant="50" id="zqd-Hg-hwL"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="">
+                                    <imageReference key="image" image="checkmark" catalog="system" symbolScale="small"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QA4-fa-khm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kA0-Vk-yE7" firstAttribute="centerX" secondItem="IyM-ko-A6F" secondAttribute="centerX" id="045-MT-yPT"/>
                             <constraint firstItem="QA4-fa-khm" firstAttribute="trailing" secondItem="nRY-y5-1b7" secondAttribute="trailing" constant="20" id="4aJ-lb-ebh"/>
                             <constraint firstAttribute="bottom" secondItem="vtA-UF-pLO" secondAttribute="bottom" id="6Jw-1k-jqB"/>
+                            <constraint firstAttribute="bottom" secondItem="kA0-Vk-yE7" secondAttribute="bottom" id="6zT-1E-T3l"/>
                             <constraint firstItem="1wM-1v-Qfv" firstAttribute="leading" secondItem="QA4-fa-khm" secondAttribute="leading" constant="20" id="7tf-E2-S6g"/>
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="centerY" secondItem="IyM-ko-A6F" secondAttribute="centerY" id="EuJ-Jz-BJc"/>
                             <constraint firstItem="1wM-1v-Qfv" firstAttribute="top" secondItem="IyM-ko-A6F" secondAttribute="top" constant="75" id="HSj-my-WWT"/>
@@ -382,18 +405,25 @@
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="top" secondItem="IyM-ko-A6F" secondAttribute="top" id="PwJ-DE-vIW"/>
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="leading" secondItem="QA4-fa-khm" secondAttribute="leading" id="UfD-fj-von"/>
                             <constraint firstItem="nRY-y5-1b7" firstAttribute="top" secondItem="IyM-ko-A6F" secondAttribute="top" constant="135" id="XiJ-Y4-1YE"/>
+                            <constraint firstItem="kA0-Vk-yE7" firstAttribute="leading" secondItem="QA4-fa-khm" secondAttribute="leading" id="cq9-HH-3Tj"/>
+                            <constraint firstItem="QA4-fa-khm" firstAttribute="trailing" secondItem="TGf-1d-ee6" secondAttribute="trailing" constant="20" id="e6e-sl-1PI"/>
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="centerX" secondItem="IyM-ko-A6F" secondAttribute="centerX" id="ek4-7y-EMg"/>
+                            <constraint firstItem="kA0-Vk-yE7" firstAttribute="trailing" secondItem="QA4-fa-khm" secondAttribute="trailing" id="gI9-sT-klf"/>
                             <constraint firstItem="wuA-af-Gc1" firstAttribute="top" secondItem="IyM-ko-A6F" secondAttribute="top" constant="75" id="tgf-Sy-Mi2"/>
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="trailing" secondItem="QA4-fa-khm" secondAttribute="trailing" id="u3R-4b-QZ9"/>
                             <constraint firstItem="QA4-fa-khm" firstAttribute="trailing" secondItem="wuA-af-Gc1" secondAttribute="trailing" constant="20" id="uFh-Wj-cNM"/>
                             <constraint firstAttribute="bottom" secondItem="nRY-y5-1b7" secondAttribute="bottom" id="z0s-qP-7qQ"/>
+                            <constraint firstAttribute="bottom" secondItem="TGf-1d-ee6" secondAttribute="bottom" constant="25" id="z8C-hz-I5g"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="t8T-BM-aT2"/>
+                    <navigationItem key="navigationItem" id="Gnx-CF-kdU"/>
                     <connections>
                         <outlet property="cancelBtnView" destination="wuA-af-Gc1" id="q9s-9a-bT0"/>
+                        <outlet property="confirmBtn" destination="TGf-1d-ee6" id="wc7-FB-YGO"/>
+                        <outlet property="gradientView" destination="kA0-Vk-yE7" id="81Z-3S-e4G"/>
                         <outlet property="noteBodyTextView" destination="Fuh-bi-8Sv" id="tl8-XY-pxg"/>
                         <outlet property="noteTitleTextView" destination="HY9-ud-LkH" id="0tV-PM-c9D"/>
+                        <outlet property="timeLabel" destination="aDa-eP-Ww4" id="Nm1-FI-xcz"/>
                         <outlet property="timeView" destination="1wM-1v-Qfv" id="MaH-sQ-6Cn"/>
                     </connections>
                 </viewController>
@@ -413,6 +443,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PfF-B3-LZQ">
+                                <rect key="frame" x="30" y="739" width="82" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QYe-In-Buw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -441,15 +479,13 @@
             <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="2qV-mZ-mtC"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="540" height="1148"/>
         <image name="StreakCircle" width="266.66665649414062" height="266.66665649414062"/>
         <image name="Time Icon" width="25" height="25"/>
         <image name="ball" width="324.66665649414062" height="323.33334350585938"/>
         <image name="bg1" width="393" height="852"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="emoji3" width="66.666664123535156" height="66.666664123535156"/>
         <image name="learningNow" width="116" height="80"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
