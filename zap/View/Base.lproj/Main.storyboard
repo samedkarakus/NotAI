@@ -305,17 +305,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nRY-y5-1b7" userLabel="Note Details">
                                 <rect key="frame" x="20" y="135" width="353" height="707"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Designing for minimal physical strain" translatesAutoresizingMaskIntoConstraints="NO" id="HY9-ud-LkH">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HY9-ud-LkH">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="97"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuh-bi-8Sv">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuh-bi-8Sv">
                                         <rect key="frame" x="0.0" y="109" width="353" height="598"/>
                                         <mutableString key="text">The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!</mutableString>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -369,9 +369,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ToHomeSegue" id="2qV-mZ-mtC"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YN6-cs-70o" userLabel="Gradient Effect">
-                                <rect key="frame" x="0.0" y="692" width="393" height="150"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QA4-fa-khm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -383,23 +380,18 @@
                             <constraint firstItem="1wM-1v-Qfv" firstAttribute="top" secondItem="IyM-ko-A6F" secondAttribute="top" constant="75" id="HSj-my-WWT"/>
                             <constraint firstItem="nRY-y5-1b7" firstAttribute="leading" secondItem="QA4-fa-khm" secondAttribute="leading" constant="20" id="MIT-vm-OM7"/>
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="top" secondItem="IyM-ko-A6F" secondAttribute="top" id="PwJ-DE-vIW"/>
-                            <constraint firstItem="YN6-cs-70o" firstAttribute="bottom" secondItem="QA4-fa-khm" secondAttribute="bottom" id="RQ1-ph-kbI"/>
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="leading" secondItem="QA4-fa-khm" secondAttribute="leading" id="UfD-fj-von"/>
                             <constraint firstItem="nRY-y5-1b7" firstAttribute="top" secondItem="IyM-ko-A6F" secondAttribute="top" constant="135" id="XiJ-Y4-1YE"/>
-                            <constraint firstItem="YN6-cs-70o" firstAttribute="centerX" secondItem="IyM-ko-A6F" secondAttribute="centerX" id="a6X-gj-SFd"/>
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="centerX" secondItem="IyM-ko-A6F" secondAttribute="centerX" id="ek4-7y-EMg"/>
-                            <constraint firstItem="YN6-cs-70o" firstAttribute="leading" secondItem="QA4-fa-khm" secondAttribute="leading" id="ifB-k5-frS"/>
                             <constraint firstItem="wuA-af-Gc1" firstAttribute="top" secondItem="IyM-ko-A6F" secondAttribute="top" constant="75" id="tgf-Sy-Mi2"/>
                             <constraint firstItem="vtA-UF-pLO" firstAttribute="trailing" secondItem="QA4-fa-khm" secondAttribute="trailing" id="u3R-4b-QZ9"/>
                             <constraint firstItem="QA4-fa-khm" firstAttribute="trailing" secondItem="wuA-af-Gc1" secondAttribute="trailing" constant="20" id="uFh-Wj-cNM"/>
-                            <constraint firstItem="YN6-cs-70o" firstAttribute="trailing" secondItem="QA4-fa-khm" secondAttribute="trailing" id="xYv-PJ-u2H"/>
                             <constraint firstAttribute="bottom" secondItem="nRY-y5-1b7" secondAttribute="bottom" id="z0s-qP-7qQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t8T-BM-aT2"/>
                     <connections>
                         <outlet property="cancelBtnView" destination="wuA-af-Gc1" id="q9s-9a-bT0"/>
-                        <outlet property="gradientView" destination="YN6-cs-70o" id="SAb-Ae-ZlW"/>
                         <outlet property="noteBodyTextView" destination="Fuh-bi-8Sv" id="tl8-XY-pxg"/>
                         <outlet property="noteTitleTextView" destination="HY9-ud-LkH" id="0tV-PM-c9D"/>
                         <outlet property="timeView" destination="1wM-1v-Qfv" id="MaH-sQ-6Cn"/>

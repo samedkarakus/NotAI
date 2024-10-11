@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NoteViewController: UIViewController  {
+class NoteViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var cancelBtnView: UIButton!
     @IBOutlet weak var timeView: UIView!
@@ -16,23 +16,43 @@ class NoteViewController: UIViewController  {
     @IBOutlet weak var noteBodyTextView: UITextView!
     @IBOutlet weak var noteTitleTextView: UITextView!
     
+    let titlePlaceholder = "Konu başlığı"
+    let bodyPlaceholder = "Detaylar.."
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        noteTitleTextView.delegate = self
+        noteBodyTextView.delegate = self
+        addPlaceholder(titlePlaceholder, for: noteTitleTextView)
+        addPlaceholder(bodyPlaceholder, for: noteBodyTextView)
         
         self.navigationItem.setHidesBackButton(true, animated: true)
         textViewDidChange(noteTitleTextView)
         
         editShape(view: timeView)
         editShape(view: cancelBtnView)
-        addGradientMask(to: gradientView)
-
-        
+        lineSpacing(6, for: noteBodyTextView)
     }
     
     func textViewDidChange(_ textView: UITextView) {
         let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))
         textView.isScrollEnabled = false
         textView.frame.size.height = size.height
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == titlePlaceholder || textView.text == bodyPlaceholder{
+            textView.text = ""
+            textView.textColor = UIColor.white
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = titlePlaceholder
+            textView.textColor = UIColor.white.withAlphaComponent(0.25)
+        }
     }
     
     
@@ -61,20 +81,23 @@ func editShape(view: UIView) {
     view.layer.borderWidth = 0.5
 }
 
-func addGradientMask(to view: UIView) {
-    let gradientLayer = CAGradientLayer()
-    gradientLayer.frame = view.bounds
+func lineSpacing(_ space: CGFloat, for textView: UITextView) {
+    if let text = textView.text, let currentFont = textView.font, let currentTextColor = textView.textColor {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = space
 
-    // Define the gradient colors
-    gradientLayer.colors = [
-        UIColor.clear.cgColor,    // Top - Fully visible
-        UIColor.white.cgColor,    // Mid - Fully visible
-        UIColor.white.cgColor     // Bottom - Transparent
-    ]
+        let attributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: paragraphStyle,
+            .font: currentFont,
+            .foregroundColor: currentTextColor
+        ]
 
-    // Define where the color changes occur (0 means top, 1 means bottom)
-    gradientLayer.locations = [0.0, 0.7, 1.0]
+        let attributedString = NSMutableAttributedString(string: text, attributes: attributes)
+        textView.attributedText = attributedString
+    }
+}
 
-    // Apply the gradient mask to the UITextView's layer
-    view.layer.mask = gradientLayer
+func addPlaceholder(_ placeholder: String, for textView: UITextView) {
+    textView.text = placeholder
+    textView.textColor = UIColor.white.withAlphaComponent(0.25)
 }
