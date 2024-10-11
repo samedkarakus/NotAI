@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="katman_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="M8.32,3.05c-3.85,1.85-6.32,5.55-6.32,9.48,0,5.38,4.66,10.17,10.27,10.27,5.71.1,10.68-4.7,10.73-10.73"/>
+  <path class="cls-1" d="M22.39,8.56c-.91-4.2-5.58-7.11-10.26-6.19"/>
+</svg>
