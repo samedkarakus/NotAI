@@ -1,0 +1,12 @@
+Target dependency graph (5 targets)
+Target 'zap' in project 'zap'
+➜ Implicit dependency on target 'ShadowView' in project 'Pods' via file 'ShadowView.framework' in build phase 'Link Binary'
+➜ Implicit dependency on target 'Pods-zap' in project 'Pods' via file 'Pods_zap.framework' in build phase 'Link Binary'
+➜ Implicit dependency on target 'IQKeyboardManagerSwift' in project 'Pods' via options '-framework IQKeyboardManagerSwift' in build setting 'OTHER_LDFLAGS'
+Target 'Pods-zap' in project 'Pods'
+➜ Explicit dependency on target 'IQKeyboardManagerSwift' in project 'Pods'
+➜ Explicit dependency on target 'ShadowView' in project 'Pods'
+Target 'IQKeyboardManagerSwift' in project 'Pods'
+➜ Explicit dependency on target 'IQKeyboardManagerSwift-IQKeyboardManagerSwift' in project 'Pods'
+Target 'IQKeyboardManagerSwift-IQKeyboardManagerSwift' in project 'Pods' (no dependencies)
+Target 'ShadowView' in project 'Pods' (no dependencies)

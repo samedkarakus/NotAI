@@ -1,0 +1,5 @@
+ extern const unsigned char ShadowViewVersionString[];
+ extern const double ShadowViewVersionNumber;
+
+ const unsigned char ShadowViewVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:ShadowView  PROJECT:Pods-1" "\n";
+ const double ShadowViewVersionNumber __attribute__ ((used)) = (double)1.;

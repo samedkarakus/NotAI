@@ -7,22 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91FD7DB90AECDEB10C454A37 /* Pods_zap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F39AFD1C6774C062F574798 /* Pods_zap.framework */; };
+		945368982CBA87E3003DC7DB /* ShadowView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 945368962CBA87E3003DC7DB /* ShadowView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94E837E42CB9AE7C00EBC9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DA2CB9AE7C00EBC9D4 /* LaunchScreen.storyboard */; };
 		94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DC2CB9AE7C00EBC9D4 /* Main.storyboard */; };
 		94E837E62CB9AE7C00EBC9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */; };
-		94E837E82CB9AE7C00EBC9D4 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94E837E12CB9AE7C00EBC9D4 /* loader.gif */; };
 		94E837E92CB9AE7C00EBC9D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E837D52CB9AE7C00EBC9D4 /* HomeViewController.swift */; };
 		94E837EA2CB9AE7C00EBC9D4 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E837D62CB9AE7C00EBC9D4 /* NoteViewController.swift */; };
 		94E837EB2CB9AE7C00EBC9D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E837DE2CB9AE7C00EBC9D4 /* AppDelegate.swift */; };
 		94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */; };
+		BDFC25BBC628B8604537745E /* Pods_zap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A806AC7C0C4F2E7384E4D2CA /* Pods_zap.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		945368992CBA87E3003DC7DB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				945368982CBA87E3003DC7DB /* ShadowView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		382FC06AD839D262791CB38D /* Pods-zap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.release.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.release.xcconfig"; sourceTree = "<group>"; };
-		6F39AFD1C6774C062F574798 /* Pods_zap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D3A0172E29E9DEF8BC13BF9 /* Pods-zap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.debug.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.debug.xcconfig"; sourceTree = "<group>"; };
+		204BDDE46F289702AF999EC7 /* Pods-zap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.release.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.release.xcconfig"; sourceTree = "<group>"; };
+		5B382C447E90D3BAFFE5D708 /* Pods-zap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.debug.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.debug.xcconfig"; sourceTree = "<group>"; };
 		9408AD3F2CA9BECF00AB70D3 /* zap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		945368962CBA87E3003DC7DB /* ShadowView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShadowView.framework; path = Carthage/Build/Mac/ShadowView.framework; sourceTree = "<group>"; };
 		94E837D52CB9AE7C00EBC9D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94E837D62CB9AE7C00EBC9D4 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		94E837D92CB9AE7C00EBC9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,8 +44,8 @@
 		94E837DE2CB9AE7C00EBC9D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94E837E02CB9AE7C00EBC9D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94E837E12CB9AE7C00EBC9D4 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
 		94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A806AC7C0C4F2E7384E4D2CA /* Pods_zap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91FD7DB90AECDEB10C454A37 /* Pods_zap.framework in Frameworks */,
+				BDFC25BBC628B8604537745E /* Pods_zap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +112,6 @@
 				94E837DE2CB9AE7C00EBC9D4 /* AppDelegate.swift */,
 				94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */,
 				94E837E02CB9AE7C00EBC9D4 /* Info.plist */,
-				94E837E12CB9AE7C00EBC9D4 /* loader.gif */,
 				94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */,
 			);
 			path = zap;
@@ -107,8 +120,8 @@
 		A63FE4CD82E0C20C40EA93A1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7D3A0172E29E9DEF8BC13BF9 /* Pods-zap.debug.xcconfig */,
-				382FC06AD839D262791CB38D /* Pods-zap.release.xcconfig */,
+				5B382C447E90D3BAFFE5D708 /* Pods-zap.debug.xcconfig */,
+				204BDDE46F289702AF999EC7 /* Pods-zap.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -116,7 +129,8 @@
 		A887B99FDA766F6FEB2DFFCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6F39AFD1C6774C062F574798 /* Pods_zap.framework */,
+				945368962CBA87E3003DC7DB /* ShadowView.framework */,
+				A806AC7C0C4F2E7384E4D2CA /* Pods_zap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,11 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9408AD682CA9BED100AB70D3 /* Build configuration list for PBXNativeTarget "zap" */;
 			buildPhases = (
-				553D5247148CC61248BD697A /* [CP] Check Pods Manifest.lock */,
+				D9C91DCEBBB5F9839EA49C6D /* [CP] Check Pods Manifest.lock */,
 				9408AD3B2CA9BECF00AB70D3 /* Sources */,
 				9408AD3C2CA9BECF00AB70D3 /* Frameworks */,
 				9408AD3D2CA9BECF00AB70D3 /* Resources */,
-				0185CB45601D3005836DFDB5 /* [CP] Embed Pods Frameworks */,
+				945368992CBA87E3003DC7DB /* Embed Frameworks */,
+				433F07959C8375478A19A3BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,14 +199,13 @@
 				94E837E42CB9AE7C00EBC9D4 /* LaunchScreen.storyboard in Resources */,
 				94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */,
 				94E837E62CB9AE7C00EBC9D4 /* Assets.xcassets in Resources */,
-				94E837E82CB9AE7C00EBC9D4 /* loader.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0185CB45601D3005836DFDB5 /* [CP] Embed Pods Frameworks */ = {
+		433F07959C8375478A19A3BA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,7 +222,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zap/Pods-zap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		553D5247148CC61248BD697A /* [CP] Check Pods Manifest.lock */ = {
+		D9C91DCEBBB5F9839EA49C6D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,7 +282,7 @@
 /* Begin XCBuildConfiguration section */
 		9408AD692CA9BED100AB70D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D3A0172E29E9DEF8BC13BF9 /* Pods-zap.debug.xcconfig */;
+			baseConfigurationReference = 5B382C447E90D3BAFFE5D708 /* Pods-zap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -276,6 +290,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BWCFA5MJHF;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -297,7 +315,7 @@
 		};
 		9408AD6A2CA9BED100AB70D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 382FC06AD839D262791CB38D /* Pods-zap.release.xcconfig */;
+			baseConfigurationReference = 204BDDE46F289702AF999EC7 /* Pods-zap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +323,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BWCFA5MJHF;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

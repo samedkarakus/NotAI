@@ -1,0 +1,11 @@
+framework module ShadowView {
+  umbrella header "ShadowView-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ShadowView.Swift {
+  header "ShadowView-Swift.h"
+  requires objc
+}

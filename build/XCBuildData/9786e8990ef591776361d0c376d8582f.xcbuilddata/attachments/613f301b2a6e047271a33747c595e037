@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Debug-iphonesimulator/ShadowView/ShadowView.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Debug-iphonesimulator/ShadowView/ShadowView.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "ShadowView-Swift.h",
+      'external-contents': "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/unextended-interface-header.h",
+    }]
+    }]
+}

@@ -1,0 +1,5 @@
+ extern const unsigned char Pods_zapVersionString[];
+ extern const double Pods_zapVersionNumber;
+
+ const unsigned char Pods_zapVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_zap  PROJECT:Pods-1" "\n";
+ const double Pods_zapVersionNumber __attribute__ ((used)) = (double)1.;

@@ -1,0 +1,4 @@
+framework module ShadowView {
+  header "ShadowView-Swift.h"
+  requires objc
+}

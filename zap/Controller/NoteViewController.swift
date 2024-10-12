@@ -5,9 +5,12 @@
 //  Created by Samed Karakuş on 10.10.2024.
 //
 import UIKit
+import Vision
 
-class NoteViewController: UIViewController, UITextViewDelegate {
+class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var denemeImg: UIImageView!
+    @IBOutlet weak var addImageBtnView: UIButton!
     @IBOutlet weak var cancelBtnView: UIButton!
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var confirmBtn: UIButton!
@@ -29,8 +32,7 @@ class NoteViewController: UIViewController, UITextViewDelegate {
         noteBodyTextView.delegate = self
         addPlaceholder(titlePlaceholder, for: noteTitleTextView)
         addPlaceholder(bodyPlaceholder, for: noteBodyTextView)
-        
-        // Enable scrolling for noteBodyTextView
+
         noteBodyTextView.isScrollEnabled = true
         
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -39,6 +41,8 @@ class NoteViewController: UIViewController, UITextViewDelegate {
         editShape(view: timeView)
         editShape(view: cancelBtnView)
         editShape(view: confirmBtn)
+        editShape(view: addImageBtnView)
+        
         lineSpacing(6, for: noteBodyTextView)
     }
     
@@ -70,6 +74,21 @@ class NoteViewController: UIViewController, UITextViewDelegate {
         navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func photoBtnPressed(_ sender: UIButton) {
+        let actionSheet = UIAlertController(title: "Fotoğraf Seç", message: "Fotoğraf çek veya galeriden seç", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Kamerayı Aç", style: .default, handler: { (action) in
+            self.openCamera()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Galeriden Seç", style: .default, handler: { (action) in
+            self.openGallery()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "İptal", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true, completion: nil)
+        
+        recognizeText(in: UIImage(named: "deneme")!)
+    }
+    
     func textViewDidChange(_ textView: UITextView) {
         let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))
         textView.frame.size.height = size.height
@@ -99,7 +118,47 @@ class NoteViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    
+    //MARK: - Camera Settings
+    
+    func openCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            print("Kamera bulunamadı")
+        }
+    }
+    
+    func openGallery() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage {
+            denemeImg.image = editedImage
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            denemeImg.image = originalImage
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
     // MARK: - Timer Settings
+    
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimeLabel), userInfo: nil, repeats: true)
     }
@@ -118,9 +177,42 @@ class NoteViewController: UIViewController, UITextViewDelegate {
         timer?.invalidate()
         timer = nil
     }
+    
+    
+    //MARK: - Vision, Text Recognition
+    
+    func recognizeText(in image: UIImage) {
+        guard let cgImage = image.cgImage else {
+            return
+        }
+        let imageRequestHandler = VNImageRequestHandler(cgImage: cgImage)
+        
+        let size = CGSize(width: cgImage.width, height: cgImage.height)
+        let bounds = CGRect(origin: .zero, size: size)
+        
+        let request = VNRecognizeTextRequest { request, error in
+            guard let results = request.results as? [VNRecognizedTextObservation],
+            error == nil else {
+                return
+            }
+            let string = results.compactMap {
+                $0.topCandidates(1).first?.string
+            }.joined(separator: "\n")
+            print(string)
+        }
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                try imageRequestHandler.perform([request])
+            } catch {
+                print("Error: \(error)")
+                return
+            }
+        }
+    }
 }
 
-// Helper functions
+// Editing functions
 func editShape(view: UIView) {
     view.layer.masksToBounds = true
     view.layer.cornerRadius = view.frame.height / 2
@@ -149,3 +241,5 @@ func addPlaceholder(_ placeholder: String, for textView: UITextView) {
     textView.text = placeholder
     textView.textColor = UIColor.white.withAlphaComponent(0.25)
 }
+
+

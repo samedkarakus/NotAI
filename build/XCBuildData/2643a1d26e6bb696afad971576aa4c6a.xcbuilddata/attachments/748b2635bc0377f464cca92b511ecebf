@@ -1,0 +1,448 @@
+{
+  "" : {
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerSwift-master.dia",
+    "emit-module-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerSwift-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerSwift-master-emit-module.dia",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerSwift-master.swiftdeps"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Configuration/IQActiveConfiguration.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQActiveConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQActiveConfiguration.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQActiveConfiguration.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQActiveConfiguration.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQActiveConfiguration.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQActiveConfiguration.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQActiveConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQActiveConfiguration~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Configuration/IQBarButtonItemConfiguration.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItemConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItemConfiguration.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItemConfiguration.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItemConfiguration.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItemConfiguration.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItemConfiguration.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItemConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItemConfiguration~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Configuration/IQKeyboardConfiguration.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardConfiguration.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardConfiguration.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardConfiguration.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardConfiguration.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardConfiguration.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardConfiguration~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Configuration/IQRootControllerConfiguration.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQRootControllerConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQRootControllerConfiguration.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQRootControllerConfiguration.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQRootControllerConfiguration.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQRootControllerConfiguration.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQRootControllerConfiguration.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQRootControllerConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQRootControllerConfiguration~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Configuration/IQScrollViewConfiguration.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQScrollViewConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQScrollViewConfiguration.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQScrollViewConfiguration.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQScrollViewConfiguration.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQScrollViewConfiguration.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQScrollViewConfiguration.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQScrollViewConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQScrollViewConfiguration~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Configuration/IQToolbarConfiguration.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarConfiguration.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarConfiguration.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarConfiguration.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarConfiguration.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarConfiguration.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarConfiguration~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Configuration/IQToolbarPlaceholderConfiguration.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarPlaceholderConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarPlaceholderConfiguration.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarPlaceholderConfiguration.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarPlaceholderConfiguration.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarPlaceholderConfiguration.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarPlaceholderConfiguration.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarPlaceholderConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbarPlaceholderConfiguration~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerConstants.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerConstants.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerConstants.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerConstants.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerConstants.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerConstants.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerConstants.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerConstants~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager+Debug.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Debug.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Debug.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Debug.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Debug.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Debug.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Debug.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Debug.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Debug~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager+Deprecated.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Deprecated.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Deprecated.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Deprecated.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Deprecated.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Deprecated.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Deprecated.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Deprecated.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Deprecated~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager+Internal.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Internal.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Internal.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Internal.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Internal.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Internal.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Internal.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Internal.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Internal~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager+Position.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Position.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Position.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Position.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Position.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Position.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Position.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Position.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Position~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager+Toolbar.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Toolbar.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Toolbar.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Toolbar.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Toolbar.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Toolbar.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Toolbar.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Toolbar.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+Toolbar~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager+ToolbarActions.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+ToolbarActions.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+ToolbarActions.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+ToolbarActions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+ToolbarActions.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+ToolbarActions.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+ToolbarActions.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+ToolbarActions.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+ToolbarActions~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager+UIKeyboardNotification.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UIKeyboardNotification.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UIKeyboardNotification.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UIKeyboardNotification.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UIKeyboardNotification.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UIKeyboardNotification.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UIKeyboardNotification.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UIKeyboardNotification.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UIKeyboardNotification~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager+UITextFieldViewNotification.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UITextFieldViewNotification.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UITextFieldViewNotification.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UITextFieldViewNotification.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UITextFieldViewNotification.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UITextFieldViewNotification.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UITextFieldViewNotification.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UITextFieldViewNotification.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager+UITextFieldViewNotification~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager/IQKeyboardManager.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManager~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManagerCompatible/IQKeyboardManagerCompatible.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerCompatible.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerCompatible.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerCompatible.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerCompatible.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerCompatible.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerCompatible.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerCompatible.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardManagerCompatible~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQTextView/IQPlaceholderable.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPlaceholderable.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPlaceholderable.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPlaceholderable.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPlaceholderable.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPlaceholderable.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPlaceholderable.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPlaceholderable.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPlaceholderable~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQTextView/IQTextView.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextView.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextView.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextView.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextView.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextView.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextView.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextView.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextView~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItem.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItem.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItem.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItem.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItem.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItem.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItem.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQBarButtonItem~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQInvocation.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQInvocation.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQInvocation.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQInvocation.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQInvocation.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQInvocation.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQInvocation.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQInvocation~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPreviousNextView.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPreviousNextView.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPreviousNextView.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPreviousNextView.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPreviousNextView.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPreviousNextView.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPreviousNextView.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQPreviousNextView~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTitleBarButtonItem.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTitleBarButtonItem.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTitleBarButtonItem.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTitleBarButtonItem.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTitleBarButtonItem.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTitleBarButtonItem.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTitleBarButtonItem.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTitleBarButtonItem~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbar.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbar.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbar.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbar.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbar.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbar.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbar.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQToolbar~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbar.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbar.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbar.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbar.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbar.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbar.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbar.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbar~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbarDeprecated.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbarDeprecated.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbarDeprecated.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbarDeprecated.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbarDeprecated.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbarDeprecated.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbarDeprecated.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbarDeprecated.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+IQKeyboardToolbarDeprecated~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/LIsteners/IQKeyboardListener.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardListener.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardListener.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardListener.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardListener.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardListener.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardListener.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardListener.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardListener~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/LIsteners/IQTextFieldViewListener.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewListener.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewListener.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewListener.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewListener.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewListener.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewListener.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewListener.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewListener~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/LIsteners/Info/IQKeyboardInfo.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardInfo.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardInfo.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardInfo.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardInfo.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardInfo.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardInfo.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardInfo.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardInfo~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/LIsteners/Info/IQTextFieldViewInfo.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfo.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfo.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfo.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfo.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfo.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfo.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfo.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfo~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/ReturnKeyHandler/IQKeyboardReturnKeyHandler+TextFieldDelegate.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextFieldDelegate.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextFieldDelegate.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextFieldDelegate.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextFieldDelegate.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextFieldDelegate.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextFieldDelegate.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextFieldDelegate.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextFieldDelegate~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/ReturnKeyHandler/IQKeyboardReturnKeyHandler+TextViewDelegate.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextViewDelegate.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextViewDelegate.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextViewDelegate.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextViewDelegate.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextViewDelegate.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextViewDelegate.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextViewDelegate.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler+TextViewDelegate~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/ReturnKeyHandler/IQKeyboardReturnKeyHandler.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQKeyboardReturnKeyHandler~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/ReturnKeyHandler/IQTextFieldViewInfoModel.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfoModel.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfoModel.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfoModel.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfoModel.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfoModel.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfoModel.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfoModel.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQTextFieldViewInfoModel~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/IQNSArray+Sort.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQNSArray+Sort.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQNSArray+Sort.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQNSArray+Sort.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQNSArray+Sort.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQNSArray+Sort.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQNSArray+Sort.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQNSArray+Sort.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQNSArray+Sort~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/IQUICollectionView+Additions.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUICollectionView+Additions.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUICollectionView+Additions.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUICollectionView+Additions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUICollectionView+Additions.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUICollectionView+Additions.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUICollectionView+Additions.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUICollectionView+Additions.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUICollectionView+Additions~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/IQUIScrollView+Additions.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIScrollView+Additions.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIScrollView+Additions.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIScrollView+Additions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIScrollView+Additions.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIScrollView+Additions.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIScrollView+Additions.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIScrollView+Additions.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIScrollView+Additions~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/IQUITableView+Additions.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITableView+Additions.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITableView+Additions.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITableView+Additions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITableView+Additions.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITableView+Additions.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITableView+Additions.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITableView+Additions.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITableView+Additions~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/IQUITextFieldView+Additions.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITextFieldView+Additions.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITextFieldView+Additions.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITextFieldView+Additions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITextFieldView+Additions.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITextFieldView+Additions.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITextFieldView+Additions.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITextFieldView+Additions.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUITextFieldView+Additions~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/IQUIView+Hierarchy.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+Hierarchy.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+Hierarchy.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+Hierarchy.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+Hierarchy.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+Hierarchy.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+Hierarchy.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+Hierarchy.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIView+Hierarchy~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/IQUIViewController+Additions.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIViewController+Additions.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIViewController+Additions.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIViewController+Additions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIViewController+Additions.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIViewController+Additions.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIViewController+Additions.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIViewController+Additions.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/IQUIViewController+Additions~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/MainActor+AssumeIsolated.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/MainActor+AssumeIsolated.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/MainActor+AssumeIsolated.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/MainActor+AssumeIsolated.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/MainActor+AssumeIsolated.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/MainActor+AssumeIsolated.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/MainActor+AssumeIsolated.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/MainActor+AssumeIsolated.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/MainActor+AssumeIsolated~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/UIKitExtensions/UIImage+NextPrevious.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/UIImage+NextPrevious.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/UIImage+NextPrevious.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/UIImage+NextPrevious.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/UIImage+NextPrevious.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/UIImage+NextPrevious.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/UIImage+NextPrevious.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/UIImage+NextPrevious.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/IQKeyboardManagerSwift.build/Objects-normal/arm64/UIImage+NextPrevious~partial.swiftmodule"
+  }
+}

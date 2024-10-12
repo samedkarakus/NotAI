@@ -1,3 +1,10 @@
+//
+//  HomeViewController.swift
+//  zap
+//
+//  Created by Samed Karakuş on 29.09.2024.
+//
+
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -10,7 +17,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     
-    @IBOutlet weak var AiImageView: UIImageView!
     @IBOutlet weak var bubbleView: UIView!
     @IBOutlet weak var streakCircleView: UIImageView!
     @IBOutlet weak var streakLabelView: UIStackView!
@@ -133,15 +139,22 @@ class HomeViewController: UIViewController {
         addLabelsAroundCircle(view: streakCircleView, radius: (streakCircleView.bounds.size.width / 2) - 13, count: 10)
     }
     
+    
     // MARK: - Balloon Animations
 
     func setupBalloonAnimations() {
-        setupBalloonAnimation(for: learningNowView, radius: 3, duration: 12, clockwise: false)
-        setupBalloonAnimation(for: learningLabelView, radius: 3, duration: 12, clockwise: false)
-        setupBalloonAnimation(for: streakLabelView, radius: 5, duration: 15, clockwise: true)
-        setupBalloonAnimation(for: streakView, radius: 5, duration: 15, clockwise: true)
-        setupBalloonAnimation(for: streakCircleView, radius: 5, duration: 15, clockwise: true)
+        let smallRadiusViews = [learningNowView, learningLabelView]
+        let largeRadiusViews = [streakLabelView, streakView, streakCircleView]
+        
+        for view in smallRadiusViews {
+            setupBalloonAnimation(for: view!, radius: 4, duration: 10, clockwise: false)
+        }
+        
+        for view in largeRadiusViews {
+            setupBalloonAnimation(for: view!, radius: 6, duration: 12, clockwise: true)
+        }
     }
+
 
     func setupBalloonAnimation(for view: UIView, radius: CGFloat, duration: TimeInterval, clockwise: Bool) {
         animateBalloon(view, radius: radius, duration: duration, clockwise: clockwise)
@@ -160,10 +173,6 @@ class HomeViewController: UIViewController {
             //resetBalloonPosition(view: $0)
         }
     }
-
-    /*func resetBalloonPosition(view: UIView?) {
-        view?.layer.position = view?.center ?? CGPoint.zero
-    }*/
 
     func animateBalloon(_ view: UIView, radius: CGFloat, duration: TimeInterval, clockwise: Bool) {
         let originalPosition = view.center

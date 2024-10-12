@@ -1,0 +1,58 @@
+{
+  "" : {
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/zap-master.dia",
+    "emit-module-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/zap-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/zap-master-emit-module.dia",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/zap-master.swiftdeps"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/zap/AppDelegate.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/zap/Controller/HomeViewController.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/HomeViewController.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/HomeViewController.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/HomeViewController.dia",
+    "index-unit-output-path" : "/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/HomeViewController.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/HomeViewController.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/HomeViewController.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/HomeViewController.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/HomeViewController~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/zap/Controller/NoteViewController.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/NoteViewController.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/NoteViewController.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/NoteViewController.dia",
+    "index-unit-output-path" : "/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/NoteViewController.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/NoteViewController.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/NoteViewController.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/NoteViewController.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/NoteViewController~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/zap/SceneDelegate.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/SceneDelegate.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/SceneDelegate.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/SceneDelegate.dia",
+    "index-unit-output-path" : "/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/SceneDelegate.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/SceneDelegate.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/SceneDelegate.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/zap.build/Debug-iphonesimulator/zap.build/Objects-normal/arm64/SceneDelegate~partial.swiftmodule"
+  }
+}

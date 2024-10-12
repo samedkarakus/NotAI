@@ -1,0 +1,68 @@
+{
+  "" : {
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView-master.dia",
+    "emit-module-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView-master-emit-module.dia",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView-master.swiftdeps"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/ShadowView/ShadowView/ShadowView+BlurProcess.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView+BlurProcess.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView+BlurProcess.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView+BlurProcess.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView+BlurProcess.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView+BlurProcess.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView+BlurProcess.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView+BlurProcess.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView+BlurProcess~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/ShadowView/ShadowView/ShadowView.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/ShadowView~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/ShadowView/ShadowView/UIImage+Size.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImage+Size.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImage+Size.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImage+Size.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImage+Size.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImage+Size.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImage+Size.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImage+Size.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImage+Size~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/ShadowView/ShadowView/UIImageEffects.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImageEffects.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImageEffects.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImageEffects.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImageEffects.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImageEffects.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImageEffects.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImageEffects.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIImageEffects~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/ShadowView/ShadowView/UIView+Image.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Image.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Image.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Image.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Image.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Image.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Image.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Image.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Image~partial.swiftmodule"
+  },
+  "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/Pods/ShadowView/ShadowView/UIView+Shadow.swift" : {
+    "const-values" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Shadow.swiftconstvalues",
+    "dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Shadow.d",
+    "diagnostics" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Shadow.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Shadow.o",
+    "llvm-bc" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Shadow.bc",
+    "object" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Shadow.o",
+    "swift-dependencies" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Shadow.swiftdeps",
+    "swiftmodule" : "/Users/samedkarakus/Desktop/IOS Development/15-Zap/zap/build/Pods.build/Debug-iphonesimulator/ShadowView.build/Objects-normal/arm64/UIView+Shadow~partial.swiftmodule"
+  }
+}
