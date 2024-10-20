@@ -4,6 +4,8 @@ platform :ios, '13.0'
 target 'zap' do
 
   use_frameworks!
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift'
 
 end

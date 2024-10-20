@@ -5,11 +5,14 @@
 //  Created by Samed Karakuş on 10.10.2024.
 //
 import UIKit
+import MobileCoreServices
 import Vision
+import PDFKit
+import UniformTypeIdentifiers
 
-class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentPickerDelegate {
     
-    @IBOutlet weak var denemeImg: UIImageView!
+    @IBOutlet weak var addFileBtnView: UIButton!
     @IBOutlet weak var addImageBtnView: UIButton!
     @IBOutlet weak var cancelBtnView: UIButton!
     @IBOutlet weak var timeView: UIView!
@@ -42,6 +45,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         editShape(view: cancelBtnView)
         editShape(view: confirmBtn)
         editShape(view: addImageBtnView)
+        editShape(view: addFileBtnView)
         
         lineSpacing(6, for: noteBodyTextView)
     }
@@ -85,9 +89,17 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         }))
         actionSheet.addAction(UIAlertAction(title: "İptal", style: .cancel, handler: nil))
         self.present(actionSheet, animated: true, completion: nil)
-        
-        recognizeText(in: UIImage(named: "deneme")!)
     }
+    
+    
+    @IBAction func addFileBtnPressed(_ sender: UIButton) {
+        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.pdf], asCopy: true)
+        documentPicker.delegate = self
+        documentPicker.allowsMultipleSelection = false
+        present(documentPicker, animated: true, completion: nil)
+    }
+
+
     
     func textViewDidChange(_ textView: UITextView) {
         let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))
@@ -119,20 +131,27 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     }
     
     
-    //MARK: - Camera Settings
+    //MARK: - Camera Functions
     
     func openCamera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .camera
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = .camera
+            imagePickerController.cameraCaptureMode = .photo
+            imagePickerController.cameraDevice = .rear
+            imagePickerController.showsCameraControls = true
+            imagePickerController.allowsEditing = false
+            
+            imagePickerController.cameraViewTransform = CGAffineTransform.identity
+            present(imagePickerController, animated: true, completion: nil)
+            textViewDidBeginEditing(noteBodyTextView)
+            
         } else {
-            print("Kamera bulunamadı")
+            print("Kamera kullanılamıyor.")
         }
     }
-    
+
     func openGallery() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
@@ -145,9 +164,9 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedImage = info[.editedImage] as? UIImage {
-            denemeImg.image = editedImage
+            recognizeText(in: editedImage)
         } else if let originalImage = info[.originalImage] as? UIImage {
-            denemeImg.image = originalImage
+            recognizeText(in: originalImage)
         }
         picker.dismiss(animated: true, completion: nil)
     }
@@ -157,7 +176,68 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     }
     
     
-    // MARK: - Timer Settings
+    // MARK: - PDF İşleme
+    
+    func handleSelectedPDF(url: URL) {
+        if let pdfDocument = PDFDocument(url: url) {
+            var fullText = ""
+            
+            for pageIndex in 0..<pdfDocument.pageCount {
+                if let page = pdfDocument.page(at: pageIndex) {
+                    if let pageContent = page.string {
+                        fullText += pageContent
+                    }
+                }
+            }
+            
+            noteBodyTextView.text = fullText
+        } else {
+            print("PDF açılamadı.")
+        }
+    }
+
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let selectedURL = urls.first else { return }
+
+        do {
+            let fileManager = FileManager.default
+            let tempDirectory = fileManager.temporaryDirectory
+            let tempFileURL = tempDirectory.appendingPathComponent(selectedURL.lastPathComponent)
+            
+            if fileManager.fileExists(atPath: tempFileURL.path) {
+                try fileManager.removeItem(at: tempFileURL)
+            }
+            try fileManager.copyItem(at: selectedURL, to: tempFileURL)
+
+            if let pdfDocument = PDFDocument(url: tempFileURL) {
+                var fullText = ""
+
+                for i in 0..<pdfDocument.pageCount {
+                    if let page = pdfDocument.page(at: i), let pageText = page.string {
+                        fullText += pageText
+                    }
+                }
+
+                DispatchQueue.main.async {
+                    self.textViewDidBeginEditing(self.noteBodyTextView)
+                    self.noteBodyTextView.text = fullText
+                }
+            } else {
+                print("PDF dosyası açılamadı.")
+            }
+        } catch {
+            print("Dosya kopyalanamadı: \(error)")
+        }
+    }
+
+    
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        print("Kullanıcı dosya seçim ekranını iptal etti.")
+    }
+
+    
+    
+    // MARK: - Timer Functions
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimeLabel), userInfo: nil, repeats: true)
@@ -187,9 +267,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         }
         let imageRequestHandler = VNImageRequestHandler(cgImage: cgImage)
         
-        let size = CGSize(width: cgImage.width, height: cgImage.height)
-        let bounds = CGRect(origin: .zero, size: size)
-        
         let request = VNRecognizeTextRequest { request, error in
             guard let results = request.results as? [VNRecognizedTextObservation],
             error == nil else {
@@ -198,6 +275,9 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             let string = results.compactMap {
                 $0.topCandidates(1).first?.string
             }.joined(separator: "\n")
+            DispatchQueue.main.async {
+                self.noteBodyTextView.text = string
+            }
             print(string)
         }
 
@@ -206,10 +286,10 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                 try imageRequestHandler.perform([request])
             } catch {
                 print("Error: \(error)")
-                return
             }
         }
     }
+
 }
 
 // Editing functions
