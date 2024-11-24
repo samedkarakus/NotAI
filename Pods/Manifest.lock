@@ -1145,6 +1145,7 @@ PODS:
     - abseil/meta/type_traits
     - abseil/xcprivacy
   - abseil/xcprivacy (1.20240116.2)
+  - Alamofire (5.10.1)
   - BoringSSL-GRPC (0.0.36):
     - BoringSSL-GRPC/Implementation (= 0.0.36)
     - BoringSSL-GRPC/Interface (= 0.0.36)
@@ -1321,6 +1322,7 @@ PODS:
   - RecaptchaInterop (100.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.5)
   - Firebase/Auth
   - Firebase/Firestore
   - IQKeyboardManagerSwift
@@ -1328,6 +1330,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAppCheckInterop
@@ -1350,6 +1353,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   abseil: d121da9ef7e2ff4cab7666e76c5a3e0915ae08c3
+  Alamofire: 840d2a1ad82355b536ec6ba5f97e5bfa54600ca3
   BoringSSL-GRPC: ca6a8e5d04812fce8ffd6437810c2d46f925eaeb
   Firebase: 5c575140761e22324806f401e38c483d58db2dec
   FirebaseAppCheckInterop: 7789a8adfb09e905ce02a76540b94b059029ea81
@@ -1370,6 +1374,6 @@ SPEC CHECKSUMS:
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
 
-PODFILE CHECKSUM: cf7a9ee375c1cdc8c25a7dce2be14b54dd28fd9a
+PODFILE CHECKSUM: 762832739fd406285f0b1c9a4df9132f6aada712
 
 COCOAPODS: 1.15.2

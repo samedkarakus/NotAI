@@ -5,9 +5,8 @@
 //  Created by Samed Karakuş on 10.10.2024.
 //
 import UIKit
-import MobileCoreServices
-import Vision
 import PDFKit
+import MobileCoreServices
 import UniformTypeIdentifiers
 
 class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentPickerDelegate {
@@ -22,10 +21,10 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     @IBOutlet weak var noteBodyTextView: UITextView!
     @IBOutlet weak var noteTitleTextView: UITextView!
     
-    let titlePlaceholder = "Konu başlığı"
-    let bodyPlaceholder = "Detaylar.."
     var timer: Timer?
     var isGradientAdded: Bool = false
+    let titlePlaceholder = "Konu başlığı"
+    let bodyPlaceholder = "Detaylar.."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         noteBodyTextView.delegate = self
         addPlaceholder(titlePlaceholder, for: noteTitleTextView)
         addPlaceholder(bodyPlaceholder, for: noteBodyTextView)
-
+        
         noteBodyTextView.isScrollEnabled = true
         
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -60,20 +59,21 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         if !isGradientAdded {
             let startColor = UIColor(red: 114/255, green: 53/255, blue: 240/255, alpha: 1.0).cgColor
             let endColor = UIColor(red: 114/255, green: 53/255, blue: 240/255, alpha: 0.0).cgColor
-
+            
             let gradientLayer = CAGradientLayer()
             gradientLayer.colors = [endColor, startColor]
             gradientLayer.locations = [0.0, 0.7]
             gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
             gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
             gradientLayer.frame = self.gradientView.bounds
-
+            
             self.gradientView.layer.insertSublayer(gradientLayer, at: 0)
-
+            getTextFromGeneratedNote()
+            
             isGradientAdded = true
         }
     }
-
+    
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -98,13 +98,13 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         documentPicker.allowsMultipleSelection = false
         present(documentPicker, animated: true, completion: nil)
     }
-
-
+    
+    
     
     func textViewDidChange(_ textView: UITextView) {
         let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))
         textView.frame.size.height = size.height
-
+        
         if textView == noteBodyTextView {
             noteBodyTextView.isScrollEnabled = true
             noteBodyTextView.scrollRangeToVisible(NSRange(location: textView.text.count - 1, length: 1))
@@ -117,7 +117,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             textView.textColor = UIColor.white
         }
     }
-
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         let placeholders: [UITextView: (text: String, color: UIColor)] = [
             noteTitleTextView: (titlePlaceholder, UIColor.white.withAlphaComponent(0.25)),
@@ -151,7 +151,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             print("Kamera kullanılamıyor.")
         }
     }
-
+    
     func openGallery() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
@@ -164,21 +164,21 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedImage = info[.editedImage] as? UIImage {
-            recognizeText(in: editedImage)
+            TextRecognitionHelper.recognizeText(in: editedImage, textTo: noteBodyTextView)
         } else if let originalImage = info[.originalImage] as? UIImage {
-            recognizeText(in: originalImage)
+            TextRecognitionHelper.recognizeText(in: originalImage, textTo: noteBodyTextView)
         }
         picker.dismiss(animated: true, completion: nil)
     }
-
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     
     
-    // MARK: - PDF İşleme
+    // MARK: - PDF
     
-    func handleSelectedPDF(url: URL) {
+    func handleSelectedPDF(url: URL, textTo textView: UITextView) {
         if let pdfDocument = PDFDocument(url: url) {
             var fullText = ""
             
@@ -190,15 +190,15 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                 }
             }
             
-            noteBodyTextView.text = fullText
+            textView.text = fullText
         } else {
             print("PDF açılamadı.")
         }
     }
-
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]/*, textTo textView: UITextView*/) {
         guard let selectedURL = urls.first else { return }
-
+        
         do {
             let fileManager = FileManager.default
             let tempDirectory = fileManager.temporaryDirectory
@@ -208,16 +208,16 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                 try fileManager.removeItem(at: tempFileURL)
             }
             try fileManager.copyItem(at: selectedURL, to: tempFileURL)
-
+            
             if let pdfDocument = PDFDocument(url: tempFileURL) {
                 var fullText = ""
-
+                
                 for i in 0..<pdfDocument.pageCount {
                     if let page = pdfDocument.page(at: i), let pageText = page.string {
                         fullText += pageText
                     }
                 }
-
+                
                 DispatchQueue.main.async {
                     self.textViewDidBeginEditing(self.noteBodyTextView)
                     self.noteBodyTextView.text = fullText
@@ -229,70 +229,41 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             print("Dosya kopyalanamadı: \(error)")
         }
     }
-
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         print("Kullanıcı dosya seçim ekranını iptal etti.")
     }
-
     
+    func getTextFromGeneratedNote() -> String {
+        if noteBodyTextView.text == "" {
+            confirmBtn.isHidden = true
+        }
+        return noteBodyTextView.text
+    }
     
     // MARK: - Timer Functions
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimeLabel), userInfo: nil, repeats: true)
     }
-
+    
     @objc func updateTimeLabel() {
         let date = Date()
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
         let minute = calendar.component(.minute, from: date)
         let second = calendar.component(.second, from: date)
-
+        
         timeLabel.text = String(format: "%02d:%02d:%02d", hour, minute, second)
     }
-
+    
     func stopTimer() {
         timer?.invalidate()
         timer = nil
     }
-    
-    
-    //MARK: - Vision, Text Recognition
-    
-    func recognizeText(in image: UIImage) {
-        guard let cgImage = image.cgImage else {
-            return
-        }
-        let imageRequestHandler = VNImageRequestHandler(cgImage: cgImage)
-        
-        let request = VNRecognizeTextRequest { request, error in
-            guard let results = request.results as? [VNRecognizedTextObservation],
-            error == nil else {
-                return
-            }
-            let string = results.compactMap {
-                $0.topCandidates(1).first?.string
-            }.joined(separator: "\n")
-            DispatchQueue.main.async {
-                self.noteBodyTextView.text = string
-            }
-            print(string)
-        }
-
-        DispatchQueue.global(qos: .userInitiated).async {
-            do {
-                try imageRequestHandler.perform([request])
-            } catch {
-                print("Error: \(error)")
-            }
-        }
-    }
-
 }
+//MARK: - Editing functions
 
-// Editing functions
 func editShape(view: UIView) {
     view.layer.masksToBounds = true
     view.layer.cornerRadius = view.frame.height / 2

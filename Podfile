@@ -7,5 +7,6 @@ target 'zap' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift'
+  pod 'Alamofire', '~> 5.5'
 
 end
