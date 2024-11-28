@@ -252,9 +252,9 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
         let minute = calendar.component(.minute, from: date)
-        let second = calendar.component(.second, from: date)
         
-        timeLabel.text = String(format: "%02d:%02d:%02d", hour, minute, second)
+        
+        timeLabel.text = String(format: "%02d:%02d", hour, minute)
     }
     
     func stopTimer() {
