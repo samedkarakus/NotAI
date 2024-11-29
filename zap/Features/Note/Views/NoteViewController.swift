@@ -30,9 +30,9 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     override func viewDidLoad() {
         super.viewDidLoad()
         TimerManager.shared.startTimer(for: timeLeftLabel)
+        self.navigationItem.setHidesBackButton(true, animated: true)
         setupTextViews()
         setupButtons()
-        setupNavigationBar()
         viewModel?.loadData()
     }
 

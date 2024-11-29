@@ -22,7 +22,7 @@ class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
+        self.navigationItem.setHidesBackButton(true, animated: true)
         
         let generator = QuizGenerator()
         let questions = generator.fetchQuestions()
