@@ -8,7 +8,7 @@
 import UIKit
 
 func setupNavigationBar() {
-    self.navigationItem.setHidesBackButton(true, animated: true)
+    //self.navigationItem.setHidesBackButton(true, animated: true)
 }
 
 func makeCircular(view: UIView) {
