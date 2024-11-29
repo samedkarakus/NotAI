@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="zap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="zap" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,6 +283,7 @@
                         <outlet property="streakCircleView" destination="iC7-Gn-z6s" id="SDI-on-dRw"/>
                         <outlet property="streakLabelView" destination="h2B-CY-ihj" id="3jb-gE-eCr"/>
                         <outlet property="streakView" destination="yCn-5Y-D6M" id="JQv-0Y-VBd"/>
+                        <outlet property="timeLeftLabel" destination="Dwm-LH-De0" id="yh0-hy-X7S"/>
                         <outlet property="titleLabelView" destination="Sqm-od-pqc" id="2t2-ls-dZK"/>
                     </connections>
                 </viewController>
@@ -468,7 +469,7 @@
                         <outlet property="gradientView" destination="kA0-Vk-yE7" id="81Z-3S-e4G"/>
                         <outlet property="noteBodyTextView" destination="Fuh-bi-8Sv" id="tl8-XY-pxg"/>
                         <outlet property="noteTitleTextView" destination="HY9-ud-LkH" id="0tV-PM-c9D"/>
-                        <outlet property="timeLabel" destination="aDa-eP-Ww4" id="Nm1-FI-xcz"/>
+                        <outlet property="timeLeftLabel" destination="aDa-eP-Ww4" id="Nm1-FI-xcz"/>
                         <outlet property="timeView" destination="1wM-1v-Qfv" id="MaH-sQ-6Cn"/>
                     </connections>
                 </viewController>
@@ -476,10 +477,10 @@
             </objects>
             <point key="canvasLocation" x="1769" y="-2"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="qSg-O0-fW7">
             <objects>
-                <viewController id="CvK-EV-4pV" customClass="QuestionViewController" customModule="zap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CvK-EV-4pV" customClass="QuizViewController" customModule="zap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cfz-xp-8qa">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -528,8 +529,8 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="small"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="small" variableValue="5.5511151231257827e-17"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelButtonPressed:" destination="CvK-EV-4pV" eventType="touchUpInside" id="ToM-Gn-FGM"/>
@@ -639,7 +640,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="m09-Yn-dse"/>
                     <connections>
-                        <outlet property="QuestionNoLabel" destination="C2M-tF-P1U" id="KZF-5H-64i"/>
                         <outlet property="answer1BtnView" destination="XDM-Sv-jUn" id="ocE-tc-bH3"/>
                         <outlet property="answer2BtnView" destination="NzZ-Tc-tfK" id="6Sc-uM-Ylg"/>
                         <outlet property="answer3BtnView" destination="4Tc-gn-UNJ" id="1nR-7O-leb"/>
@@ -647,7 +647,8 @@
                         <outlet property="answersView" destination="129-aP-qa4" id="kLC-K8-eYP"/>
                         <outlet property="cancelBtnView" destination="cSk-JM-yGO" id="e65-Hx-iIk"/>
                         <outlet property="questionLabel" destination="AQY-jS-MaM" id="rCu-DY-F5m"/>
-                        <outlet property="questionNoView" destination="EDB-6w-gQz" id="KgJ-Ex-cgh"/>
+                        <outlet property="questionNoLabel" destination="C2M-tF-P1U" id="KZF-5H-64i"/>
+                        <outlet property="questionNoView" destination="EDB-6w-gQz" id="0al-pv-sT1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8J-wX-QmY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -666,9 +667,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fya-ST-LWN">
-                                <rect key="frame" x="189.66666666666666" y="135" width="60.666666666666657" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="195.66666666666666" y="135" width="48.666666666666657" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOi-D3-cwk">
@@ -684,19 +685,16 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eksik Konular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-Yj-DDB">
-                                <rect key="frame" x="25" y="515" width="86" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="25.000000000000007" y="348.66666666666669" width="96.666666666666686" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Ql-G6-pqe">
-                                <rect key="frame" x="25" y="547" width="390" height="300"/>
+                                <rect key="frame" x="25" y="383" width="390" height="464"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="JA1-MU-2CV"/>
-                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ibL-fd-Mh5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ibL-fd-Mh5" customClass="ProblemCell" customModule="zap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ibL-fd-Mh5" id="tcP-Iz-Fia">
@@ -719,12 +717,12 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dp-xL-7px">
-                                <rect key="frame" x="145" y="206" width="150" height="75"/>
+                                <rect key="frame" x="145" y="198.66666666666666" width="150" height="74.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="pSu-zO-T0B"/>
                                     <constraint firstAttribute="height" constant="75" id="tE6-Bv-VRW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -734,6 +732,7 @@
                         <constraints>
                             <constraint firstItem="zym-ze-jxf" firstAttribute="trailing" secondItem="DRY-vl-VPG" secondAttribute="trailing" constant="25" id="3C7-Ya-eaz"/>
                             <constraint firstItem="1dp-xL-7px" firstAttribute="centerX" secondItem="eXl-Eu-oFY" secondAttribute="centerX" id="3YY-Op-e7n"/>
+                            <constraint firstItem="dQt-Yj-DDB" firstAttribute="top" secondItem="1dp-xL-7px" secondAttribute="bottom" constant="75" id="7of-cn-3OQ"/>
                             <constraint firstItem="fya-ST-LWN" firstAttribute="centerX" secondItem="eXl-Eu-oFY" secondAttribute="centerX" id="DVh-fh-WFV"/>
                             <constraint firstItem="RBj-Ub-iWe" firstAttribute="top" secondItem="eXl-Eu-oFY" secondAttribute="top" id="M8z-FC-4Dx"/>
                             <constraint firstItem="zym-ze-jxf" firstAttribute="trailing" secondItem="8Ql-G6-pqe" secondAttribute="trailing" constant="25" id="Mlg-4n-8cJ"/>
@@ -754,6 +753,11 @@
                             <constraint firstItem="RBj-Ub-iWe" firstAttribute="centerY" secondItem="eXl-Eu-oFY" secondAttribute="centerY" id="yLP-8T-DWq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mS9-Ql-Ebf"/>
+                    <connections>
+                        <outlet property="endQuizButtonView" destination="xOi-D3-cwk" id="YPM-BG-KJ9"/>
+                        <outlet property="get10moreQuestionButtonView" destination="DRY-vl-VPG" id="isF-Lv-B8s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gh-FK-lRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		942E55432CC1571900F993A8 /* TextRecognitionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E55422CC1571900F993A8 /* TextRecognitionHelper.swift */; };
-		9438105A2CC2AE5F00AC74B0 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943810592CC2AE5F00AC74B0 /* QuestionViewController.swift */; };
+		942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E55422CC1571900F993A8 /* TextRecognition.swift */; };
+		9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943810592CC2AE5F00AC74B0 /* QuizViewController.swift */; };
 		9438105C2CC567E500AC74B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105B2CC567E500AC74B0 /* Question.swift */; };
-		943810602CC8F83D00AC74B0 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105F2CC8F83D00AC74B0 /* QuizBrain.swift */; };
+		943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */; };
 		945368982CBA87E3003DC7DB /* ShadowView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 945368962CBA87E3003DC7DB /* ShadowView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		949321102CE6A84600C8666C /* QuizGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493210F2CE6A84600C8666C /* QuizGenerator.swift */; };
 		949321122CE6A89C00C8666C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321112CE6A89C00C8666C /* Constants.swift */; };
 		949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321132CF3D2B100C8666C /* ResultViewController.swift */; };
+		94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED112CF8DE3F0042C49E /* TimerManager.swift */; };
+		94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */; };
+		94DBED1A2CF8E0F00042C49E /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */; };
+		94DBED252CF907E40042C49E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED242CF907E10042C49E /* APIClient.swift */; };
+		94DBED282CF908140042C49E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED272CF908140042C49E /* AppCoordinator.swift */; };
+		94DBED2A2CF908240042C49E /* NoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED292CF908240042C49E /* NoteCoordinator.swift */; };
+		94DBED2D2CF908460042C49E /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED2C2CF908460042C49E /* AppColors.swift */; };
+		94DBED2F2CF908500042C49E /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED2E2CF908500042C49E /* AppFonts.swift */; };
+		94DBED312CF908AD0042C49E /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED302CF908AD0042C49E /* NoteModel.swift */; };
+		94DBED332CF908C80042C49E /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED322CF908C80042C49E /* NoteViewModel.swift */; };
+		94DBED552CF90F6D0042C49E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED542CF90F6D0042C49E /* HomeModel.swift */; };
+		94DBED572CF90F910042C49E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED562CF90F910042C49E /* HomeViewModel.swift */; };
+		94DBED5A2CF910200042C49E /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED592CF910200042C49E /* UIHelpers.swift */; };
+		94DBED5C2CF9E9BF0042C49E /* QuizGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED5B2CF9E9BF0042C49E /* QuizGenerator.swift */; };
 		94E837E42CB9AE7C00EBC9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DA2CB9AE7C00EBC9D4 /* LaunchScreen.storyboard */; };
 		94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DC2CB9AE7C00EBC9D4 /* Main.storyboard */; };
 		94E837E62CB9AE7C00EBC9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */; };
@@ -43,14 +56,27 @@
 		204BDDE46F289702AF999EC7 /* Pods-zap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.release.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.release.xcconfig"; sourceTree = "<group>"; };
 		5B382C447E90D3BAFFE5D708 /* Pods-zap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.debug.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.debug.xcconfig"; sourceTree = "<group>"; };
 		9408AD3F2CA9BECF00AB70D3 /* zap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		942E55422CC1571900F993A8 /* TextRecognitionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionHelper.swift; sourceTree = "<group>"; };
-		943810592CC2AE5F00AC74B0 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		942E55422CC1571900F993A8 /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognition.swift; sourceTree = "<group>"; };
+		943810592CC2AE5F00AC74B0 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		9438105B2CC567E500AC74B0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		9438105F2CC8F83D00AC74B0 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
+		9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		945368962CBA87E3003DC7DB /* ShadowView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShadowView.framework; path = Carthage/Build/Mac/ShadowView.framework; sourceTree = "<group>"; };
-		9493210F2CE6A84600C8666C /* QuizGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGenerator.swift; sourceTree = "<group>"; };
 		949321112CE6A89C00C8666C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		949321132CF3D2B100C8666C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		94DBED112CF8DE3F0042C49E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		94DBED242CF907E10042C49E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		94DBED272CF908140042C49E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		94DBED292CF908240042C49E /* NoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCoordinator.swift; sourceTree = "<group>"; };
+		94DBED2C2CF908460042C49E /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		94DBED2E2CF908500042C49E /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		94DBED302CF908AD0042C49E /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		94DBED322CF908C80042C49E /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		94DBED542CF90F6D0042C49E /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		94DBED562CF90F910042C49E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		94DBED592CF910200042C49E /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
+		94DBED5B2CF9E9BF0042C49E /* QuizGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGenerator.swift; sourceTree = "<group>"; };
 		94E837D52CB9AE7C00EBC9D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94E837D62CB9AE7C00EBC9D4 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		94E837D92CB9AE7C00EBC9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,26 +118,213 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		94E837D72CB9AE7C00EBC9D4 /* Controller */ = {
+		94DBED152CF8E0890042C49E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */,
+				94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94DBED1B2CF8E1130042C49E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		94DBED1C2CF8E1610042C49E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				94E837DE2CB9AE7C00EBC9D4 /* AppDelegate.swift */,
+				94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		94DBED1D2CF907220042C49E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED462CF90E340042C49E /* Home */,
+				94DBED1E2CF907340042C49E /* Note */,
+				94DBED3C2CF90E330042C49E /* Quiz */,
+				94DBED502CF90E4B0042C49E /* Result */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		94DBED1E2CF907340042C49E /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED1F2CF907410042C49E /* Models */,
+				94DBED202CF907470042C49E /* Views */,
+				94DBED212CF9075B0042C49E /* ViewModels */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		94DBED1F2CF907410042C49E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED302CF908AD0042C49E /* NoteModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94DBED202CF907470042C49E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94E837D62CB9AE7C00EBC9D4 /* NoteViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		94DBED212CF9075B0042C49E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED322CF908C80042C49E /* NoteViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94DBED222CF907780042C49E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED112CF8DE3F0042C49E /* TimerManager.swift */,
+				942E55422CC1571900F993A8 /* TextRecognition.swift */,
+				94DBED592CF910200042C49E /* UIHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		94DBED232CF907D40042C49E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED242CF907E10042C49E /* APIClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		94DBED262CF908020042C49E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED272CF908140042C49E /* AppCoordinator.swift */,
+				94DBED292CF908240042C49E /* NoteCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		94DBED2B2CF9083B0042C49E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				949321112CE6A89C00C8666C /* Constants.swift */,
+				94DBED2C2CF908460042C49E /* AppColors.swift */,
+				94DBED2E2CF908500042C49E /* AppFonts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		94DBED372CF90E330042C49E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9438105B2CC567E500AC74B0 /* Question.swift */,
+				94DBED5B2CF9E9BF0042C49E /* QuizGenerator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94DBED392CF90E330042C49E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				943810592CC2AE5F00AC74B0 /* QuizViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		94DBED3B2CF90E330042C49E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94DBED3C2CF90E330042C49E /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED372CF90E330042C49E /* Models */,
+				94DBED392CF90E330042C49E /* Views */,
+				94DBED3B2CF90E330042C49E /* ViewModels */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		94DBED412CF90E340042C49E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED542CF90F6D0042C49E /* HomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94DBED432CF90E340042C49E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				94E837D52CB9AE7C00EBC9D4 /* HomeViewController.swift */,
-				94E837D62CB9AE7C00EBC9D4 /* NoteViewController.swift */,
-				943810592CC2AE5F00AC74B0 /* QuestionViewController.swift */,
-				949321132CF3D2B100C8666C /* ResultViewController.swift */,
 			);
-			path = Controller;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		94E837D82CB9AE7C00EBC9D4 /* Model */ = {
+		94DBED452CF90E340042C49E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				942E55422CC1571900F993A8 /* TextRecognitionHelper.swift */,
-				9438105B2CC567E500AC74B0 /* Question.swift */,
-				9438105F2CC8F83D00AC74B0 /* QuizBrain.swift */,
-				9493210F2CE6A84600C8666C /* QuizGenerator.swift */,
+				94DBED562CF90F910042C49E /* HomeViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94DBED462CF90E340042C49E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED412CF90E340042C49E /* Models */,
+				94DBED432CF90E340042C49E /* Views */,
+				94DBED452CF90E340042C49E /* ViewModels */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		94DBED4B2CF90E4B0042C49E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94DBED4D2CF90E4B0042C49E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				949321132CF3D2B100C8666C /* ResultViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		94DBED4F2CF90E4B0042C49E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94DBED502CF90E4B0042C49E /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				94DBED4B2CF90E4B0042C49E /* Models */,
+				94DBED4D2CF90E4B0042C49E /* Views */,
+				94DBED4F2CF90E4B0042C49E /* ViewModels */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		94E837DD2CB9AE7C00EBC9D4 /* View */ = {
@@ -126,14 +339,16 @@
 		94E837E32CB9AE7C00EBC9D4 /* zap */ = {
 			isa = PBXGroup;
 			children = (
-				94E837D72CB9AE7C00EBC9D4 /* Controller */,
-				94E837D82CB9AE7C00EBC9D4 /* Model */,
+				94DBED1C2CF8E1610042C49E /* App */,
+				94DBED1D2CF907220042C49E /* Features */,
+				94DBED222CF907780042C49E /* Utilities */,
+				94DBED1B2CF8E1130042C49E /* Resources */,
+				94DBED232CF907D40042C49E /* Services */,
+				94DBED262CF908020042C49E /* Coordinators */,
+				94DBED152CF8E0890042C49E /* Extensions */,
 				94E837DD2CB9AE7C00EBC9D4 /* View */,
-				94E837DE2CB9AE7C00EBC9D4 /* AppDelegate.swift */,
-				94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */,
+				94DBED2B2CF9083B0042C49E /* Constants */,
 				94E837E02CB9AE7C00EBC9D4 /* Info.plist */,
-				94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */,
-				949321112CE6A89C00C8666C /* Constants.swift */,
 			);
 			path = zap;
 			sourceTree = "<group>";
@@ -191,6 +406,7 @@
 				TargetAttributes = {
 					9408AD3E2CA9BECF00AB70D3 = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -273,15 +489,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				94E837E92CB9AE7C00EBC9D4 /* HomeViewController.swift in Sources */,
+				94DBED1A2CF8E0F00042C49E /* UITextView+Extensions.swift in Sources */,
+				94DBED552CF90F6D0042C49E /* HomeModel.swift in Sources */,
+				94DBED5A2CF910200042C49E /* UIHelpers.swift in Sources */,
+				94DBED2A2CF908240042C49E /* NoteCoordinator.swift in Sources */,
 				949321122CE6A89C00C8666C /* Constants.swift in Sources */,
+				94DBED572CF90F910042C49E /* HomeViewModel.swift in Sources */,
 				94E837EA2CB9AE7C00EBC9D4 /* NoteViewController.swift in Sources */,
-				949321102CE6A84600C8666C /* QuizGenerator.swift in Sources */,
-				9438105A2CC2AE5F00AC74B0 /* QuestionViewController.swift in Sources */,
-				942E55432CC1571900F993A8 /* TextRecognitionHelper.swift in Sources */,
+				94DBED312CF908AD0042C49E /* NoteModel.swift in Sources */,
+				94DBED282CF908140042C49E /* AppCoordinator.swift in Sources */,
+				9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */,
+				94DBED5C2CF9E9BF0042C49E /* QuizGenerator.swift in Sources */,
+				94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */,
+				94DBED2D2CF908460042C49E /* AppColors.swift in Sources */,
+				942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */,
+				94DBED252CF907E40042C49E /* APIClient.swift in Sources */,
 				94E837EB2CB9AE7C00EBC9D4 /* AppDelegate.swift in Sources */,
+				94DBED332CF908C80042C49E /* NoteViewModel.swift in Sources */,
 				9438105C2CC567E500AC74B0 /* Question.swift in Sources */,
 				94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */,
-				943810602CC8F83D00AC74B0 /* QuizBrain.swift in Sources */,
+				94DBED2F2CF908500042C49E /* AppFonts.swift in Sources */,
+				94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */,
+				943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */,
 				949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,9 +543,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 97B55DK58L;
+				DEVELOPMENT_TEAM = BWCFA5MJHF;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +566,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.samedkarakus.zap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "zap/View/zap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,9 +579,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 97B55DK58L;
+				DEVELOPMENT_TEAM = BWCFA5MJHF;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,6 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.samedkarakus.zap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "zap/View/zap-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
