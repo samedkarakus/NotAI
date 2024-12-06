@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var inviteButton: UIButton!
     @IBOutlet weak var notificationView: UIView!
-    @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var bubbleView: UIView!
     @IBOutlet weak var streakCircleView: UIImageView!
@@ -71,7 +70,7 @@ class HomeViewController: UIViewController {
     }
 
     func setupUIElements() {
-        let viewsToMakeCircular: [UIView] = [profileImageView, notificationView, inviteButton, learningNowView, streakView]
+        let viewsToMakeCircular: [UIView] = [notificationView, inviteButton, learningNowView, streakView]
         let viewsToBlur: [UIView] = [notificationView, inviteButton, learningNowView, streakView]
 
         viewsToMakeCircular.forEach { makeCircular(view: $0) }

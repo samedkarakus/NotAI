@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,8 @@
 		94E837EA2CB9AE7C00EBC9D4 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E837D62CB9AE7C00EBC9D4 /* NoteViewController.swift */; };
 		94E837EB2CB9AE7C00EBC9D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E837DE2CB9AE7C00EBC9D4 /* AppDelegate.swift */; };
 		94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */; };
+		94EA7CF82D02F64B00ED9CB7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA7CF72D02F64B00ED9CB7 /* ProfileViewController.swift */; };
+		94EA7CFE2D03286100ED9CB7 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA7CFD2D03286100ED9CB7 /* ProfileItem.swift */; };
 		BDFC25BBC628B8604537745E /* Pods_NotAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A806AC7C0C4F2E7384E4D2CA /* Pods_NotAI.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,9 +88,15 @@
 		94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94E837E02CB9AE7C00EBC9D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		94EA7CF72D02F64B00ED9CB7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		94EA7CFD2D03286100ED9CB7 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		A806AC7C0C4F2E7384E4D2CA /* Pods_NotAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B841F0231B1DC9FFA2D0B4 /* Pods-NotAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotAI.debug.xcconfig"; path = "Target Support Files/Pods-NotAI/Pods-NotAI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		94EA7CF62D02F5DD00ED9CB7 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9408AD3C2CA9BECF00AB70D3 /* Frameworks */ = {
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				94DBED462CF90E340042C49E /* Home */,
+				94EA7CF32D02F59200ED9CB7 /* Profile */,
 				94DBED1E2CF907340042C49E /* Note */,
 				94DBED3C2CF90E330042C49E /* Quiz */,
 				94DBED502CF90E4B0042C49E /* Result */,
@@ -355,6 +364,32 @@
 			path = NotAI;
 			sourceTree = "<group>";
 		};
+		94EA7CF32D02F59200ED9CB7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				94EA7CF42D02F5AB00ED9CB7 /* Models */,
+				94EA7CF52D02F5B100ED9CB7 /* Views */,
+				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		94EA7CF42D02F5AB00ED9CB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94EA7CFD2D03286100ED9CB7 /* ProfileItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94EA7CF52D02F5B100ED9CB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94EA7CF72D02F64B00ED9CB7 /* ProfileViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A63FE4CD82E0C20C40EA93A1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +427,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
 			);
 			name = NotAI;
 			productName = zap;
@@ -505,6 +543,7 @@
 				9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */,
 				94DBED5C2CF9E9BF0042C49E /* QuizGenerator.swift in Sources */,
 				94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */,
+				94EA7CFE2D03286100ED9CB7 /* ProfileItem.swift in Sources */,
 				94DBED2D2CF908460042C49E /* AppColors.swift in Sources */,
 				942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */,
 				94DBED252CF907E40042C49E /* APIClient.swift in Sources */,
@@ -514,6 +553,7 @@
 				94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */,
 				94DBED2F2CF908500042C49E /* AppFonts.swift in Sources */,
 				94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */,
+				94EA7CF82D02F64B00ED9CB7 /* ProfileViewController.swift in Sources */,
 				943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */,
 				949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */,
 			);
