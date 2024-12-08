@@ -19,23 +19,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="M8W-AD-f8Y">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fbG-jC-nkk">
-                                <rect key="frame" x="157" y="756.66666666666663" width="79" height="46.333333333333371"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="J9s-jg-KOE">
-                                        <rect key="frame" x="29.666666666666657" y="0.0" width="20" height="20"/>
-                                        <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </activityIndicatorView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NotAI © 2024" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2Q-mJ-ciZ">
-                                        <rect key="frame" x="0.0" y="31.999999999999996" width="79" height="14.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NotAI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nA7-Xs-AH8">
-                                <rect key="frame" x="157.33333333333334" y="407" width="78.666666666666657" height="38.333333333333371"/>
+                                <rect key="frame" x="157.33333333333334" y="407" width="78.666666666666657" height="38.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" systemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,9 +33,7 @@
                             <constraint firstAttribute="bottom" secondItem="M8W-AD-f8Y" secondAttribute="bottom" id="5Us-lL-b6d"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FNI-OZ-pkU"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="QzA-0r-bIx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fbG-jC-nkk" secondAttribute="bottom" constant="15" id="Ta7-EM-GSt"/>
                             <constraint firstItem="nA7-Xs-AH8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="grI-vZ-hex"/>
-                            <constraint firstItem="fbG-jC-nkk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="j06-xZ-cyS"/>
                             <constraint firstItem="nA7-Xs-AH8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pCI-BL-itw"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="sPt-IY-MY1"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="twx-2N-2ls"/>

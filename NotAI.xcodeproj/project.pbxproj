@@ -95,6 +95,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		94D5580E2D062D7E00268595 /* Loading */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Loading; sourceTree = "<group>"; };
 		94EA7CF62D02F5DD00ED9CB7 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -157,6 +158,7 @@
 		94DBED1D2CF907220042C49E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				94D5580E2D062D7E00268595 /* Loading */,
 				94DBED462CF90E340042C49E /* Home */,
 				94EA7CF32D02F59200ED9CB7 /* Profile */,
 				94DBED1E2CF907340042C49E /* Note */,
@@ -429,6 +431,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				94D5580E2D062D7E00268595 /* Loading */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
 			);
 			name = NotAI;
