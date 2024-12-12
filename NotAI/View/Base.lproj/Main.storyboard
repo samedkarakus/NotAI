@@ -127,8 +127,8 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 saat kaldı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-LH-De0">
-                                                        <rect key="frame" x="93.333333333333314" y="166.99999999999994" width="78" height="18"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kalan Süre: --.--.--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-LH-De0">
+                                                        <rect key="frame" x="67" y="166.99999999999994" width="131" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -178,25 +178,40 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8cg-9N-tyk">
-                                                <rect key="frame" x="22" y="31.333333333333371" width="116" height="97.333333333333314"/>
+                                                <rect key="frame" x="22" y="31.333333333333371" width="116" height="96.333333333333314"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learningNow" translatesAutoresizingMaskIntoConstraints="NO" id="fp6-hN-6E2">
                                                         <rect key="frame" x="0.0" y="0.0" width="116" height="80"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="şuan öğreniyor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncW-2a-kmH">
-                                                        <rect key="frame" x="16" y="83" width="84" height="14.333333333333329"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="konuyu öğreniyor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncW-2a-kmH">
+                                                        <rect key="frame" x="8" y="83" width="100" height="13.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Qkl-wP-kfh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <color key="textColor" white="0.0" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReE-3k-IcB" userLabel="LearnerButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                <connections>
+                                                    <segue destination="bU3-VM-WHr" kind="show" id="oDk-CB-E78"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="8cg-9N-tyk" firstAttribute="centerY" secondItem="rhZ-L4-25I" secondAttribute="centerY" id="43q-nq-U77"/>
                                             <constraint firstAttribute="width" constant="160" id="7rL-X4-Z1g"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="9wB-sU-srO"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="A42-rg-l8n"/>
+                                            <constraint firstItem="ReE-3k-IcB" firstAttribute="leading" secondItem="jtF-aY-VD5" secondAttribute="leading" id="Iw7-00-ae9"/>
+                                            <constraint firstItem="ReE-3k-IcB" firstAttribute="top" secondItem="jtF-aY-VD5" secondAttribute="top" id="VM0-h6-2zW"/>
+                                            <constraint firstAttribute="bottom" secondItem="ReE-3k-IcB" secondAttribute="bottom" id="YCv-mP-hiW"/>
+                                            <constraint firstAttribute="trailing" secondItem="ReE-3k-IcB" secondAttribute="trailing" id="g1C-EZ-DXt"/>
                                             <constraint firstAttribute="height" constant="160" id="jjj-mW-Bk3"/>
                                             <constraint firstItem="8cg-9N-tyk" firstAttribute="centerX" secondItem="rhZ-L4-25I" secondAttribute="centerX" id="xZd-6v-YBv"/>
                                         </constraints>
@@ -296,6 +311,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1022.7272727272727" y="-2.510460251046025"/>
+        </scene>
+        <!--Learner View Controller-->
+        <scene sceneID="4d6-e9-ww3">
+            <objects>
+                <viewController id="bU3-VM-WHr" customClass="LearnerViewController" customModule="NotAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mfp-9S-7xE">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="VYo-UY-adc">
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aIh-Yh-2JX" userLabel="Learner Table View">
+                                <rect key="frame" x="20" y="126" width="400" height="796"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mAZ-ML-pWy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VYo-UY-adc" firstAttribute="trailing" secondItem="mfp-9S-7xE" secondAttribute="trailing" id="94I-zh-krq"/>
+                            <constraint firstItem="aIh-Yh-2JX" firstAttribute="bottom" secondItem="mAZ-ML-pWy" secondAttribute="bottom" id="EmJ-cM-FQq"/>
+                            <constraint firstItem="VYo-UY-adc" firstAttribute="centerY" secondItem="mfp-9S-7xE" secondAttribute="centerY" id="IBA-II-VLj"/>
+                            <constraint firstItem="VYo-UY-adc" firstAttribute="centerX" secondItem="mfp-9S-7xE" secondAttribute="centerX" id="J7d-Kx-cvW"/>
+                            <constraint firstAttribute="bottom" secondItem="VYo-UY-adc" secondAttribute="bottom" id="SuM-36-GCX"/>
+                            <constraint firstItem="VYo-UY-adc" firstAttribute="top" secondItem="mfp-9S-7xE" secondAttribute="top" id="ZJs-AZ-6df"/>
+                            <constraint firstItem="aIh-Yh-2JX" firstAttribute="top" secondItem="mAZ-ML-pWy" secondAttribute="top" constant="20" id="eng-zn-SwP"/>
+                            <constraint firstItem="mAZ-ML-pWy" firstAttribute="trailing" secondItem="aIh-Yh-2JX" secondAttribute="trailing" constant="20" id="pFv-NZ-EUS"/>
+                            <constraint firstItem="aIh-Yh-2JX" firstAttribute="leading" secondItem="mAZ-ML-pWy" secondAttribute="leading" constant="20" id="r6L-D7-zuI"/>
+                            <constraint firstItem="VYo-UY-adc" firstAttribute="leading" secondItem="mfp-9S-7xE" secondAttribute="leading" id="y01-zR-GRo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wM4-Rt-fxn"/>
+                    <connections>
+                        <outlet property="learnerTableView" destination="aIh-Yh-2JX" id="DQp-u8-bVq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1B-jw-WGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022.7272727272727" y="719.87447698744768"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ukr-f7-wWV">
@@ -412,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yf1-Pc-aWy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022.7272727272727" y="683.47280334728032"/>
+            <point key="canvasLocation" x="1769" y="720"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="jOo-l4-na2">
@@ -790,7 +845,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fya-ST-LWN">
-                                <rect key="frame" x="195.66666666666666" y="135" width="49" height="29"/>
+                                <rect key="frame" x="195.66666666666666" y="150" width="49" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -859,9 +914,9 @@
                             <constraint firstItem="fya-ST-LWN" firstAttribute="centerX" secondItem="eXl-Eu-oFY" secondAttribute="centerX" id="DVh-fh-WFV"/>
                             <constraint firstItem="RBj-Ub-iWe" firstAttribute="top" secondItem="eXl-Eu-oFY" secondAttribute="top" id="M8z-FC-4Dx"/>
                             <constraint firstItem="zym-ze-jxf" firstAttribute="trailing" secondItem="8Ql-G6-pqe" secondAttribute="trailing" constant="25" id="Mlg-4n-8cJ"/>
-                            <constraint firstItem="1dp-xL-7px" firstAttribute="top" secondItem="fya-ST-LWN" secondAttribute="bottom" constant="35" id="Q4o-O5-Ow3"/>
+                            <constraint firstItem="1dp-xL-7px" firstAttribute="top" secondItem="fya-ST-LWN" secondAttribute="bottom" constant="20" id="Q4o-O5-Ow3"/>
                             <constraint firstAttribute="bottom" secondItem="RBj-Ub-iWe" secondAttribute="bottom" id="RSw-Z2-qhI"/>
-                            <constraint firstItem="fya-ST-LWN" firstAttribute="top" secondItem="eXl-Eu-oFY" secondAttribute="top" constant="135" id="TIq-7I-Teq"/>
+                            <constraint firstItem="fya-ST-LWN" firstAttribute="top" secondItem="eXl-Eu-oFY" secondAttribute="top" constant="150" id="TIq-7I-Teq"/>
                             <constraint firstItem="RBj-Ub-iWe" firstAttribute="trailing" secondItem="eXl-Eu-oFY" secondAttribute="trailing" id="YhO-HG-1WI"/>
                             <constraint firstItem="8Ql-G6-pqe" firstAttribute="leading" secondItem="zym-ze-jxf" secondAttribute="leading" constant="25" id="YnK-Pm-mj7"/>
                             <constraint firstItem="zym-ze-jxf" firstAttribute="bottom" secondItem="DRY-vl-VPG" secondAttribute="bottom" constant="10" id="bZX-o8-W0d"/>
@@ -937,7 +992,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2V0-U0-N4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246.81818181818184" y="-3.1380753138075317"/>
+            <point key="canvasLocation" x="-1145" y="-3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iou-N9-Umz">
@@ -981,7 +1036,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

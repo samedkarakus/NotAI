@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 class TimerManager {
-    static let shared = TimerManager() // Singleton instance
+    static let shared = TimerManager()
     
     private var timer: Timer?
 
-    private init() {} // Başkalarının bu sınıfı direkt olarak init etmesini engeller
+    private init() {}
     
     // MARK: - Timer Functions
     func startTimer(for timeLabel: UILabel) {

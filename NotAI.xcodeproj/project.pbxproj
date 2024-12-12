@@ -95,8 +95,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		94D5580E2D062D7E00268595 /* Loading */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Loading; sourceTree = "<group>"; };
+		94D5580E2D062D7E00268595 /* Loading Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Loading Scene"; sourceTree = "<group>"; };
 		94EA7CF62D02F5DD00ED9CB7 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
+		94F17F4F2D0A1DAE0077C202 /* Learner Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Learner Scene"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,24 +159,25 @@
 		94DBED1D2CF907220042C49E /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				94D5580E2D062D7E00268595 /* Loading */,
-				94DBED462CF90E340042C49E /* Home */,
-				94EA7CF32D02F59200ED9CB7 /* Profile */,
-				94DBED1E2CF907340042C49E /* Note */,
-				94DBED3C2CF90E330042C49E /* Quiz */,
-				94DBED502CF90E4B0042C49E /* Result */,
+				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
+				94D5580E2D062D7E00268595 /* Loading Scene */,
+				94DBED462CF90E340042C49E /* Home Scene */,
+				94EA7CF32D02F59200ED9CB7 /* Profile Scene */,
+				94DBED1E2CF907340042C49E /* Note Scene */,
+				94DBED3C2CF90E330042C49E /* Quiz Scene */,
+				94DBED502CF90E4B0042C49E /* Result Scene */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		94DBED1E2CF907340042C49E /* Note */ = {
+		94DBED1E2CF907340042C49E /* Note Scene */ = {
 			isa = PBXGroup;
 			children = (
 				94DBED1F2CF907410042C49E /* Models */,
 				94DBED202CF907470042C49E /* Views */,
 				94DBED212CF9075B0042C49E /* ViewModels */,
 			);
-			path = Note;
+			path = "Note Scene";
 			sourceTree = "<group>";
 		};
 		94DBED1F2CF907410042C49E /* Models */ = {
@@ -264,14 +266,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		94DBED3C2CF90E330042C49E /* Quiz */ = {
+		94DBED3C2CF90E330042C49E /* Quiz Scene */ = {
 			isa = PBXGroup;
 			children = (
 				94DBED372CF90E330042C49E /* Models */,
 				94DBED392CF90E330042C49E /* Views */,
 				94DBED3B2CF90E330042C49E /* ViewModels */,
 			);
-			path = Quiz;
+			path = "Quiz Scene";
 			sourceTree = "<group>";
 		};
 		94DBED412CF90E340042C49E /* Models */ = {
@@ -298,14 +300,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		94DBED462CF90E340042C49E /* Home */ = {
+		94DBED462CF90E340042C49E /* Home Scene */ = {
 			isa = PBXGroup;
 			children = (
 				94DBED412CF90E340042C49E /* Models */,
 				94DBED432CF90E340042C49E /* Views */,
 				94DBED452CF90E340042C49E /* ViewModels */,
 			);
-			path = Home;
+			path = "Home Scene";
 			sourceTree = "<group>";
 		};
 		94DBED4B2CF90E4B0042C49E /* Models */ = {
@@ -330,14 +332,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		94DBED502CF90E4B0042C49E /* Result */ = {
+		94DBED502CF90E4B0042C49E /* Result Scene */ = {
 			isa = PBXGroup;
 			children = (
 				94DBED4B2CF90E4B0042C49E /* Models */,
 				94DBED4D2CF90E4B0042C49E /* Views */,
 				94DBED4F2CF90E4B0042C49E /* ViewModels */,
 			);
-			path = Result;
+			path = "Result Scene";
 			sourceTree = "<group>";
 		};
 		94E837DD2CB9AE7C00EBC9D4 /* View */ = {
@@ -366,14 +368,14 @@
 			path = NotAI;
 			sourceTree = "<group>";
 		};
-		94EA7CF32D02F59200ED9CB7 /* Profile */ = {
+		94EA7CF32D02F59200ED9CB7 /* Profile Scene */ = {
 			isa = PBXGroup;
 			children = (
 				94EA7CF42D02F5AB00ED9CB7 /* Models */,
 				94EA7CF52D02F5B100ED9CB7 /* Views */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
 			);
-			path = Profile;
+			path = "Profile Scene";
 			sourceTree = "<group>";
 		};
 		94EA7CF42D02F5AB00ED9CB7 /* Models */ = {
@@ -431,8 +433,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				94D5580E2D062D7E00268595 /* Loading */,
+				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
+				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
 			);
 			name = NotAI;
 			productName = zap;

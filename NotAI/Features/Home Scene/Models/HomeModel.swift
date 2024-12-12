@@ -12,4 +12,3 @@ struct HomeModel {
     var streakCount: Int
     var isLearning: Bool
 }
-
