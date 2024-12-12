@@ -95,9 +95,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		948D9A7E2D0B42000070462A /* QR Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "QR Scene"; sourceTree = "<group>"; };
 		94D5580E2D062D7E00268595 /* Loading Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Loading Scene"; sourceTree = "<group>"; };
 		94EA7CF62D02F5DD00ED9CB7 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
 		94F17F4F2D0A1DAE0077C202 /* Learner Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Learner Scene"; sourceTree = "<group>"; };
+		94FEA6C62D0B7A3400FBB4F0 /* SignIn Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "SignIn Scene"; sourceTree = "<group>"; };
+		94FEA6C72D0B7A3F00FBB4F0 /* SignUp Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "SignUp Scene"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,9 @@
 		94DBED1D2CF907220042C49E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				94FEA6C72D0B7A3F00FBB4F0 /* SignUp Scene */,
+				94FEA6C62D0B7A3400FBB4F0 /* SignIn Scene */,
+				948D9A7E2D0B42000070462A /* QR Scene */,
 				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
 				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94DBED462CF90E340042C49E /* Home Scene */,
@@ -433,9 +439,12 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				948D9A7E2D0B42000070462A /* QR Scene */,
 				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
 				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
+				94FEA6C62D0B7A3400FBB4F0 /* SignIn Scene */,
+				94FEA6C72D0B7A3F00FBB4F0 /* SignUp Scene */,
 			);
 			name = NotAI;
 			productName = zap;

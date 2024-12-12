@@ -22,8 +22,6 @@ class LearnerCell: UITableViewCell {
         makeButtonCircular(view: learnerBubbleView)
         learnerBubbleView.layer.cornerRadius = 10
         addBlurredBackground(learnerBubbleView)
-        LearnerView.backgroundColor = .clear
-        contentView.backgroundColor = .clear
         self.backgroundColor = .clear
     }
 
@@ -32,5 +30,4 @@ class LearnerCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
