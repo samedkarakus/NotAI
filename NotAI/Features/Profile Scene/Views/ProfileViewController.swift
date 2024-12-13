@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var editButtonView: UIButton!
     @IBOutlet weak var memojiView: UIView!
     @IBOutlet weak var settingsTableView: UITableView! // IBOutlet olan tableView
@@ -24,6 +25,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         addBlurredBackground(memojiView)
         makeCircular(view: editButtonView)
         addBlurredBackgroundToPressedButton(editButtonView)
+        configureQRCode()
         
         navigationItem.title = "Ayarlar"
         
@@ -39,6 +41,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         // Back button text'ini gizle
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for: .default)
+    }
+    
+    private func configureQRCode() {
+        let profileIdentifier = "www.instagram.com"
+        let qrCodeSize = qrCodeImageView.frame.size
+        qrCodeImageView.image = viewModel.generateProfileQRCode(for: profileIdentifier, size: qrCodeSize)
     }
     
     // TableView'ı yapılandırma

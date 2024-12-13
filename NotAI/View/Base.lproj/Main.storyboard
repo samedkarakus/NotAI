@@ -504,6 +504,7 @@
                     <connections>
                         <outlet property="editButtonView" destination="ENl-jK-ncN" id="g0h-Zx-0xd"/>
                         <outlet property="memojiView" destination="DQE-bd-O6W" id="o8R-JY-ekr"/>
+                        <outlet property="qrCodeImageView" destination="MuU-ob-fxE" id="cnk-5J-dFo"/>
                         <outlet property="settingsTableView" destination="ODH-Qz-Xdl" id="ebh-c8-vkx"/>
                     </connections>
                 </viewController>
@@ -591,6 +592,7 @@
                     </view>
                     <connections>
                         <outlet property="QrCodeView" destination="434-4M-vZO" id="6jC-6E-7nW"/>
+                        <outlet property="createdQrCode" destination="T8K-cE-aCx" id="fQQ-Cc-iMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7e-OP-kng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1265,7 +1267,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,11 +9,19 @@ import UIKit
 
 class QRViewController: UIViewController {
     
+    @IBOutlet weak var createdQrCode: UIImageView!
     @IBOutlet weak var QrCodeView: UIView!
+    
+    private var viewModel: QRViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+        setupViewModel()
+    }
+    
+    private func setupUI() {
         let viewsToMakeCircular: [UIView] = [QrCodeView]
         viewsToMakeCircular.forEach { makeCircular(view: $0) }
         QrCodeView.layer.cornerRadius = 10
@@ -22,15 +30,10 @@ class QRViewController: UIViewController {
         viewsToAddBlurredBackgroundToPressed.forEach { addBlurredBackgroundToPressedButton($0) }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupViewModel() {
+        viewModel = QRViewModel(qrData: "www.youtube.com")
+        if let qrImage = viewModel.getQRCodeImage(for: createdQrCode.frame.size) {
+            createdQrCode.image = qrImage
+        }
     }
-    */
-
 }

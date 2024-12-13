@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ProfileViewModel {
     
@@ -39,5 +40,9 @@ class ProfileViewModel {
                 ProfileItem(icon: "iphone.and.arrow.right.outward", title: "Çıkış Yap")
             ]
         ]
+    }
+    
+    func generateProfileQRCode(for text: String, size: CGSize) -> UIImage? {
+        return QRCodeGenerator.shared.generateQRCode(from: text, size: size)
     }
 }
