@@ -38,7 +38,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doğrusal Diferansiyel Denklemler" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yG3-U6-kbO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doğrusal Diferansiyel Denklemler" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yG3-U6-kbO" userLabel="Learner Topic">
                                                 <rect key="frame" x="0.0" y="21" width="178" height="28.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,11 +98,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="LearnerView" destination="H2p-sc-9uM" id="O2m-BP-kjI"/>
                 <outlet property="learnerBubbleView" destination="TM1-Se-e7Z" id="ooU-2O-4B5"/>
                 <outlet property="learnerEmoji" destination="evm-bC-9I3" id="Z3Y-Ux-6jK"/>
+                <outlet property="learnerTopic" destination="yG3-U6-kbO" id="XKh-QJ-pxX"/>
                 <outlet property="learnerUserName" destination="mTn-o7-4jY" id="JJe-cW-p2x"/>
-                <outlet property="leernerTopic" destination="yG3-U6-kbO" id="Bh4-Sm-b43"/>
+                <outlet property="learnerView" destination="H2p-sc-9uM" id="O2m-BP-kjI"/>
                 <outlet property="similarityPercentage" destination="6VF-8b-veH" id="qR3-IV-9iC"/>
             </connections>
             <point key="canvasLocation" x="155.72519083969465" y="38.732394366197184"/>

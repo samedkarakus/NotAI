@@ -6,53 +6,86 @@
 //
 
 import UIKit
-import AuthenticationServices
 
-class SignInViewController: UIViewController, ASAuthorizationControllerDelegate {
+class SignInViewController: UIViewController {
 
-    @IBOutlet weak var emailInput: UITextField!
+    @IBOutlet weak var adImageView: UIImageView!
+    @IBOutlet weak var adGrayView: UIView!
+    @IBOutlet weak var adView: UIView!
+    @IBOutlet weak var featuresView: UIView!
+    
+    @IBOutlet weak var onboardingLabel: UILabel!
+    
+    @IBOutlet weak var progressViewTrailing: UIProgressView!
+    @IBOutlet weak var progressViewCenter: UIProgressView!
+    @IBOutlet weak var progressViewLeading: UIProgressView!
+    
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var appleSignInButton: UIButton!
     @IBOutlet weak var googleSignInButton: UIButton!
+    
+    @IBOutlet weak var infoTextView: UITextView!
+    
+    var step: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailInput.backgroundColor = .clear
-        addBlurredBackground(emailInput)
-        makeCircular(view: emailInput)
-        emailInput.layer.cornerRadius = 10
+        progressViewLeading.progress = 0.0
+        progressViewCenter.progress = 0.0
+        progressViewTrailing.progress = 0.0
         
-        appleSignInButton.addTarget(self, action: #selector(handleAppleSignIn), for: .touchUpInside)
+        let viewsToMakeCircular: [UIView] = [adView, featuresView]
+        let viewsToBlur: [UIView] = [adView, featuresView]
+        
+        viewsToMakeCircular.forEach { makeCircular(view: $0) }
+        viewsToBlur.forEach { addBlurredBackgroundToPressedButton($0) }
+        
+        adView.layer.cornerRadius = 10
+        featuresView.layer.cornerRadius = 10
+        adGrayView.layer.cornerRadius = 8
+        
+        configureTextView()
+        deviceUserInterfaceIdiom(leading: leadingConstraint, trailing: trailingConstraint)
     }
-
-    @objc func handleAppleSignIn() {
-        let request = ASAuthorizationAppleIDProvider().createRequest()
-        request.requestedScopes = [.fullName, .email]
-
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-        authorizationController.delegate = self
-        authorizationController.performRequests()
-    }
-
-    // ASAuthorizationControllerDelegate metodlarını burada implement edebilirsiniz
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            let userIdentifier = appleIDCredential.user
-            let fullName = appleIDCredential.fullName
-            let email = appleIDCredential.email
-            
-            // Giriş bilgilerini işleyin
-            print("User ID: \(userIdentifier)")
-            if let fullName = fullName {
-                print("Full Name: \(fullName)")
-            }
-            if let email = email {
-                print("Email: \(email)")
-            }
+    
+    func deviceUserInterfaceIdiom(leading: NSLayoutConstraint, trailing: NSLayoutConstraint) {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            leading.constant = 200
+            trailing.constant = 200
         }
     }
+    
+    func configureTextView() {
+        let fullText = "Kayıt olarak Hizmet Şartlarımızı ve Gizlilik Politikamızı kabul ettiğinizi beyan etmiş olursunuz."
+        let hizmetSartlariText = "Hizmet Şartlarımızı"
+        let gizlilikPolitikasiText = "Gizlilik Politikamızı"
 
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("Authorization failed: \(error.localizedDescription)")
+        let attributedString = NSMutableAttributedString(string: fullText)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.black.withAlphaComponent(0.4), range: NSRange(location: 0, length: fullText.count))
+
+        // Hizmet Şartlarımızı için link
+        if let hizmetRange = fullText.range(of: hizmetSartlariText) {
+            let nsRange = NSRange(hizmetRange, in: fullText)
+            attributedString.addAttribute(.link, value: "https://example.com/hizmet-sartlari", range: nsRange)
+        }
+
+        // Gizlilik Politikamızı için link
+        if let gizlilikRange = fullText.range(of: gizlilikPolitikasiText) {
+            let nsRange = NSRange(gizlilikRange, in: fullText)
+            attributedString.addAttribute(.link, value: "https://example.com/gizlilik-politikasi", range: nsRange)
+        }
+
+        // UITextView ayarları
+        infoTextView.attributedText = attributedString
+        infoTextView.textAlignment = .center
+        infoTextView.isEditable = false
+        infoTextView.isSelectable = true
+        infoTextView.dataDetectorTypes = .link
+        infoTextView.linkTextAttributes = [
+            .foregroundColor: UIColor.black
+        ]
     }
 }

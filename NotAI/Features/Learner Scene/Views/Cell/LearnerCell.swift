@@ -9,11 +9,11 @@ import UIKit
 
 class LearnerCell: UITableViewCell {
 
-    @IBOutlet weak var LearnerView: UIView!
+    @IBOutlet weak var learnerView: UIView!
     @IBOutlet weak var learnerBubbleView: UIView!
     @IBOutlet weak var learnerEmoji: UIImageView!
     @IBOutlet weak var learnerUserName: UILabel!
-    @IBOutlet weak var leernerTopic: UILabel!
+    @IBOutlet weak var learnerTopic: UILabel!
     @IBOutlet weak var similarityPercentage: UILabel!
     
     

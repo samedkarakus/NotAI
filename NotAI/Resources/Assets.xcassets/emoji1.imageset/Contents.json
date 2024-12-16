@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "emoji1.jpg",
+      "filename" : "emoji1@3x@3x.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "emoji1@2x.jpg",
+      "filename" : "emoji1@3x@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

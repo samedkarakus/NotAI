@@ -67,7 +67,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             gradientLayer.frame = self.gradientView.bounds
             
             self.gradientView.layer.insertSublayer(gradientLayer, at: 0)
-            getTextFromGeneratedNote()
             
             isGradientAdded = true
         }
