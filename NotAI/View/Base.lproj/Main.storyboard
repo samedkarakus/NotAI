@@ -111,14 +111,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Sqm-od-pqc">
                                                 <rect key="frame" x="25" y="65.000000000000028" width="265" height="185"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Not 60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5B-Me-DOv">
-                                                        <rect key="frame" x="104.33333333333336" y="0.0" width="56.666666666666671" height="18"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#Not 60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5B-Me-DOv">
+                                                        <rect key="frame" x="104.33333333333336" y="0.0" width="56.666666666666671" height="19"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homojen Diferansiyel Denklemler" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="6uK-fZ-uNl">
-                                                        <rect key="frame" x="0.0" y="30" width="265" height="125"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Homojen Diferansiyel Denklemler" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="6uK-fZ-uNl">
+                                                        <rect key="frame" x="0.0" y="31" width="265" height="125"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="265" id="LMW-fc-3qL"/>
                                                             <constraint firstAttribute="height" constant="125" id="ZKQ-VW-2iA"/>
@@ -127,9 +127,9 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kalan Süre: --.--.--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-LH-De0">
-                                                        <rect key="frame" x="67" y="167" width="131" height="18"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kalan Süre: --.--.--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-LH-De0">
+                                                        <rect key="frame" x="70.666666666666657" y="168" width="123.66666666666666" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -614,13 +614,13 @@
                                 <rect key="frame" x="20" y="135" width="353" height="717"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Designing for minimal physical strain" translatesAutoresizingMaskIntoConstraints="NO" id="HY9-ud-LkH">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="415"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="353.66666666666669"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuh-bi-8Sv">
-                                        <rect key="frame" x="0.0" y="425" width="353" height="292"/>
+                                        <rect key="frame" x="0.0" y="363.66666666666674" width="353" height="353.33333333333326"/>
                                         <string key="text">The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!The "Cannot find" error in Swift typically occurs when you're trying to access a function, variable, or type that the compiler cannot find in the current scope. Here are some common causes of this issue and how to resolve them.If you check all the above points and you’re still getting the"Cannot find" error, please provide more details about your project structure, the specific code that is causing the issue, and any other relevant context so I can assist you further!</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>

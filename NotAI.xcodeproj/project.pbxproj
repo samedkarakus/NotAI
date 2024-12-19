@@ -14,6 +14,8 @@
 		943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */; };
 		945368982CBA87E3003DC7DB /* ShadowView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 945368962CBA87E3003DC7DB /* ShadowView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9489B7372D14599B0080466F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9489B7362D14599B0080466F /* GoogleService-Info.plist */; };
+		9489B7592D1477AE0080466F /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489B7582D1477AE0080466F /* FileManagerService.swift */; };
+		9489B75B2D1477CB0080466F /* TextRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489B75A2D1477CB0080466F /* TextRecognitionService.swift */; };
 		949321122CE6A89C00C8666C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321112CE6A89C00C8666C /* Constants.swift */; };
 		949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321132CF3D2B100C8666C /* ResultViewController.swift */; };
 		94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED112CF8DE3F0042C49E /* TimerManager.swift */; };
@@ -22,7 +24,7 @@
 		94DBED252CF907E40042C49E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED242CF907E10042C49E /* APIClient.swift */; };
 		94DBED282CF908140042C49E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED272CF908140042C49E /* AppCoordinator.swift */; };
 		94DBED2A2CF908240042C49E /* NoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED292CF908240042C49E /* NoteCoordinator.swift */; };
-		94DBED312CF908AD0042C49E /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED302CF908AD0042C49E /* NoteModel.swift */; };
+		94DBED312CF908AD0042C49E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED302CF908AD0042C49E /* Note.swift */; };
 		94DBED332CF908C80042C49E /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED322CF908C80042C49E /* NoteViewModel.swift */; };
 		94DBED552CF90F6D0042C49E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED542CF90F6D0042C49E /* HomeModel.swift */; };
 		94DBED572CF90F910042C49E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED562CF90F910042C49E /* HomeViewModel.swift */; };
@@ -66,6 +68,8 @@
 		9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		945368962CBA87E3003DC7DB /* ShadowView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShadowView.framework; path = Carthage/Build/Mac/ShadowView.framework; sourceTree = "<group>"; };
 		9489B7362D14599B0080466F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9489B7582D1477AE0080466F /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		9489B75A2D1477CB0080466F /* TextRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionService.swift; sourceTree = "<group>"; };
 		949321112CE6A89C00C8666C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		949321132CF3D2B100C8666C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		94DBED112CF8DE3F0042C49E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		94DBED242CF907E10042C49E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		94DBED272CF908140042C49E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		94DBED292CF908240042C49E /* NoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCoordinator.swift; sourceTree = "<group>"; };
-		94DBED302CF908AD0042C49E /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		94DBED302CF908AD0042C49E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		94DBED322CF908C80042C49E /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		94DBED542CF90F6D0042C49E /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		94DBED562CF90F910042C49E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -207,7 +211,9 @@
 		94DBED1F2CF907410042C49E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				94DBED302CF908AD0042C49E /* NoteModel.swift */,
+				94DBED302CF908AD0042C49E /* Note.swift */,
+				9489B7582D1477AE0080466F /* FileManagerService.swift */,
+				9489B75A2D1477CB0080466F /* TextRecognitionService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -589,12 +595,13 @@
 				949321122CE6A89C00C8666C /* Constants.swift in Sources */,
 				94DBED572CF90F910042C49E /* HomeViewModel.swift in Sources */,
 				94E837EA2CB9AE7C00EBC9D4 /* NoteViewController.swift in Sources */,
-				94DBED312CF908AD0042C49E /* NoteModel.swift in Sources */,
+				94DBED312CF908AD0042C49E /* Note.swift in Sources */,
 				94DBED282CF908140042C49E /* AppCoordinator.swift in Sources */,
 				9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */,
 				94DBED5C2CF9E9BF0042C49E /* QuizGenerator.swift in Sources */,
 				94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */,
 				94EA7CFE2D03286100ED9CB7 /* ProfileItem.swift in Sources */,
+				9489B75B2D1477CB0080466F /* TextRecognitionService.swift in Sources */,
 				942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */,
 				94DBED252CF907E40042C49E /* APIClient.swift in Sources */,
 				9402DEEA2D0C7AF4002EA923 /* QRCodeGenerator.swift in Sources */,
@@ -602,6 +609,7 @@
 				94DBED332CF908C80042C49E /* NoteViewModel.swift in Sources */,
 				9438105C2CC567E500AC74B0 /* Question.swift in Sources */,
 				94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */,
+				9489B7592D1477AE0080466F /* FileManagerService.swift in Sources */,
 				94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */,
 				94EA7CF82D02F64B00ED9CB7 /* ProfileViewController.swift in Sources */,
 				943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */,

@@ -1,25 +1,60 @@
 //
-//  NoteViewModel.swift
+//  AppCoordinator.swift
 //  NotAI
 //
 //  Created by Samed Karakuş on 28.11.2024.
 //
 
 import Foundation
+import UIKit
 
 class NoteViewModel {
     
-    var noteTitle: String
-    var noteContent: String
-
-    init(noteTitle: String, noteContent: String) {
-        self.noteTitle = noteTitle
-        self.noteContent = noteContent
+    private var note: Note?
+    private let fileManagerService = FileManagerService.shared
+    private let textRecognitionService = TextRecognitionService.self
+    
+    var onTextUpdate: ((String) -> Void)?
+    
+    var title: String {
+        return note?.title ?? ""
     }
-
-    func loadData() {
-        // Verilerin yüklenmesi gibi işlemleri burada yapabilirsiniz
+    
+    var body: String {
+        return note?.body ?? ""
+    }
+    
+    var createdDate: Date {
+        return note?.createdDate ?? Date()
+    }
+    
+    init(note: Note? = nil) {
+        if let note = note {
+            self.note = note
+        } else {
+            self.note = Note(title: "", body: "", createdDate: Date())
+        }
+    }
+    
+    func saveNote(title: String, body: String) {
+        self.note?.title = title
+        self.note?.body = body
+    }
+    
+    func loadNote() -> Note? {
+        return note
+    }
+    
+    func processImage(image: UIImage) {
+        fileManagerService.extractTextFromImage(image: image) { [weak self] text in
+            guard let text = text else { return }
+            self?.onTextUpdate?(text)
+        }
+    }
+    
+    func processPDF(url: URL) {
+        if let text = fileManagerService.extractTextFromPDF(url: url) {
+            onTextUpdate?(text)
+        }
     }
 }
-
-

@@ -4,6 +4,8 @@
 //
 //  Created by Samed Karakuş on 10.10.2024.
 //
+
+
 import UIKit
 import PDFKit
 import MobileCoreServices
@@ -32,7 +34,12 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         self.navigationItem.setHidesBackButton(true, animated: true)
         setupTextViews()
         setupButtons()
-        viewModel?.loadData()
+        viewModel?.loadNote()
+        
+        viewModel = NoteViewModel()
+        viewModel?.onTextUpdate = { [weak self] text in
+            self?.noteBodyTextView.text = text
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,22 +95,21 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     
     @IBAction func photoBtnPressed(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Fotoğraf Seç", message: "Fotoğraf çek veya galeriden seç", preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Kamerayı Aç", style: .default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction(title: "Kamerayı Aç", style: .default, handler: { _ in
             self.openCamera()
         }))
-        actionSheet.addAction(UIAlertAction(title: "Galeriden Seç", style: .default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction(title: "Galeriden Seç", style: .default, handler: { _ in
             self.openGallery()
         }))
-        actionSheet.addAction(UIAlertAction(title: "İptal", style: .cancel, handler: nil))
-        self.present(actionSheet, animated: true, completion: nil)
+        actionSheet.addAction(UIAlertAction(title: "İptal", style: .cancel))
+        self.present(actionSheet, animated: true)
     }
-    
-    
+
     @IBAction func addFileBtnPressed(_ sender: UIButton) {
         let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.pdf], asCopy: true)
         documentPicker.delegate = self
         documentPicker.allowsMultipleSelection = false
-        present(documentPicker, animated: true, completion: nil)
+        present(documentPicker, animated: true)
     }
     
     func textViewDidChange(_ textView: UITextView) {
@@ -143,17 +149,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             let imagePickerController = UIImagePickerController()
             imagePickerController.delegate = self
             imagePickerController.sourceType = .camera
-            imagePickerController.cameraCaptureMode = .photo
-            imagePickerController.cameraDevice = .rear
-            imagePickerController.showsCameraControls = true
-            imagePickerController.allowsEditing = false
-            
-            imagePickerController.cameraViewTransform = CGAffineTransform.identity
-            present(imagePickerController, animated: true, completion: nil)
-            textViewDidBeginEditing(noteBodyTextView)
-            
-        } else {
-            print("Kamera kullanılamıyor.")
+            present(imagePickerController, animated: true)
         }
     }
     
@@ -162,19 +158,18 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
+            present(imagePicker, animated: true)
         }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let editedImage = info[.editedImage] as? UIImage {
-            TextRecognition.recognizeText(in: editedImage, textTo: noteBodyTextView)
-        } else if let originalImage = info[.originalImage] as? UIImage {
-            TextRecognition.recognizeText(in: originalImage, textTo: noteBodyTextView)
+        if let image = info[.originalImage] as? UIImage {
+            viewModel?.processImage(image: image)
+            noteBodyTextView.textColor = .white
         }
-        picker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true)
     }
+
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
@@ -201,48 +196,13 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         }
     }
     
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]/*, textTo textView: UITextView*/) {
-        guard let selectedURL = urls.first else { return }
-        
-        do {
-            let fileManager = FileManager.default
-            let tempDirectory = fileManager.temporaryDirectory
-            let tempFileURL = tempDirectory.appendingPathComponent(selectedURL.lastPathComponent)
-            
-            if fileManager.fileExists(atPath: tempFileURL.path) {
-                try fileManager.removeItem(at: tempFileURL)
-            }
-            try fileManager.copyItem(at: selectedURL, to: tempFileURL)
-            
-            if let pdfDocument = PDFDocument(url: tempFileURL) {
-                var fullText = ""
-                
-                for i in 0..<pdfDocument.pageCount {
-                    if let page = pdfDocument.page(at: i), let pageText = page.string {
-                        fullText += pageText
-                    }
-                }
-                
-                DispatchQueue.main.async {
-                    self.textViewDidBeginEditing(self.noteBodyTextView)
-                    self.noteBodyTextView.text = fullText
-                }
-            } else {
-                print("PDF dosyası açılamadı.")
-            }
-        } catch {
-            print("Dosya kopyalanamadı: \(error)")
-        }
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let url = urls.first else { return }
+        viewModel?.processPDF(url: url)
+        noteBodyTextView.textColor = .white
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         print("Kullanıcı dosya seçim ekranını iptal etti.")
-    }
-    
-    func getTextFromGeneratedNote() -> String {
-        if noteBodyTextView.text == "" {
-            confirmBtn.isHidden = true
-        }
-        return noteBodyTextView.text
     }
 }
