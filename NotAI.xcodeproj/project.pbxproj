@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		9438105C2CC567E500AC74B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105B2CC567E500AC74B0 /* Question.swift */; };
 		943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */; };
 		945368982CBA87E3003DC7DB /* ShadowView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 945368962CBA87E3003DC7DB /* ShadowView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9489B7372D14599B0080466F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9489B7362D14599B0080466F /* GoogleService-Info.plist */; };
 		949321122CE6A89C00C8666C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321112CE6A89C00C8666C /* Constants.swift */; };
 		949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321132CF3D2B100C8666C /* ResultViewController.swift */; };
 		94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED112CF8DE3F0042C49E /* TimerManager.swift */; };
@@ -21,8 +22,6 @@
 		94DBED252CF907E40042C49E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED242CF907E10042C49E /* APIClient.swift */; };
 		94DBED282CF908140042C49E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED272CF908140042C49E /* AppCoordinator.swift */; };
 		94DBED2A2CF908240042C49E /* NoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED292CF908240042C49E /* NoteCoordinator.swift */; };
-		94DBED2D2CF908460042C49E /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED2C2CF908460042C49E /* AppColors.swift */; };
-		94DBED2F2CF908500042C49E /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED2E2CF908500042C49E /* AppFonts.swift */; };
 		94DBED312CF908AD0042C49E /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED302CF908AD0042C49E /* NoteModel.swift */; };
 		94DBED332CF908C80042C49E /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED322CF908C80042C49E /* NoteViewModel.swift */; };
 		94DBED552CF90F6D0042C49E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED542CF90F6D0042C49E /* HomeModel.swift */; };
@@ -66,6 +65,7 @@
 		9438105B2CC567E500AC74B0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		945368962CBA87E3003DC7DB /* ShadowView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShadowView.framework; path = Carthage/Build/Mac/ShadowView.framework; sourceTree = "<group>"; };
+		9489B7362D14599B0080466F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		949321112CE6A89C00C8666C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		949321132CF3D2B100C8666C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		94DBED112CF8DE3F0042C49E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
@@ -74,8 +74,6 @@
 		94DBED242CF907E10042C49E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		94DBED272CF908140042C49E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		94DBED292CF908240042C49E /* NoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCoordinator.swift; sourceTree = "<group>"; };
-		94DBED2C2CF908460042C49E /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
-		94DBED2E2CF908500042C49E /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		94DBED302CF908AD0042C49E /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		94DBED322CF908C80042C49E /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		94DBED542CF90F6D0042C49E /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
@@ -97,12 +95,31 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		948D9A7E2D0B42000070462A /* QR Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "QR Scene"; sourceTree = "<group>"; };
-		94D5580E2D062D7E00268595 /* Loading Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Loading Scene"; sourceTree = "<group>"; };
-		94EA7CF62D02F5DD00ED9CB7 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
-		94F17F4F2D0A1DAE0077C202 /* Learner Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Learner Scene"; sourceTree = "<group>"; };
-		94FEA6C62D0B7A3400FBB4F0 /* SignIn Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "SignIn Scene"; sourceTree = "<group>"; };
-		94FEA6C72D0B7A3F00FBB4F0 /* SignUp Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "SignUp Scene"; sourceTree = "<group>"; };
+		948D9A7E2D0B42000070462A /* QR Scene */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "QR Scene";
+			sourceTree = "<group>";
+		};
+		94D5580E2D062D7E00268595 /* Loading Scene */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Loading Scene";
+			sourceTree = "<group>";
+		};
+		94EA7CF62D02F5DD00ED9CB7 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94F17F4F2D0A1DAE0077C202 /* Learner Scene */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Learner Scene";
+			sourceTree = "<group>";
+		};
+		94FEA6C62D0B7A3400FBB4F0 /* Onboarding Scene */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Onboarding Scene";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +181,7 @@
 		94DBED1D2CF907220042C49E /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				94FEA6C72D0B7A3F00FBB4F0 /* SignUp Scene */,
-				94FEA6C62D0B7A3400FBB4F0 /* SignIn Scene */,
+				94FEA6C62D0B7A3400FBB4F0 /* Onboarding Scene */,
 				948D9A7E2D0B42000070462A /* QR Scene */,
 				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
 				94D5580E2D062D7E00268595 /* Loading Scene */,
@@ -244,8 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				949321112CE6A89C00C8666C /* Constants.swift */,
-				94DBED2C2CF908460042C49E /* AppColors.swift */,
-				94DBED2E2CF908500042C49E /* AppFonts.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -373,6 +387,7 @@
 				94E837DD2CB9AE7C00EBC9D4 /* View */,
 				94DBED2B2CF9083B0042C49E /* Constants */,
 				94E837E02CB9AE7C00EBC9D4 /* Info.plist */,
+				9489B7362D14599B0080466F /* GoogleService-Info.plist */,
 			);
 			path = NotAI;
 			sourceTree = "<group>";
@@ -436,6 +451,7 @@
 				9408AD3D2CA9BECF00AB70D3 /* Resources */,
 				945368992CBA87E3003DC7DB /* Embed Frameworks */,
 				433F07959C8375478A19A3BA /* [CP] Embed Pods Frameworks */,
+				8D5505974850FB4C877B6757 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -446,8 +462,7 @@
 				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
 				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
-				94FEA6C62D0B7A3400FBB4F0 /* SignIn Scene */,
-				94FEA6C72D0B7A3F00FBB4F0 /* SignUp Scene */,
+				94FEA6C62D0B7A3400FBB4F0 /* Onboarding Scene */,
 			);
 			name = NotAI;
 			productName = zap;
@@ -471,7 +486,6 @@
 				};
 			};
 			buildConfigurationList = 9408AD3A2CA9BECF00AB70D3 /* Build configuration list for PBXProject "NotAI" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -479,6 +493,7 @@
 				Base,
 			);
 			mainGroup = 9408AD362CA9BECF00AB70D3;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 9408AD402CA9BECF00AB70D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -494,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94E837E42CB9AE7C00EBC9D4 /* LaunchScreen.storyboard in Resources */,
+				9489B7372D14599B0080466F /* GoogleService-Info.plist in Resources */,
 				94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */,
 				94E837E62CB9AE7C00EBC9D4 /* Assets.xcassets in Resources */,
 			);
@@ -517,6 +533,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D5505974850FB4C877B6757 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9C91DCEBBB5F9839EA49C6D /* [CP] Check Pods Manifest.lock */ = {
@@ -562,7 +595,6 @@
 				94DBED5C2CF9E9BF0042C49E /* QuizGenerator.swift in Sources */,
 				94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */,
 				94EA7CFE2D03286100ED9CB7 /* ProfileItem.swift in Sources */,
-				94DBED2D2CF908460042C49E /* AppColors.swift in Sources */,
 				942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */,
 				94DBED252CF907E40042C49E /* APIClient.swift in Sources */,
 				9402DEEA2D0C7AF4002EA923 /* QRCodeGenerator.swift in Sources */,
@@ -570,7 +602,6 @@
 				94DBED332CF908C80042C49E /* NoteViewModel.swift in Sources */,
 				9438105C2CC567E500AC74B0 /* Question.swift in Sources */,
 				94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */,
-				94DBED2F2CF908500042C49E /* AppFonts.swift in Sources */,
 				94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */,
 				94EA7CF82D02F64B00ED9CB7 /* ProfileViewController.swift in Sources */,
 				943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */,
@@ -623,6 +654,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -661,6 +693,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

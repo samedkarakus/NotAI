@@ -16,9 +16,9 @@ class TimerManager {
     private init() {}
     
     // MARK: - Timer Functions
-    func startTimer(for timeLabel: UILabel) {
+    func startTimer(for timeLabel: UILabel, foreword: String) {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            self.updateTimeLabel(for: timeLabel)
+            self.updateTimeLabel(for: timeLabel, foreword: foreword)
         }
     }
 
@@ -27,7 +27,7 @@ class TimerManager {
         timer = nil
     }
 
-    func updateTimeLabel(for timeLabel: UILabel) {
+    func updateTimeLabel(for timeLabel: UILabel, foreword: String) {
         let date = Date()
         let calendar = Calendar.current
         let midnight = calendar.startOfDay(for: date).addingTimeInterval(24 * 60 * 60)
@@ -37,6 +37,6 @@ class TimerManager {
         let minutesLeft = (Int(timeInterval) % 3600) / 60
         let secondsLeft = Int(timeInterval) % 60
 
-        timeLabel.text = String(format: "%02d:%02d:%02d", hoursLeft, minutesLeft, secondsLeft)
+        timeLabel.text = String(format: "\(foreword)%02d:%02d:%02d", hoursLeft, minutesLeft, secondsLeft)
     }
 }

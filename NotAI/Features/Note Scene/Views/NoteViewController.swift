@@ -29,11 +29,20 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TimerManager.shared.startTimer(for: timeLeftLabel)
         self.navigationItem.setHidesBackButton(true, animated: true)
         setupTextViews()
         setupButtons()
         viewModel?.loadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        TimerManager.shared.startTimer(for: timeLeftLabel, foreword: "")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        TimerManager.shared.stopTimer()
     }
 
     private func setupTextViews() {
@@ -96,8 +105,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         documentPicker.allowsMultipleSelection = false
         present(documentPicker, animated: true, completion: nil)
     }
-    
-    
     
     func textViewDidChange(_ textView: UITextView) {
         let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))

@@ -25,7 +25,7 @@ class LoadingViewController: UIViewController {
     }
     
     private func transitionToMainScreen() {
-        if let mainVC = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") {
+        if let mainVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
             mainVC.modalPresentationStyle = .fullScreen
             present(mainVC, animated: true, completion: nil)
         }

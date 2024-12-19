@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xpe-Pv-AI4" userLabel="Title View">
-                                <rect key="frame" x="80" y="125.00000000000001" width="233.33333333333337" height="51.666666666666671"/>
+                                <rect key="frame" x="80.000000000000014" y="125.00000000000001" width="233.33333333333337" height="51.666666666666671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba Samed," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STA-gC-fSW">
                                         <rect key="frame" x="0.0" y="0.0" width="233.33333333333334" height="18"/>
@@ -1123,10 +1123,10 @@
             </objects>
             <point key="canvasLocation" x="-1354" y="-3"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Onboarding View Controller-->
         <scene sceneID="Vyp-3d-O8g">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="4Q4-MD-ALB" customClass="SignInViewController" customModule="NotAI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="4Q4-MD-ALB" customClass="OnboardingViewController" customModule="NotAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="88F-Cb-coe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
