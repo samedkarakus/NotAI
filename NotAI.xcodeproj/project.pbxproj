@@ -29,7 +29,6 @@
 		94DBED552CF90F6D0042C49E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED542CF90F6D0042C49E /* HomeModel.swift */; };
 		94DBED572CF90F910042C49E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED562CF90F910042C49E /* HomeViewModel.swift */; };
 		94DBED5A2CF910200042C49E /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED592CF910200042C49E /* UIHelpers.swift */; };
-		94DBED5C2CF9E9BF0042C49E /* QuizGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED5B2CF9E9BF0042C49E /* QuizGenerator.swift */; };
 		94E837E42CB9AE7C00EBC9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DA2CB9AE7C00EBC9D4 /* LaunchScreen.storyboard */; };
 		94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DC2CB9AE7C00EBC9D4 /* Main.storyboard */; };
 		94E837E62CB9AE7C00EBC9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */; };
@@ -83,7 +82,6 @@
 		94DBED542CF90F6D0042C49E /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		94DBED562CF90F910042C49E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		94DBED592CF910200042C49E /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
-		94DBED5B2CF9E9BF0042C49E /* QuizGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGenerator.swift; sourceTree = "<group>"; };
 		94E837D52CB9AE7C00EBC9D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94E837D62CB9AE7C00EBC9D4 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		94E837D92CB9AE7C00EBC9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				9438105B2CC567E500AC74B0 /* Question.swift */,
-				94DBED5B2CF9E9BF0042C49E /* QuizGenerator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -598,7 +595,6 @@
 				94DBED312CF908AD0042C49E /* Note.swift in Sources */,
 				94DBED282CF908140042C49E /* AppCoordinator.swift in Sources */,
 				9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */,
-				94DBED5C2CF9E9BF0042C49E /* QuizGenerator.swift in Sources */,
 				94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */,
 				94EA7CFE2D03286100ED9CB7 /* ProfileItem.swift in Sources */,
 				9489B75B2D1477CB0080466F /* TextRecognitionService.swift in Sources */,

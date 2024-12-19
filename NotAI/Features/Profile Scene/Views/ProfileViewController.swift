@@ -12,24 +12,25 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var editButtonView: UIButton!
     @IBOutlet weak var memojiView: UIView!
-    @IBOutlet weak var settingsTableView: UITableView! // IBOutlet olan tableView
+    @IBOutlet weak var settingsTableView: UITableView!
 
     private let viewModel = ProfileViewModel()
+    private var qrViewModel: QRViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TableView'ı yapılandır
         setupTableView()
         makeCircular(view: memojiView)
         addBlurredBackground(memojiView)
         makeCircular(view: editButtonView)
         addBlurredBackgroundToPressedButton(editButtonView)
+    
+        qrViewModel = QRViewModel(qrData: "https://www.instagram.com")
         configureQRCode()
         
         navigationItem.title = "Ayarlar"
         
-        // Navigation bar ayarları
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.black,
         ]
@@ -39,27 +40,29 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         navigationController?.navigationBar.backIndicatorImage = backButtonImage
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButtonImage
         
-        // Back button text'ini gizle
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for: .default)
     }
     
     private func configureQRCode() {
-        let profileIdentifier = "www.instagram.com"
+        guard let qrViewModel = qrViewModel else {
+            print("qrViewModel is nil")
+            return
+        }
+        
         let qrCodeSize = qrCodeImageView.frame.size
-        qrCodeImageView.image = viewModel.generateProfileQRCode(for: profileIdentifier, size: qrCodeSize)
+        qrCodeImageView.image = qrViewModel.getQRCodeImage(for: qrCodeSize)
     }
+
     
-    // TableView'ı yapılandırma
     func setupTableView() {
         settingsTableView.dataSource = self
         settingsTableView.delegate = self
         settingsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        // TableView'a ait özellikler
         settingsTableView.backgroundColor = .clear
         settingsTableView.showsVerticalScrollIndicator = false
         settingsTableView.showsHorizontalScrollIndicator = false
-        settingsTableView.separatorStyle = .none // Çizgileri kaldır
+        settingsTableView.separatorStyle = .none
     }
     
     // MARK: - TableView DataSource
@@ -74,22 +77,31 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        // İlgili veriyi al
         let item = viewModel.sections[indexPath.section][indexPath.row]
         
-        // Hücre metni
         cell.textLabel?.text = item.title
         cell.textLabel?.textColor = .black
         cell.textLabel?.font = UIFont.systemFont(ofSize: 14)
 
+        configureCellIcon(cell, item: item)
+        
+        let disclosureIndicator = UIImageView(image: UIImage(systemName: "chevron.right"))
+        disclosureIndicator.tintColor = .black
+        cell.accessoryView = disclosureIndicator
+        
+        cell.backgroundColor = .clear
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+        
+        addBlurredBackground(cell)
+        
+        return cell
+    }
+
+    private func configureCellIcon(_ cell: UITableViewCell, item: ProfileItem) {
         if let iconName = item.icon {
-            if iconName == "instagram" {
-                cell.imageView?.image = UIImage(named: "instagram")
-            } else if iconName == "linkedin" {
-                cell.imageView?.image = UIImage(named: "linkedin")
-            } else if iconName == "appStore" {
-                cell.imageView?.image = UIImage(named: "appStore")
+            if let image = UIImage(named: iconName) {
+                cell.imageView?.image = image
             } else {
                 cell.imageView?.image = UIImage(systemName: iconName)
             }
@@ -98,22 +110,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                 cell.imageView!.widthAnchor.constraint(equalToConstant: 14)
             ])
         } else {
-            cell.imageView?.image = nil // Eğer ikon yoksa boş bırak
+            cell.imageView?.image = nil
         }
-        
-        let disclosureIndicator = UIImageView(image: UIImage(systemName: "chevron.right"))
-        disclosureIndicator.tintColor = .black // Set the color to black
-        cell.accessoryView = disclosureIndicator
-        
-        cell.backgroundColor = .clear
-        
-        // Border radius ve arka plan rengi ekleme
-        cell.layer.cornerRadius = 10
-        cell.layer.masksToBounds = true
-
-        addBlurredBackground(cell)
-        
-        return cell
     }
     
     // MARK: - TableView Delegate
@@ -125,19 +123,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         switch item.title {
         case "Instagram'da Bizi Takip Edin":
-            if let url = URL(string: "https://www.instagram.com") {
-                UIApplication.shared.open(url)
-            }
+            openURL("https://www.instagram.com")
             
         case "LinkedIn'de Takip Edin":
-            if let url = URL(string: "https://www.linkedin.com") {
-                UIApplication.shared.open(url)
-            }
+            openURL("https://www.linkedin.com")
             
         case "Bize Ulaşın":
-            if let url = URL(string: "mailto:example@email.com") {
-                UIApplication.shared.open(url)
-            }
+            openURL("mailto:example@email.com")
             
         case "Geri Bildirim Ver":
             print("Geri bildirim vermek için yönlendirme yapılabilir.")
@@ -150,6 +142,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
 
+    private func openURL(_ urlString: String) {
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url)
+        }
+    }
+
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.contentView.backgroundColor = UIColor.clear
@@ -157,4 +155,3 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         header.layer.masksToBounds = true
     }
 }
-

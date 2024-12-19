@@ -503,7 +503,7 @@
                     <connections>
                         <outlet property="editButtonView" destination="ENl-jK-ncN" id="g0h-Zx-0xd"/>
                         <outlet property="memojiView" destination="DQE-bd-O6W" id="o8R-JY-ekr"/>
-                        <outlet property="qrCodeImageView" destination="MuU-ob-fxE" id="cnk-5J-dFo"/>
+                        <outlet property="qrCodeImageView" destination="MuU-ob-fxE" id="RKN-Si-Qnj"/>
                         <outlet property="settingsTableView" destination="ODH-Qz-Xdl" id="ebh-c8-vkx"/>
                     </connections>
                 </viewController>
@@ -795,6 +795,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back2" translatesAutoresizingMaskIntoConstraints="NO" id="6ZR-il-7qb">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soru" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="AQY-jS-MaM">
+                                <rect key="frame" x="20" y="135" width="353" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDB-6w-gQz" userLabel="Question No View">
                                 <rect key="frame" x="20" y="75" width="100" height="40"/>
                                 <subviews>
@@ -843,22 +849,16 @@
                                     <action selector="cancelButtonPressed:" destination="CvK-EV-4pV" eventType="touchUpInside" id="ToM-Gn-FGM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soru" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="AQY-jS-MaM">
-                                <rect key="frame" x="20" y="135" width="353" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="129-aP-qa4" userLabel="Answers View">
-                                <rect key="frame" x="20" y="457" width="353" height="315"/>
+                                <rect key="frame" x="20" y="452" width="353" height="320"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aak-uB-4CU">
-                                        <rect key="frame" x="15" y="15" width="323" height="285"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aak-uB-4CU">
+                                        <rect key="frame" x="15" y="15" width="323" height="290"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-Sv-jUn">
-                                                <rect key="frame" x="0.0" y="0.0" width="323" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="323" height="65"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="fMc-cy-2u4"/>
+                                                    <constraint firstAttribute="height" constant="65" id="fMc-cy-2u4"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -870,9 +870,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzZ-Tc-tfK">
-                                                <rect key="frame" x="0.0" y="75" width="323" height="60"/>
+                                                <rect key="frame" x="0.0" y="75" width="323" height="65"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="wEL-pV-qpl"/>
+                                                    <constraint firstAttribute="height" constant="65" id="wEL-pV-qpl"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -884,9 +884,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tc-gn-UNJ">
-                                                <rect key="frame" x="0.0" y="150" width="323" height="60"/>
+                                                <rect key="frame" x="0.0" y="150" width="323" height="65"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="EsR-z5-Zil"/>
+                                                    <constraint firstAttribute="height" constant="65" id="EsR-z5-Zil"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -898,9 +898,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdO-hO-B5m">
-                                                <rect key="frame" x="0.0" y="225" width="323" height="60"/>
+                                                <rect key="frame" x="0.0" y="225" width="323" height="65"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="n8f-AR-kYK"/>
+                                                    <constraint firstAttribute="height" constant="65" id="n8f-AR-kYK"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -947,12 +947,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="m09-Yn-dse"/>
                     <connections>
-                        <outlet property="answer1BtnView" destination="XDM-Sv-jUn" id="ocE-tc-bH3"/>
-                        <outlet property="answer2BtnView" destination="NzZ-Tc-tfK" id="6Sc-uM-Ylg"/>
-                        <outlet property="answer3BtnView" destination="4Tc-gn-UNJ" id="1nR-7O-leb"/>
-                        <outlet property="answer4BtnView" destination="xdO-hO-B5m" id="V5x-Bs-LZq"/>
+                        <outlet property="answer1Btn" destination="XDM-Sv-jUn" id="tom-Ef-aWv"/>
+                        <outlet property="answer2Btn" destination="NzZ-Tc-tfK" id="NKy-3x-ZPP"/>
+                        <outlet property="answer3Btn" destination="4Tc-gn-UNJ" id="G31-jR-jcq"/>
+                        <outlet property="answer4Btn" destination="xdO-hO-B5m" id="ZFq-rF-6PS"/>
                         <outlet property="answersView" destination="129-aP-qa4" id="kLC-K8-eYP"/>
-                        <outlet property="cancelBtnView" destination="cSk-JM-yGO" id="e65-Hx-iIk"/>
+                        <outlet property="cancelBtn" destination="cSk-JM-yGO" id="QfE-AX-oi1"/>
                         <outlet property="questionLabel" destination="AQY-jS-MaM" id="rCu-DY-F5m"/>
                         <outlet property="questionNoLabel" destination="C2M-tF-P1U" id="KZF-5H-64i"/>
                         <outlet property="questionNoView" destination="EDB-6w-gQz" id="0al-pv-sT1"/>

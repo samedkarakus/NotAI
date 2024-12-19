@@ -31,7 +31,11 @@ class QRViewController: UIViewController {
     }
     
     private func setupViewModel() {
-        viewModel = QRViewModel(qrData: "www.youtube.com")
+        viewModel = QRViewModel(qrData: "https://www.instagram.com")
+        updateQRCodeImage()
+    }
+    
+    private func updateQRCodeImage() {
         if let qrImage = viewModel.getQRCodeImage(for: createdQrCode.frame.size) {
             createdQrCode.image = qrImage
         }
