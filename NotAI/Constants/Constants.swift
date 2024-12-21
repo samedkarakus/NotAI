@@ -13,4 +13,6 @@ struct Constants {
     
     static let LearnerCellNibName = "LearnerCell"
     static let LearnerCellIdentifier = "ReusableLearnerCell"
+    static let CompletedStreakAnimation = "yellowFire"
+    static let UncompletedStreakAnimation = "grayFire"
 }

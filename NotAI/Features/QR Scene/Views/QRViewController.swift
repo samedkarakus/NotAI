@@ -17,17 +17,8 @@ class QRViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        editModelBackground(for: QrCodeView)
         setupViewModel()
-    }
-    
-    private func setupUI() {
-        let viewsToMakeCircular: [UIView] = [QrCodeView]
-        viewsToMakeCircular.forEach { makeCircular(view: $0) }
-        QrCodeView.layer.cornerRadius = 10
-        
-        let viewsToAddBlurredBackgroundToPressed: [UIView] = [QrCodeView]
-        viewsToAddBlurredBackgroundToPressed.forEach { addBlurredBackgroundToPressedButton($0) }
     }
     
     private func setupViewModel() {

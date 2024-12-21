@@ -37,7 +37,7 @@ class QuizViewController: UIViewController {
             button?.setTitle(answers[index], for: .normal)
             button?.isUserInteractionEnabled = true
             makeCircular(view: button!)
-            button?.layer.cornerRadius = 15
+            button?.layer.cornerRadius = 20
             button?.backgroundColor = UIColor.white.withAlphaComponent(0.2)
         }
 
@@ -45,8 +45,8 @@ class QuizViewController: UIViewController {
         makeCircular(view: questionNoView)
         makeCircular(view: cancelBtn)
         
-        answersView.backgroundColor = UIColor.white.withAlphaComponent(0.15)
-        answersView.layer.cornerRadius = 25
+        answersView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        answersView.layer.cornerRadius = 35
     }
 
     func resetButtonStyles() {
@@ -61,7 +61,10 @@ class QuizViewController: UIViewController {
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        sender.backgroundColor = UIColor.white.withAlphaComponent(0.45)
+        guard let answer = sender.title(for: .normal) else { return }
+        let isCorrect = viewModel.checkAnswer(answer)
+        
+        sender.backgroundColor = UIColor.white.withAlphaComponent(0.6)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if self.viewModel.nextQuestion() {
@@ -83,8 +86,13 @@ class QuizViewController: UIViewController {
             self.setupUIElements()
         })
         alert.addAction(UIAlertAction(title: "Çıkış", style: .cancel) { _ in
-            self.navigationController?.popViewController(animated: true)
+            if let homeViewController = self.navigationController?.viewControllers.first(where: { $0 is HomeViewController }) {
+                self.navigationController?.popToViewController(homeViewController, animated: true)
+            } else {
+                print("HomeViewController bulunamadı.")
+            }
         })
+
         present(alert, animated: true)
     }
 }

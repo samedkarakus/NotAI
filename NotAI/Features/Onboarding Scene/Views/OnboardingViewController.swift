@@ -9,6 +9,7 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var adImageView: UIImageView!
     @IBOutlet weak var adGrayView: UIView!
     @IBOutlet weak var adView: UIView!
@@ -19,9 +20,6 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var progressViewTrailing: UIProgressView!
     @IBOutlet weak var progressViewCenter: UIProgressView!
     @IBOutlet weak var progressViewLeading: UIProgressView!
-    
-    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var appleSignInButton: UIButton!
     @IBOutlet weak var googleSignInButton: UIButton!
@@ -48,15 +46,30 @@ class OnboardingViewController: UIViewController {
         adGrayView.layer.cornerRadius = 8
         
         configureTextView()
-        deviceUserInterfaceIdiom(leading: leadingConstraint, trailing: trailingConstraint)
+        adjustConstraintsForInterfaceIdiom(in: contentView)
+
     }
     
-    func deviceUserInterfaceIdiom(leading: NSLayoutConstraint, trailing: NSLayoutConstraint) {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            leading.constant = 200
-            trailing.constant = 200
+    @IBAction func appleButtonPressed(_ sender: UIButton) {
+        if let mainVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
+            mainVC.modalPresentationStyle = .fullScreen
+            present(mainVC, animated: true, completion: nil)
         }
     }
+    
+    func adjustConstraintsForInterfaceIdiom(in view: UIView) {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            for constraint in view.constraints {
+                if constraint.firstAttribute == .leading {
+                    constraint.constant = 150
+                }
+                if constraint.firstAttribute == .trailing {
+                    constraint.constant = 150
+                }
+            }
+        }
+    }
+
     
     func configureTextView() {
         let fullText = "Kayıt olarak Hizmet Şartlarımızı ve Gizlilik Politikamızı kabul ettiğinizi beyan etmiş olursunuz."
@@ -66,19 +79,16 @@ class OnboardingViewController: UIViewController {
         let attributedString = NSMutableAttributedString(string: fullText)
         attributedString.addAttribute(.foregroundColor, value: UIColor.black.withAlphaComponent(0.4), range: NSRange(location: 0, length: fullText.count))
 
-        // Hizmet Şartlarımızı için link
         if let hizmetRange = fullText.range(of: hizmetSartlariText) {
             let nsRange = NSRange(hizmetRange, in: fullText)
             attributedString.addAttribute(.link, value: "https://example.com/hizmet-sartlari", range: nsRange)
         }
 
-        // Gizlilik Politikamızı için link
         if let gizlilikRange = fullText.range(of: gizlilikPolitikasiText) {
             let nsRange = NSRange(gizlilikRange, in: fullText)
             attributedString.addAttribute(.link, value: "https://example.com/gizlilik-politikasi", range: nsRange)
         }
 
-        // UITextView ayarları
         infoTextView.attributedText = attributedString
         infoTextView.textAlignment = .center
         infoTextView.isEditable = false

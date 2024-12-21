@@ -93,6 +93,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
         
+        let selectedBackground = UIView()
+        selectedBackground.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        cell.selectedBackgroundView = selectedBackground
+        
         addBlurredBackground(cell)
         
         return cell
@@ -135,6 +139,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             print("Geri bildirim vermek için yönlendirme yapılabilir.")
             
         case "Çıkış Yap":
+            if let mainVC = storyboard?.instantiateViewController(withIdentifier: "OnboardingViewController") {
+                mainVC.modalPresentationStyle = .fullScreen
+                present(mainVC, animated: true, completion: nil)
+            }
             print("Çıkış yapılıyor.")
             
         default:

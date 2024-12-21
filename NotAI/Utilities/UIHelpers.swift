@@ -163,3 +163,12 @@ func animatePulse(index: Int) {
     pulseLayer.add(scaleAnimation, forKey: "scale")
     pulseLayer.add(opacityAnimation, forKey: "opacity")
 }
+
+func editModelBackground(for view: UIView) {
+    let viewsToMakeCircular: [UIView] = [view]
+    viewsToMakeCircular.forEach { makeCircular(view: $0) }
+    view.layer.cornerRadius = 10
+    
+    let viewsToAddBlurredBackgroundToPressed: [UIView] = [view]
+    viewsToAddBlurredBackgroundToPressed.forEach { addBlurredBackgroundToPressedButton($0) }
+}

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9402DEEA2D0C7AF4002EA923 /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402DEE92D0C7AF4002EA923 /* QRCodeGenerator.swift */; };
+		942681182D1664AC00467FF3 /* yellowFire.json in Resources */ = {isa = PBXBuildFile; fileRef = 942681172D1664AC00467FF3 /* yellowFire.json */; };
+		9426811A2D1665AA00467FF3 /* purpleFire.json in Resources */ = {isa = PBXBuildFile; fileRef = 942681192D1665AA00467FF3 /* purpleFire.json */; };
+		9426811C2D166B4300467FF3 /* grayFire.json in Resources */ = {isa = PBXBuildFile; fileRef = 9426811B2D166B4300467FF3 /* grayFire.json */; };
 		942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E55422CC1571900F993A8 /* TextRecognition.swift */; };
 		9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943810592CC2AE5F00AC74B0 /* QuizViewController.swift */; };
 		9438105C2CC567E500AC74B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105B2CC567E500AC74B0 /* Question.swift */; };
@@ -61,6 +64,9 @@
 		5B382C447E90D3BAFFE5D708 /* Pods-zap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.debug.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.debug.xcconfig"; sourceTree = "<group>"; };
 		9402DEE92D0C7AF4002EA923 /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
 		9408AD3F2CA9BECF00AB70D3 /* NotAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		942681172D1664AC00467FF3 /* yellowFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = yellowFire.json; sourceTree = "<group>"; };
+		942681192D1665AA00467FF3 /* purpleFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = purpleFire.json; sourceTree = "<group>"; };
+		9426811B2D166B4300467FF3 /* grayFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = grayFire.json; sourceTree = "<group>"; };
 		942E55422CC1571900F993A8 /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognition.swift; sourceTree = "<group>"; };
 		943810592CC2AE5F00AC74B0 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		9438105B2CC567E500AC74B0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -97,6 +103,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		942681062D164AB400467FF3 /* Streak Scene */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Streak Scene";
+			sourceTree = "<group>";
+		};
 		948D9A7E2D0B42000070462A /* QR Scene */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "QR Scene";
@@ -143,6 +154,9 @@
 				9408AD402CA9BECF00AB70D3 /* Products */,
 				A63FE4CD82E0C20C40EA93A1 /* Pods */,
 				A887B99FDA766F6FEB2DFFCD /* Frameworks */,
+				942681172D1664AC00467FF3 /* yellowFire.json */,
+				942681192D1665AA00467FF3 /* purpleFire.json */,
+				9426811B2D166B4300467FF3 /* grayFire.json */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +197,7 @@
 		94DBED1D2CF907220042C49E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				942681062D164AB400467FF3 /* Streak Scene */,
 				94FEA6C62D0B7A3400FBB4F0 /* Onboarding Scene */,
 				948D9A7E2D0B42000070462A /* QR Scene */,
 				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
@@ -454,13 +469,13 @@
 				9408AD3D2CA9BECF00AB70D3 /* Resources */,
 				945368992CBA87E3003DC7DB /* Embed Frameworks */,
 				433F07959C8375478A19A3BA /* [CP] Embed Pods Frameworks */,
-				8D5505974850FB4C877B6757 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				942681062D164AB400467FF3 /* Streak Scene */,
 				948D9A7E2D0B42000070462A /* QR Scene */,
 				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
@@ -514,7 +529,10 @@
 				94E837E42CB9AE7C00EBC9D4 /* LaunchScreen.storyboard in Resources */,
 				9489B7372D14599B0080466F /* GoogleService-Info.plist in Resources */,
 				94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */,
+				9426811A2D1665AA00467FF3 /* purpleFire.json in Resources */,
 				94E837E62CB9AE7C00EBC9D4 /* Assets.xcassets in Resources */,
+				9426811C2D166B4300467FF3 /* grayFire.json in Resources */,
+				942681182D1664AC00467FF3 /* yellowFire.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,23 +554,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D5505974850FB4C877B6757 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9C91DCEBBB5F9839EA49C6D /* [CP] Check Pods Manifest.lock */ = {
