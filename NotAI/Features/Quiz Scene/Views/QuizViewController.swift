@@ -70,29 +70,14 @@ class QuizViewController: UIViewController {
             if self.viewModel.nextQuestion() {
                 self.setupUIElements()
             } else {
-                self.showScore()
+                if let resultViewController = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+                    self.navigationController?.pushViewController(resultViewController, animated: true)
+                } else {
+                    print("ResultViewController bulunamadı.")
+                }
+
+                
             }
         }
-    }
-
-    func showScore() {
-        let alert = UIAlertController(
-            title: "Quiz Tamamlandı",
-            message: "Skorunuz: \(viewModel.score)/\(viewModel.totalQuestions)",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "Yeniden Başla", style: .default) { _ in
-            self.viewModel.resetQuiz()
-            self.setupUIElements()
-        })
-        alert.addAction(UIAlertAction(title: "Çıkış", style: .cancel) { _ in
-            if let homeViewController = self.navigationController?.viewControllers.first(where: { $0 is HomeViewController }) {
-                self.navigationController?.popToViewController(homeViewController, animated: true)
-            } else {
-                print("HomeViewController bulunamadı.")
-            }
-        })
-
-        present(alert, animated: true)
     }
 }

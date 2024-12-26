@@ -30,7 +30,6 @@ class LearnerViewController: UIViewController, UITableViewDelegate, UISearchBarD
         if let searchTextField = searchBar.value(forKey: "searchField") as? UITextField {
             searchTextField.font = UIFont.systemFont(ofSize: 14)
         }
-        
         setupNavigationBar()
     }
 

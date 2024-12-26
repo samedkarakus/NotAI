@@ -172,3 +172,4 @@ func editModelBackground(for view: UIView) {
     let viewsToAddBlurredBackgroundToPressed: [UIView] = [view]
     viewsToAddBlurredBackgroundToPressed.forEach { addBlurredBackgroundToPressedButton($0) }
 }
+

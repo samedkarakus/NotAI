@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct LearnerModel {
+struct Learner {
     let username: String
     let topic: String
     let memoji: UIImage

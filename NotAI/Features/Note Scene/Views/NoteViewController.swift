@@ -34,7 +34,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         self.navigationItem.setHidesBackButton(true, animated: true)
         setupTextViews()
         setupButtons()
-        viewModel?.loadNote()
         
         viewModel = NoteViewModel()
         viewModel?.onTextUpdate = { [weak self] text in

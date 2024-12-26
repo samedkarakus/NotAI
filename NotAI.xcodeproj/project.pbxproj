@@ -11,6 +11,9 @@
 		942681182D1664AC00467FF3 /* yellowFire.json in Resources */ = {isa = PBXBuildFile; fileRef = 942681172D1664AC00467FF3 /* yellowFire.json */; };
 		9426811A2D1665AA00467FF3 /* purpleFire.json in Resources */ = {isa = PBXBuildFile; fileRef = 942681192D1665AA00467FF3 /* purpleFire.json */; };
 		9426811C2D166B4300467FF3 /* grayFire.json in Resources */ = {isa = PBXBuildFile; fileRef = 9426811B2D166B4300467FF3 /* grayFire.json */; };
+		942684782D1AD70300467FF3 /* ErrorTopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942684772D1AD70300467FF3 /* ErrorTopicViewModel.swift */; };
+		9426847A2D1AD71600467FF3 /* ErrorTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942684792D1AD71600467FF3 /* ErrorTopic.swift */; };
+		942684A32D1DBC9600467FF3 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942684A22D1DBC9600467FF3 /* CircularProgressView.swift */; };
 		942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E55422CC1571900F993A8 /* TextRecognition.swift */; };
 		9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943810592CC2AE5F00AC74B0 /* QuizViewController.swift */; };
 		9438105C2CC567E500AC74B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105B2CC567E500AC74B0 /* Question.swift */; };
@@ -67,6 +70,9 @@
 		942681172D1664AC00467FF3 /* yellowFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = yellowFire.json; sourceTree = "<group>"; };
 		942681192D1665AA00467FF3 /* purpleFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = purpleFire.json; sourceTree = "<group>"; };
 		9426811B2D166B4300467FF3 /* grayFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = grayFire.json; sourceTree = "<group>"; };
+		942684772D1AD70300467FF3 /* ErrorTopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorTopicViewModel.swift; path = "NotAI/Features/Result Scene/ErrorTopicViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		942684792D1AD71600467FF3 /* ErrorTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorTopic.swift; path = "NotAI/Features/Result Scene/ErrorTopic.swift"; sourceTree = SOURCE_ROOT; };
+		942684A22D1DBC9600467FF3 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		942E55422CC1571900F993A8 /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognition.swift; sourceTree = "<group>"; };
 		943810592CC2AE5F00AC74B0 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		9438105B2CC567E500AC74B0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -106,6 +112,11 @@
 		942681062D164AB400467FF3 /* Streak Scene */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Streak Scene";
+			sourceTree = "<group>";
+		};
+		942684722D1AD38200467FF3 /* Cell */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		948D9A7E2D0B42000070462A /* QR Scene */ = {
@@ -154,9 +165,6 @@
 				9408AD402CA9BECF00AB70D3 /* Products */,
 				A63FE4CD82E0C20C40EA93A1 /* Pods */,
 				A887B99FDA766F6FEB2DFFCD /* Frameworks */,
-				942681172D1664AC00467FF3 /* yellowFire.json */,
-				942681192D1665AA00467FF3 /* purpleFire.json */,
-				9426811B2D166B4300467FF3 /* grayFire.json */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +188,9 @@
 		94DBED1B2CF8E1130042C49E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				942681172D1664AC00467FF3 /* yellowFire.json */,
+				942681192D1665AA00467FF3 /* purpleFire.json */,
+				9426811B2D166B4300467FF3 /* grayFire.json */,
 				94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -354,6 +365,7 @@
 		94DBED4B2CF90E4B0042C49E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				942684792D1AD71600467FF3 /* ErrorTopic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,7 +373,9 @@
 		94DBED4D2CF90E4B0042C49E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				942684722D1AD38200467FF3 /* Cell */,
 				949321132CF3D2B100C8666C /* ResultViewController.swift */,
+				942684A22D1DBC9600467FF3 /* CircularProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,6 +383,7 @@
 		94DBED4F2CF90E4B0042C49E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				942684772D1AD70300467FF3 /* ErrorTopicViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -476,6 +491,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				942681062D164AB400467FF3 /* Streak Scene */,
+				942684722D1AD38200467FF3 /* Cell */,
 				948D9A7E2D0B42000070462A /* QR Scene */,
 				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
@@ -591,6 +607,7 @@
 				94DBED5A2CF910200042C49E /* UIHelpers.swift in Sources */,
 				94DBED2A2CF908240042C49E /* NoteCoordinator.swift in Sources */,
 				949321122CE6A89C00C8666C /* Constants.swift in Sources */,
+				942684782D1AD70300467FF3 /* ErrorTopicViewModel.swift in Sources */,
 				94DBED572CF90F910042C49E /* HomeViewModel.swift in Sources */,
 				94E837EA2CB9AE7C00EBC9D4 /* NoteViewController.swift in Sources */,
 				94DBED312CF908AD0042C49E /* Note.swift in Sources */,
@@ -608,8 +625,10 @@
 				94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */,
 				9489B7592D1477AE0080466F /* FileManagerService.swift in Sources */,
 				94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */,
+				942684A32D1DBC9600467FF3 /* CircularProgressView.swift in Sources */,
 				94EA7CF82D02F64B00ED9CB7 /* ProfileViewController.swift in Sources */,
 				943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */,
+				9426847A2D1AD71600467FF3 /* ErrorTopic.swift in Sources */,
 				949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
