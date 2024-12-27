@@ -334,7 +334,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="VYo-UY-adc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1" translatesAutoresizingMaskIntoConstraints="NO" id="VYo-UY-adc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aIh-Yh-2JX" userLabel="Learner Table View">
@@ -991,7 +991,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="RBj-Ub-iWe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back2" translatesAutoresizingMaskIntoConstraints="NO" id="RBj-Ub-iWe">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOi-D3-cwk">
@@ -1113,15 +1113,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="gai-e1-x9i">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1" translatesAutoresizingMaskIntoConstraints="NO" id="gai-e1-x9i">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NotAI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfb-LD-qEV">
-                                <rect key="frame" x="167.5" y="429" width="79" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" systemColor="lightTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3Hw-MV-JtT">
                                 <rect key="frame" x="167.5" y="800.5" width="79" height="46.5"/>
                                 <subviews>
@@ -1137,18 +1131,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appNicknameIconWhite" translatesAutoresizingMaskIntoConstraints="NO" id="BSu-0j-XEG">
+                                <rect key="frame" x="177" y="433" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LgG-Ck-Wl8"/>
+                                    <constraint firstAttribute="width" constant="60" id="pwu-13-rjx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lVc-Yo-iYi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="gai-e1-x9i" secondAttribute="bottom" id="5UZ-q4-osL"/>
                             <constraint firstItem="gai-e1-x9i" firstAttribute="trailing" secondItem="Dx4-od-EzE" secondAttribute="trailing" id="7Oy-9X-ihh"/>
-                            <constraint firstItem="sfb-LD-qEV" firstAttribute="centerY" secondItem="Dx4-od-EzE" secondAttribute="centerY" id="9Kq-t9-9xn"/>
-                            <constraint firstItem="sfb-LD-qEV" firstAttribute="centerX" secondItem="Dx4-od-EzE" secondAttribute="centerX" id="N1U-v4-QG7"/>
                             <constraint firstItem="gai-e1-x9i" firstAttribute="top" secondItem="Dx4-od-EzE" secondAttribute="top" id="SjG-VV-sFC"/>
+                            <constraint firstItem="BSu-0j-XEG" firstAttribute="centerY" secondItem="Dx4-od-EzE" secondAttribute="centerY" id="dUU-RP-9D4"/>
                             <constraint firstItem="lVc-Yo-iYi" firstAttribute="bottom" secondItem="3Hw-MV-JtT" secondAttribute="bottom" constant="15" id="fst-SX-TlG"/>
                             <constraint firstItem="gai-e1-x9i" firstAttribute="leading" secondItem="Dx4-od-EzE" secondAttribute="leading" id="gfS-09-cpY"/>
                             <constraint firstItem="gai-e1-x9i" firstAttribute="centerY" secondItem="Dx4-od-EzE" secondAttribute="centerY" id="poW-RC-jFt"/>
+                            <constraint firstItem="BSu-0j-XEG" firstAttribute="centerX" secondItem="Dx4-od-EzE" secondAttribute="centerX" id="syZ-q7-p1Z"/>
                             <constraint firstItem="gai-e1-x9i" firstAttribute="centerX" secondItem="Dx4-od-EzE" secondAttribute="centerX" id="vSj-Cl-pin"/>
                             <constraint firstItem="3Hw-MV-JtT" firstAttribute="centerX" secondItem="Dx4-od-EzE" secondAttribute="centerX" id="yao-oO-zUu"/>
                         </constraints>
@@ -1156,7 +1157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2V0-U0-N4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1354" y="-3"/>
+            <point key="canvasLocation" x="-510" y="-3"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="Vyp-3d-O8g">
@@ -1166,7 +1167,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="feN-6V-vag">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1" translatesAutoresizingMaskIntoConstraints="NO" id="feN-6V-vag">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7S-n1-zci">
@@ -1434,28 +1435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6f-2m-akk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-540.57971014492762" y="-3.3482142857142856"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="coH-af-5ri">
-            <objects>
-                <viewController id="2Lv-za-U3N" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gau-qf-kif">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onBoardingMock" translatesAutoresizingMaskIntoConstraints="NO" id="UTJ-Jd-Jld">
-                                <rect key="frame" x="-59" y="-181" width="1519" height="1178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vsS-0m-1Gu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qsd-HL-qrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="163.768115942029" y="-2.0089285714285712"/>
+            <point key="canvasLocation" x="274" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iou-N9-Umz">
@@ -1650,12 +1630,12 @@
         <image name="StreakCircle" width="266.5" height="266.5"/>
         <image name="Time Icon" width="25" height="25"/>
         <image name="appNicknameIcon" width="52.130001068115234" height="20"/>
+        <image name="appNicknameIconWhite" width="52.130001068115234" height="20"/>
         <image name="apple" width="15" height="15"/>
         <image name="back1" width="393" height="852"/>
         <image name="back2" width="393" height="852"/>
         <image name="ball" width="324.5" height="323"/>
         <image name="bg1" width="393" height="852"/>
-        <image name="bg2" width="393" height="852"/>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="emoji3" width="66.5" height="66.5"/>
@@ -1665,21 +1645,17 @@
         <image name="google" width="15" height="15"/>
         <image name="learningNow" width="116" height="80"/>
         <image name="loading" width="22" height="22"/>
-        <image name="onBoardingMock" width="2048" height="1536"/>
         <image name="pencil.line" catalog="system" width="128" height="117"/>
         <image name="qrFrame" width="1024" height="1024"/>
         <image name="randomQRBlack" width="100" height="100"/>
         <image name="randomQRWhite" width="100" height="100"/>
         <image name="tick" width="22" height="22"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <systemColor name="lightTextColor">
-            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

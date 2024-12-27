@@ -14,7 +14,6 @@
 		942684782D1AD70300467FF3 /* ErrorTopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942684772D1AD70300467FF3 /* ErrorTopicViewModel.swift */; };
 		9426847A2D1AD71600467FF3 /* ErrorTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942684792D1AD71600467FF3 /* ErrorTopic.swift */; };
 		942684A32D1DBC9600467FF3 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942684A22D1DBC9600467FF3 /* CircularProgressView.swift */; };
-		942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E55422CC1571900F993A8 /* TextRecognition.swift */; };
 		9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943810592CC2AE5F00AC74B0 /* QuizViewController.swift */; };
 		9438105C2CC567E500AC74B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105B2CC567E500AC74B0 /* Question.swift */; };
 		943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */; };
@@ -73,7 +72,6 @@
 		942684772D1AD70300467FF3 /* ErrorTopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorTopicViewModel.swift; path = "NotAI/Features/Result Scene/ErrorTopicViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		942684792D1AD71600467FF3 /* ErrorTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorTopic.swift; path = "NotAI/Features/Result Scene/ErrorTopic.swift"; sourceTree = SOURCE_ROOT; };
 		942684A22D1DBC9600467FF3 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		942E55422CC1571900F993A8 /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognition.swift; sourceTree = "<group>"; };
 		943810592CC2AE5F00AC74B0 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		9438105B2CC567E500AC74B0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				94DBED112CF8DE3F0042C49E /* TimerManager.swift */,
-				942E55422CC1571900F993A8 /* TextRecognition.swift */,
 				94DBED592CF910200042C49E /* UIHelpers.swift */,
 				9402DEE92D0C7AF4002EA923 /* QRCodeGenerator.swift */,
 			);
@@ -616,7 +613,6 @@
 				94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */,
 				94EA7CFE2D03286100ED9CB7 /* ProfileItem.swift in Sources */,
 				9489B75B2D1477CB0080466F /* TextRecognitionService.swift in Sources */,
-				942E55432CC1571900F993A8 /* TextRecognition.swift in Sources */,
 				94DBED252CF907E40042C49E /* APIClient.swift in Sources */,
 				9402DEEA2D0C7AF4002EA923 /* QRCodeGenerator.swift in Sources */,
 				94E837EB2CB9AE7C00EBC9D4 /* AppDelegate.swift in Sources */,

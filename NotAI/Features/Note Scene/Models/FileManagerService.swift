@@ -15,6 +15,8 @@ class FileManagerService {
     private init() {}
     
     func extractTextFromPDF(url: URL) -> String? {
+        let startTime = Date()
+        
         if let pdfDocument = PDFDocument(url: url) {
             var fullText = ""
             for pageIndex in 0..<pdfDocument.pageCount {
@@ -24,15 +26,23 @@ class FileManagerService {
                     }
                 }
             }
+            
+            let endTime = Date()
+            let processingTime = endTime.timeIntervalSince(startTime)
+            
+            print("PDF İşleme Süresi: \(processingTime) saniye")
+            
             return fullText
         } else {
             return nil
         }
     }
+
     
-    func extractTextFromImage(image: UIImage, completion: @escaping (String?) -> Void) {
-        TextRecognitionService.recognizeText(in: image) { recognizedText in
-            completion(recognizedText)
+    func extractTextFromImage(image: UIImage, completion: @escaping (String?, TimeInterval?) -> Void) {
+        TextRecognitionService.performOCRWithVision(in: image) { recognizedText, processingTime in
+            completion(recognizedText, processingTime)
         }
     }
 }
+

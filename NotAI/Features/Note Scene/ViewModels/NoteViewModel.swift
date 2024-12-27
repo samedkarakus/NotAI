@@ -46,11 +46,12 @@ class NoteViewModel {
     }
     
     func processImage(image: UIImage) {
-        fileManagerService.extractTextFromImage(image: image) { [weak self] text in
+        fileManagerService.extractTextFromImage(image: image) { [weak self] text, processingTime in
             guard let text = text else { return }
             self?.onTextUpdate?(text)
         }
     }
+
     
     func processPDF(url: URL) {
         if let text = fileManagerService.extractTextFromPDF(url: url) {

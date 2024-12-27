@@ -16,25 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="M8W-AD-f8Y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1" translatesAutoresizingMaskIntoConstraints="NO" id="M8W-AD-f8Y">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NotAI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nA7-Xs-AH8">
-                                <rect key="frame" x="157.33333333333334" y="407" width="78.666666666666657" height="38.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" systemColor="lightTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appNicknameIconWhite" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-YA-fQy">
+                                <rect key="frame" x="166.66666666666666" y="411" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="fzD-ih-F71"/>
+                                    <constraint firstAttribute="height" constant="30" id="x5f-bg-PUd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aZH-YA-fQy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2Bz-e0-7WT"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="3d8-gK-Gkc"/>
                             <constraint firstAttribute="bottom" secondItem="M8W-AD-f8Y" secondAttribute="bottom" id="5Us-lL-b6d"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FNI-OZ-pkU"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="QzA-0r-bIx"/>
-                            <constraint firstItem="nA7-Xs-AH8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="grI-vZ-hex"/>
-                            <constraint firstItem="nA7-Xs-AH8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pCI-BL-itw"/>
+                            <constraint firstItem="aZH-YA-fQy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hkD-SE-IPm"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="sPt-IY-MY1"/>
                             <constraint firstItem="M8W-AD-f8Y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="twx-2N-2ls"/>
                         </constraints>
@@ -46,10 +47,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg1" width="393" height="852"/>
-        <systemColor name="lightTextColor">
-            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="appNicknameIconWhite" width="52.130001068115234" height="20"/>
+        <image name="back1" width="393" height="852"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

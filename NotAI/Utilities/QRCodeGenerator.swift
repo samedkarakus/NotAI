@@ -9,10 +9,9 @@ import UIKit
 import CoreImage
 
 final class QRCodeGenerator {
-    static let shared = QRCodeGenerator() // Singleton olarak erişim sağlamak için
+    static let shared = QRCodeGenerator()
     
-    public init() {} // Diğer sınıflar tarafından instance oluşturulmasını engeller
-
+    public init() {}
     
     public func generateQRCode(from string: String, size: CGSize) -> UIImage? {
         guard let data = string.data(using: String.Encoding.ascii),
@@ -21,7 +20,7 @@ final class QRCodeGenerator {
         }
         
         filter.setValue(data, forKey: "inputMessage")
-        filter.setValue("Q", forKey: "inputCorrectionLevel") // Hata düzeltme seviyesi
+        filter.setValue("Q", forKey: "inputCorrectionLevel")
         
         if let outputImage = filter.outputImage {
             let scaleX = size.width / outputImage.extent.size.width
