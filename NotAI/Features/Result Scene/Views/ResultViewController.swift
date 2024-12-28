@@ -9,10 +9,11 @@ import UIKit
 
 class ResultViewController: UIViewController, UITableViewDelegate {
     
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var finalScoreView: UIView!
     @IBOutlet weak var errorTopicsTableView: UITableView!
     @IBOutlet weak var endQuizButtonView: UIButton!
-    @IBOutlet weak var get10moreQuestionButtonView: UIButton!
+    @IBOutlet weak var getMoreQuestionButtonView: UIButton!
     
     var viewModel = ErrorTopicViewModel()
     
@@ -22,16 +23,33 @@ class ResultViewController: UIViewController, UITableViewDelegate {
         setupView()
     }
     
+    @IBAction func endQuizButtonPressed(_ sender: UIButton) {
+        if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? HomeViewController {
+            self.navigationController?.pushViewController(homeVC, animated: true)
+        } else {
+            print("MainViewController bulunamadı.")
+        }
+    }
+    
+    @IBAction func getMoreQuestionButtonPressed(_ sender: UIButton) {
+        if let quizVC = self.storyboard?.instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController {
+            self.navigationController?.pushViewController(quizVC, animated: true)
+        } else {
+            print("QuizViewController bulunamadı.")
+        }
+    }
+    
     func setupView() {
         errorTopicsTableView.dataSource = self
         errorTopicsTableView.delegate = self
         errorTopicsTableView.register(UINib(nibName: Constants.ErrorTopicCellNibName, bundle: nil), forCellReuseIdentifier: Constants.ErrorTopicCellIdentifier)
-        makeButtonCircular(view: endQuizButtonView)
-        makeButtonCircular(view: get10moreQuestionButtonView)
-        addBlurredBackgroundToPressedButton(endQuizButtonView)
-        addBlurredBackgroundToPressedButton(get10moreQuestionButtonView)
         errorTopicsTableView.backgroundColor = .clear
         errorTopicsTableView.showsVerticalScrollIndicator = false
+        
+        [endQuizButtonView, getMoreQuestionButtonView].enumerated().forEach { index, button in
+            button?.isUserInteractionEnabled = true
+            makeCircular(view: button!)
+        }
         
         setCircularProgressView()
         makeCircular(view: finalScoreView)

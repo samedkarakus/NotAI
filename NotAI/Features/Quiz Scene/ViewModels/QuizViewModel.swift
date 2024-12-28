@@ -16,57 +16,58 @@ class QuizViewModel {
     init() {
         questions = [
             Question(
-                question: "Aşağıdakilerden hangisi bir sözleşmenin 'geçersiz' olmasına sebep olabilir?",
-                answer: ["Sözleşmenin yazılı yapılması.", "Taraflardan birinin ehliyetsiz olması.", "Sözleşmenin noter huzurunda yapılması.", "Tarafların mutabakata varması."],
-                correctAnswer: "Taraflardan birinin ehliyetsiz olması."
+                question: "Birinci dereceden bir diferansiyel denklemin genel çözümü neyi ifade eder?",
+                answer: ["Sabit bir çözüm kümesini.", "Bir dizi özel çözümü.", "Tüm olası çözümleri içeren ifadeyi.", "Yalnızca homojen çözümleri."],
+                correctAnswer: "Tüm olası çözümleri içeren ifadeyi."
             ),
             Question(
-                question: "Aşağıdakilerden hangisi medeni hukukun dallarından biridir?",
-                answer: ["Ceza hukuku.", "Vergi hukuku.", "Aile hukuku.", "İdari hukuk."],
-                correctAnswer: "Aile hukuku."
+                question: "Aşağıdaki denklemlerden hangisi bir diferansiyel denklem örneğidir?",
+                answer: ["y = mx + b", "y' + y = 0", "x² + y² = r²", "a² + b² = c²"],
+                correctAnswer: "y' + y = 0"
             ),
             Question(
-                question: "Hangi durumda bir davranış 'objektif sorumluluk' kapsamında değerlendirilebilir?",
-                answer: ["Kusurlu bir davranış olmaksızın zarar meydana gelmişse.", "Zarar kasıtlı bir davranış sonucunda ortaya çıkmışsa.", "Bir borcun ifasında temerrüde düşülmüşse.", "Taraflar arasında sözleşme yapılmışsa."],
-                correctAnswer: "Kusurlu bir davranış olmaksızın zarar meydana gelmişse."
+                question: "Bir diferansiyel denklem 'homojen' olarak adlandırılabilmesi için hangi şart sağlanmalıdır?",
+                answer: ["Tüm terimlerin aynı dereceye sahip olması.", "Denklemin bir sabit içermemesi.", "Denklemin türevsiz bir terim içermemesi.", "Tüm çözümlerin sıfır olması."],
+                correctAnswer: "Tüm terimlerin aynı dereceye sahip olması."
             ),
             Question(
-                question: "Aşağıdaki unsurlardan hangisi 'haksız zenginleşme' için gereklidir?",
-                answer: ["Zarar verenin kusurlu olması.", "Zenginleşmenin bir başkasının zararına olması.", "Taraflar arasında sözleşme bulunması.", "Hukuka uygun bir davranış olması."],
-                correctAnswer: "Zenginleşmenin bir başkasının zararına olması."
+                question: "y' + p(x)y = q(x) biçimindeki diferansiyel denklem ne tür bir denklemdir?",
+                answer: ["Doğrusal diferansiyel denklem.", "İkinci dereceden diferansiyel denklem.", "Homojen diferansiyel denklem.", "Karmaşık diferansiyel denklem."],
+                correctAnswer: "Doğrusal diferansiyel denklem."
             ),
             Question(
-                question: "Aşağıdakilerden hangisi ceza hukuku açısından bir 'kasten öldürme' suçunun unsurlarındandır?",
-                answer: ["Fiilin mağdura zarar vermemiş olması.", "Fiilin hukuka uygun bir gerekçe ile işlenmesi.", "Fiilin kasıtlı olarak işlenmesi.", "Fiilin bir sözleşmeye dayalı olması."],
-                correctAnswer: "Fiilin kasıtlı olarak işlenmesi."
+                question: "Aşağıdaki yöntemlerden hangisi bir diferansiyel denklemin çözümünde kullanılmaz?",
+                answer: ["Separation of variables.", "Integration by parts.", "Laplace transform.", "Gaussian elimination."],
+                correctAnswer: "Gaussian elimination."
             ),
             Question(
-                question: "Aşağıdakilerden hangisi 'borçlar hukuku'nda borcun sona erme sebeplerinden biridir?",
-                answer: ["Kusurlu davranış.", "Borçlunun ödeme yapması.", "Tazminat yükümlülüğü.", "Mahkeme kararıyla borcun artırılması."],
-                correctAnswer: "Borçlunun ödeme yapması."
+                question: "İkinci dereceden homojen diferansiyel denklemlerde karakteristik köklerden biri reel, diğeri kompleks ise çözümün genel formu nasıldır?",
+                answer: ["İki üstel terimin toplamı.", "Sinüs ve kosinüs terimlerinin kombinasyonu.", "Sabit bir değer.", "Doğrusal terimler içerir."],
+                correctAnswer: "Sinüs ve kosinüs terimlerinin kombinasyonu."
             ),
             Question(
-                question: "Aşağıdakilerden hangisi 'kişilik hakları'nın ihlali sayılmaz?",
-                answer: ["Bir kişinin özel hayatına izinsiz girilmesi.", "Kişinin itibarını zedeleyen yalan haber yapılması.", "Kişinin maddi varlığına zarar verilmesi.", "Bir kişinin medeni halinin doğru şekilde açıklanması."],
-                correctAnswer: "Bir kişinin medeni halinin doğru şekilde açıklanması."
+                question: "Bir diferansiyel denklemin 'özgün çözümü' ne anlama gelir?",
+                answer: ["Sabit bir çözüm.", "Belirli başlangıç koşullarını sağlayan çözüm.", "Genel çözümün özel bir durumu.", "Türevsiz çözüm."],
+                correctAnswer: "Belirli başlangıç koşullarını sağlayan çözüm."
             ),
             Question(
-                question: "Aşağıdakilerden hangisi bir 'taşınır mal'ın özelliklerinden biridir?",
-                answer: ["Yer değiştirebilen mallardır.", "Mülkiyet hakkı yalnızca noter onayı ile devredilebilir.", "Zorunlu sigorta gerektirir.", "Bir arazi ya da bina örnek olarak gösterilebilir."],
-                correctAnswer: "Yer değiştirebilen mallardır."
+                question: "Birinci dereceden diferansiyel denklemler için 'ayrılabilir değişkenler' yöntemi hangi durumda uygulanabilir?",
+                answer: ["Denklem doğrusal ise.", "Değişkenler çarpım biçiminde yazılabiliyorsa.", "Denklem ikinci dereceden ise.", "Denklem yalnızca sabit terimler içeriyorsa."],
+                correctAnswer: "Değişkenler çarpım biçiminde yazılabiliyorsa."
             ),
             Question(
-                question: "Aşağıdakilerden hangisi bir 'temyiz kudreti'ne sahip olmanın koşullarından biri değildir?",
-                answer: ["Kişinin reşit olması.", "Fiilin sonuçlarını anlayabilecek durumda olması.", "Akıl sağlığının yerinde olması.", "Kişinin mal varlığına sahip olması."],
-                correctAnswer: "Kişinin mal varlığına sahip olması."
+                question: "D'Alembert yöntemi hangi tür diferansiyel denklemleri çözmek için kullanılır?",
+                answer: ["Doğrusal denklemler.", "Ayrılabilir denklemler.", "Homojen denklemler.", "İkinci dereceden doğrusal denklemler."],
+                correctAnswer: "İkinci dereceden doğrusal denklemler."
             ),
             Question(
-                question: "Aşağıdakilerden hangisi 'haklı fesih' sebeplerinden biridir?",
-                answer: ["Taraflardan birinin kendi isteğiyle sözleşmeden çekilmesi.", "Sözleşmenin süresinin dolması.", "Karşı tarafın yükümlülüklerini ağır şekilde ihlal etmesi.", "Sözleşmenin noter huzurunda yapılmaması."],
-                correctAnswer: "Karşı tarafın yükümlülüklerini ağır şekilde ihlal etmesi."
+                question: "Bir diferansiyel denklemin çözümünde Laplace dönüşümü hangi avantajı sağlar?",
+                answer: ["Denklemin çözümünü integral formuna çevirir.", "Başlangıç koşullarını doğrudan uygular.", "Çözümü yalnızca sinüs ve kosinüs terimlerine indirger.", "Denklemi matris formuna dönüştürür."],
+                correctAnswer: "Başlangıç koşullarını doğrudan uygular."
             )
         ]
     }
+
     
     var currentQuestion: Question {
         return questions[currentIndex]

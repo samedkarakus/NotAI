@@ -9,16 +9,16 @@ import Foundation
 
 class ErrorTopicViewModel {
     var errors: [ErrorTopic] = [
-        ErrorTopic(topicTitle: "Ehliyetsizlik Yanılgısı", topicDescription: "Sözleşmenin geçersizliği için taraflardan birinin ehliyetsiz olması gereklidir."),
-        ErrorTopic(topicTitle: "Medeni Hukuk Yanılgısı", topicDescription: "Aile hukuku, medeni hukukun bir dalıdır; diğer seçenekler değildir."),
-        ErrorTopic(topicTitle: "Objektif Sorumluluk Yanılgısı", topicDescription: "Objektif sorumluluk, kusursuz davranışla zarar meydana geldiğinde söz konusudur."),
-        ErrorTopic(topicTitle: "Haksız Zenginleşme Unsuru", topicDescription: "Haksız zenginleşme, başkasının zararına bir zenginleşme olduğunda oluşur."),
-        ErrorTopic(topicTitle: "Kasten Öldürme Unsuru", topicDescription: "Kasten öldürme, kasıtlı bir fiil gerektirir; hukuka uygunluk unsuru değildir."),
-        ErrorTopic(topicTitle: "Borcun Sona Erme Sebebi", topicDescription: "Borcun sona ermesi, borçlunun ödeme yapmasıyla gerçekleşir; kusurlu davranışla değil."),
-        ErrorTopic(topicTitle: "Kişilik Hakları İhlali Yanılgısı", topicDescription: "Bir kişinin medeni halinin doğru açıklanması kişilik hakkı ihlali değildir."),
-        ErrorTopic(topicTitle: "Taşınır Mal Tanımı", topicDescription: "Taşınır mallar yer değiştirebilen mallardır; arazi veya bina taşınmazdır."),
-        ErrorTopic(topicTitle: "Temyiz Kudreti Koşulu", topicDescription: "Mal varlığı, temyiz kudreti için bir koşul değildir; reşitlik ve akıl sağlığı önemlidir."),
-        ErrorTopic(topicTitle: "Haklı Fesih Yanılgısı", topicDescription: "Haklı fesih, karşı tarafın yükümlülüklerini ağır şekilde ihlal etmesi durumunda mümkündür.")
+        ErrorTopic(topicTitle: "Mertebe Tanımı Hatası", topicDescription: "Diferansiyel denklemin mertebesi, en yüksek türevin derecesiyle belirlenir."),
+        ErrorTopic(topicTitle: "Homojen Denklem Yanılgısı", topicDescription: "Homojen diferansiyel denklemler, sağ tarafı sıfır olan denklemlerdir."),
+        ErrorTopic(topicTitle: "Doğrusal Denklem Kavramı", topicDescription: "Doğrusal denklemler, yalnızca fonksiyon ve türevlerinin birinci dereceden terimlerini içerir."),
+        ErrorTopic(topicTitle: "Değişken Ayrılması Kullanımı", topicDescription: "Değişken ayrılması yöntemi, yalnızca denklemin uygun şekilde ayrılabilir olması durumunda kullanılabilir."),
+        ErrorTopic(topicTitle: "Laplace Dönüşümü Uygulaması", topicDescription: "Laplace dönüşümü, zaman alanındaki diferansiyel denklemleri daha kolay çözülebilir hale getirir."),
+        ErrorTopic(topicTitle: "Karakteristik Denklem Yanılgısı", topicDescription: "Karakteristik denklemin kökleri doğru sınıflandırılmalıdır."),
+        ErrorTopic(topicTitle: "Başlangıç Koşulları", topicDescription: "Diferansiyel denklemlerin tam çözümü için başlangıç ya da sınır koşulları doğru uygulanmalıdır."),
+        ErrorTopic(topicTitle: "Partiküler Çözüm Yanılgısı", topicDescription: "Partiküler çözüm, özel yöntemlerle elde edilir; bu adım bazen eksik uygulanır."),
+        ErrorTopic(topicTitle: "Genel Çözüm Tanımı", topicDescription: "Genel çözüm, homojen ve partiküler çözümlerin birleşimidir."),
+        ErrorTopic(topicTitle: "İntegrasyon Faktörü Kullanımı", topicDescription: "İntegrasyon faktörü yöntemi, doğrusal diferansiyel denklemleri çözmek için kullanılır.")
     ]
 }
 

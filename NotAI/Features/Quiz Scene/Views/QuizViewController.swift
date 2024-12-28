@@ -75,8 +75,6 @@ class QuizViewController: UIViewController {
                 } else {
                     print("ResultViewController bulunamadı.")
                 }
-
-                
             }
         }
     }
