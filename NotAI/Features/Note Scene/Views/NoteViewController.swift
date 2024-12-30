@@ -23,11 +23,17 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     @IBOutlet weak var noteBodyTextView: UITextView!
     @IBOutlet weak var noteTitleTextView: UITextView!
     
+    
     var timer: Timer?
     var viewModel: NoteViewModel?
+    var quizViewModel: QuizViewModel?
     var isGradientAdded: Bool = false
     let titlePlaceholder = "Konu başlığı"
     let bodyPlaceholder = "Detaylar.."
+    
+    func updateQuestionsInViewModel(with questions: [Question]) {
+            quizViewModel?.updateQuestions(with: questions)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +42,9 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         setupButtons()
         
         viewModel = NoteViewModel()
+        if quizViewModel == nil {
+            quizViewModel = QuizViewModel()
+        }
         viewModel?.onTextUpdate = { [weak self] text in
             self?.noteBodyTextView.text = text
         }
@@ -91,6 +100,91 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func confirmBtnPressed(_ sender: UIButton) {
+        
+    }
+    func callChatGPTAPI(with input: String, completion: @escaping (String) -> Void) {
+            // OpenAI API URL
+            let url = URL(string: "https://api.openai.com/v1/chat/completions")!
+            
+            // İstek için parametreler
+        let dersNotlari = input
+            let parameters: [String: Any] = [
+                "model": "gpt-3.5-turbo",
+                "messages": [
+                            [
+                                "role": "user",
+                                "content": """
+                                \(dersNotlari)
+                                Bu ders notlarını sana aşağıda verdiğim kriterlere göre işle.
+
+                                struct Question: Codable {
+                                    var question: String
+                                    var answer: [String]
+                                    var correctAnswer: String
+                                }
+                                ve
+                                var questions: [Question] = [] oldugunu bil. 
+                                Ders Notlarını kullanarak yukarıdaki kurallara uygun ve aşağıdaki örnek formata göre bana 10 adet soru hazırla. Bana yollayacağın çıktı sadece aşağıdaki formatta dönen bir JSON dizisi olsun. Ekstra açıklama, başlık ya da yorum ekleme. Sorular birbirinden ve aşağıdakilerden farklı olsun.
+                                questions = [
+                                            Question(
+                                                question: "Aşağıdakilerden hangisi bir sözleşmenin 'geçersiz' olmasına sebep olabilir?",
+                                                answer: ["Sözleşmenin yazılı yapılması.", "Taraflardan birinin ehliyetsiz olması.", "Sözleşmenin noter huzurunda yapılması.", "Tarafların mutabakata varması."],
+                                                correctAnswer: "Taraflardan birinin ehliyetsiz olması."
+                                            ),
+                                            Question(
+                                                question: "Aşağıdakilerden hangisi medeni hukukun dallarından biridir?",
+                                                answer: ["Ceza hukuku.", "Vergi hukuku.", "Aile hukuku.", "İdari hukuk."],
+                                                correctAnswer: "Aile hukuku."
+                                            )
+                                ]
+                                
+                                """
+                            ]
+                ],
+                "temperature": 0.6
+            ]
+            
+            // JSON veri yapısı
+            let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
+            
+            // İstek yapılandırması
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+            request.httpBody = jsonData
+            
+            // URLSession ile istek yap
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Hata: \(error.localizedDescription)")
+                    completion("Bir hata oluştu.")
+                    return
+                }
+                
+                guard let data = data else {
+                    print("Veri alınamadı.")
+                    completion("Bir hata oluştu.")
+                    return
+                }
+                
+                // Gelen cevabı işleme
+                if let json = try? JSONSerialization.jsonObject(with: data, options: []),
+                   let dict = json as? [String: Any],
+                   let choices = dict["choices"] as? [[String: Any]],
+                   let message = choices.first?["message"] as? [String: Any],
+                   let content = message["content"] as? String {
+                    completion(content)
+                } else {
+                    print("JSON çözümleme hatası.")
+                    completion("Bir hata oluştu.")
+                }
+            }
+            
+            task.resume()
+        }
+    
     
     @IBAction func photoBtnPressed(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Fotoğraf Seç", message: "Fotoğraf çek veya galeriden seç", preferredStyle: .actionSheet)
@@ -109,6 +203,32 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         documentPicker.delegate = self
         documentPicker.allowsMultipleSelection = false
         present(documentPicker, animated: true)
+        
+        guard let userInput = noteBodyTextView.text, !userInput.isEmpty else {
+                   print("Lütfen bir metin girin.")
+                   return
+        }
+        
+        callChatGPTAPI(with: userInput) { [weak self] response in
+            DispatchQueue.main.async {
+               
+                print("Gelen Cevap:\(response)")
+                if let jsonData = response.data(using: .utf8) {
+                    let decoder = JSONDecoder()
+                    do {
+                        let questions = try decoder.decode([Question].self, from: jsonData)
+                        self?.updateQuestionsInViewModel(with: questions)
+                    } catch {
+                        print("Error decoding JSON: \(error)")
+                    }
+                } else {
+                    print("Error: Unable to convert string to data")
+                }
+            }
+            
+        }
+
+        
     }
     
     func textViewDidChange(_ textView: UITextView) {

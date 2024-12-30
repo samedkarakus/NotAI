@@ -58,6 +58,8 @@ class ResultViewController: UIViewController, UITableViewDelegate {
     
     func setCircularProgressView() {
         let progressView = CircularProgressView()
+        progressView.Score = CGFloat(score)
+        scoreLabel.text = "\(score)"
         progressView.translatesAutoresizingMaskIntoConstraints = false
         finalScoreView.addSubview(progressView)
         
@@ -67,7 +69,7 @@ class ResultViewController: UIViewController, UITableViewDelegate {
             progressView.widthAnchor.constraint(equalTo: finalScoreView.widthAnchor),
             progressView.heightAnchor.constraint(equalTo: finalScoreView.heightAnchor)
         ])
-        progressView.score = 9
+        
     }
 }
 

@@ -8,8 +8,8 @@
 import UIKit
 
 class CircularProgressView: UIView {
-
-    var score: CGFloat = 0 {
+    
+    var Score: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
@@ -36,7 +36,7 @@ class CircularProgressView: UIView {
         
         context.setLineWidth(lineWidth)
         context.setStrokeColor(UIColor.white.cgColor)
-        let endAngle = CGFloat(score / 10) * 2 * CGFloat.pi
+        let endAngle = CGFloat(Score / 10) * 2 * CGFloat.pi
         context.addArc(center: center, radius: radius, startAngle: -CGFloat.pi / 2, endAngle: endAngle - CGFloat.pi / 2, clockwise: false)
         context.strokePath()
     }

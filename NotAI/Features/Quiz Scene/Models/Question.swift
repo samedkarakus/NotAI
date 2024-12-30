@@ -8,7 +8,10 @@
 import Foundation
 
 struct Question: Codable {
-    let question: String
-    let answer: [String]
-    let correctAnswer: String
+    var question: String
+    var answer: [String]
+    var correctAnswer: String
 }
+
+var questions: [Question] = []
+var score: Int = 0
