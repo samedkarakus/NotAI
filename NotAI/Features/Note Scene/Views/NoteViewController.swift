@@ -116,14 +116,16 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                                 "role": "user",
                                 "content": """
                                 \(dersNotlari)
-                                Bu ders notlarını kullanarak bana aşağıdaki formatta 10 tane çoktan seçmeli soruların bir listesini JSON formatında döndür:
+                                Bu ders notlarını sana aşağıda verdiğim kriterlere göre işle.
 
                                 struct Question: Codable {
                                     var question: String
                                     var answer: [String]
                                     var correctAnswer: String
                                 }
-                                var questions: [Question] = [] oldugunu bil. Bana yollayacağın çıktı sadece aşağıdaki formatta dönen bir JSON dizisi gönder. Ekstra açıklama, başlık ya da yorum ekleme.
+                                ve
+                                var questions: [Question] = [] oldugunu bil. 
+                                Ders Notlarını kullanarak yukarıdaki kurallara uygun ve aşağıdaki örnek formata göre bana 10 adet soru hazırla. Bana yollayacağın çıktı sadece aşağıdaki formatta dönen bir JSON dizisi olsun. Ekstra açıklama, başlık ya da yorum ekleme. Sorular birbirinden ve aşağıdakilerden farklı olsun.
                                 questions = [
                                             Question(
                                                 question: "Aşağıdakilerden hangisi bir sözleşmenin 'geçersiz' olmasına sebep olabilir?",
@@ -140,7 +142,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                                 """
                             ]
                 ],
-                "temperature": 0.7
+                "temperature": 0.6
             ]
             
             // JSON veri yapısı
@@ -209,8 +211,8 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         
         callChatGPTAPI(with: userInput) { [weak self] response in
             DispatchQueue.main.async {
-                print("Gelen yanıt: \(response)")
-                
+               
+                print("Gelen Cevap:\(response)")
                 if let jsonData = response.data(using: .utf8) {
                     let decoder = JSONDecoder()
                     do {
@@ -223,6 +225,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                     print("Error: Unable to convert string to data")
                 }
             }
+            
         }
 
         

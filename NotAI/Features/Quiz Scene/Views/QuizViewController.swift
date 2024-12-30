@@ -58,11 +58,12 @@ class QuizViewController: UIViewController {
 
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+        viewModel.resetQuiz()
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         guard let answer = sender.title(for: .normal) else { return }
-        let isCorrect = viewModel.checkAnswer(answer)
+        viewModel.checkAnswer(answer)
         
         sender.backgroundColor = UIColor.white.withAlphaComponent(0.6)
 

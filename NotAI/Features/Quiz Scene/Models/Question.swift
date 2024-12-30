@@ -14,3 +14,4 @@ struct Question: Codable {
 }
 
 var questions: [Question] = []
+var score: Int = 0
