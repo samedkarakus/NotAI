@@ -9,5 +9,5 @@ target 'NotAI' do
   pod 'IQKeyboardManagerSwift'
   pod 'Alamofire', '~> 5.5'
   pod 'lottie-ios'
-
+  pod 'Firebase/Database'
 end

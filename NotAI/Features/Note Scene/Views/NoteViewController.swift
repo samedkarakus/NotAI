@@ -10,6 +10,7 @@ import UIKit
 import PDFKit
 import MobileCoreServices
 import UniformTypeIdentifiers
+import FirebaseDatabase
 
 class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentPickerDelegate {
     
@@ -30,6 +31,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     var isGradientAdded: Bool = false
     let titlePlaceholder = "Konu başlığı"
     let bodyPlaceholder = "Detaylar.."
+    let ref = Database.database().reference()
     
     func updateQuestionsInViewModel(with questions: [Question]) {
             quizViewModel?.updateQuestions(with: questions)
@@ -102,6 +104,43 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     
     @IBAction func confirmBtnPressed(_ sender: UIButton) {
         
+        
+
+        let newUserRef = ref.child("users").child("user3")
+        newUserRef.setValue([
+            "info": [
+                "userId": "3",
+                "userName": "kullanici3",
+                "email": "kullanici3@notai.com",
+                "name": "Kullanici Üç",
+                "streak": "5"
+            ],
+            "notes": [
+                "note1": [
+                    "notId": "1",
+                    "title": "Yeni Not 1",
+                    "text": "Yeni Not 1 içeriği...",
+                    "lastUpdate": "01.01.2025"
+                ],
+                "note2": [
+                    "notId": "2",
+                    "title": "Yeni Not 2",
+                    "text": "Yeni Not 2 içeriği...",
+                    "lastUpdate": "01.01.2025"
+                ]
+            ]
+        ]) { error, _ in
+            if let error = error {
+                print("Hata oluştu: \(error.localizedDescription)")
+            } else {
+                print("Yeni kullanıcı başarıyla eklendi.")
+            }
+        }
+
+
+        navigationController?.popViewController(animated: true)
+
+
     }
     func callChatGPTAPI(with input: String, completion: @escaping (String) -> Void) {
 
@@ -204,9 +243,13 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                    return
         }
         
+        let startTime = Date()
+           
         callChatGPTAPI(with: userInput) { [weak self] response in
             DispatchQueue.main.async {
-               
+                let endTime = Date()
+                let elapsedTime = endTime.timeIntervalSince(startTime)
+                print("İşlem süresi: \(elapsedTime) saniye")
                 print("Gelen Cevap:\(response)")
                 if let jsonData = response.data(using: .utf8) {
                     let decoder = JSONDecoder()
