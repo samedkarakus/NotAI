@@ -25,7 +25,8 @@ class ResultViewController: UIViewController, UITableViewDelegate {
     
     @IBAction func endQuizButtonPressed(_ sender: UIButton) {
         if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? HomeViewController {
-            self.navigationController?.pushViewController(homeVC, animated: true)
+            homeVC.modalPresentationStyle = .fullScreen
+            self.present(homeVC, animated: true)
         } else {
             print("MainViewController bulunamadı.")
         }
@@ -33,7 +34,8 @@ class ResultViewController: UIViewController, UITableViewDelegate {
     
     @IBAction func getMoreQuestionButtonPressed(_ sender: UIButton) {
         if let quizVC = self.storyboard?.instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController {
-            self.navigationController?.pushViewController(quizVC, animated: true)
+            quizVC.modalPresentationStyle = .fullScreen
+            self.present(quizVC, animated: true)
         } else {
             print("QuizViewController bulunamadı.")
         }

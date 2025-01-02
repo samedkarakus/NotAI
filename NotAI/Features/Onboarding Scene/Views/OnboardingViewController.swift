@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseAuth
-
+import FirebaseDatabase
 class OnboardingViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!

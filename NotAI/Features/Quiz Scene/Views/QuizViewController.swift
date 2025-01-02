@@ -74,6 +74,8 @@ class QuizViewController: UIViewController {
                 self.setupUIElements()
             } else {
                 if let resultViewController = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+                    resultViewController.modalPresentationStyle = .fullScreen
+
                     self.present(resultViewController, animated: true, completion: nil)
                 } else {
                     print("ResultViewController bulunamadı.")

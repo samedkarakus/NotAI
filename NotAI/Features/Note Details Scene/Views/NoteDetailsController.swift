@@ -10,7 +10,7 @@ import UIKit
 
 class NoteDetailsController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
     
-    @IBOutlet weak var addNoteButton: UIButton!
+    
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var lastNoteDate: UILabel!
@@ -31,13 +31,8 @@ class NoteDetailsController: UIViewController, UITableViewDelegate, UISearchBarD
         addLastNoteDate()
         activateLightModeForSearchBar(to: noteSearchBar)
         editTitle()
-        makeButtonRound()
     }
     
-    func makeButtonRound() {
-        addNoteButton.layer.cornerRadius = addNoteButton.frame.height / 2
-        view.layer.masksToBounds = true
-    }
     
     func editTitle() {
         let title = viewModel.filteredNotes.count
@@ -79,12 +74,6 @@ class NoteDetailsController: UIViewController, UITableViewDelegate, UISearchBarD
         noteDetailsTableView.reloadData()
     }
     
-    @IBAction func addNewNoteButtonPressed(_ sender: UIButton) {
-        if let targetVC = storyboard?.instantiateViewController(withIdentifier: "NoteViewController") {
-            targetVC.modalPresentationStyle = .fullScreen
-            present(targetVC, animated: true, completion: nil)
-        }
-    }
 }
 
 extension NoteDetailsController: UITableViewDataSource {

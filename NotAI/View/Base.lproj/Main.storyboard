@@ -584,20 +584,6 @@
                                     <constraint firstAttribute="height" constant="200" id="xTg-kb-214"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkZ-m6-pfu">
-                                <rect key="frame" x="344" y="821" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="npS-OA-fXD"/>
-                                    <constraint firstAttribute="height" constant="50" id="sgb-pV-KCB"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="plus" catalog="system"/>
-                                <connections>
-                                    <action selector="addNewNoteButtonPressed:" destination="CbM-8y-bmk" eventType="touchUpInside" id="qMb-BP-fZ8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zss-RX-Yem"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -612,9 +598,7 @@
                             <constraint firstItem="VW6-pE-hvK" firstAttribute="top" secondItem="Bfc-pV-X3v" secondAttribute="bottom" constant="5" id="N8F-KP-3U4"/>
                             <constraint firstItem="Bfc-pV-X3v" firstAttribute="leading" secondItem="Zss-RX-Yem" secondAttribute="leading" constant="10" id="OFr-yI-Nie"/>
                             <constraint firstItem="vY0-Tf-0fH" firstAttribute="centerY" secondItem="79l-RX-fy2" secondAttribute="centerY" id="OzL-Lw-jId"/>
-                            <constraint firstAttribute="bottom" secondItem="hkZ-m6-pfu" secondAttribute="bottom" constant="25" id="R5Q-n8-dlG"/>
                             <constraint firstItem="C7S-Qq-q64" firstAttribute="leading" secondItem="Zss-RX-Yem" secondAttribute="leading" id="Ulp-wk-Dp2"/>
-                            <constraint firstAttribute="trailing" secondItem="hkZ-m6-pfu" secondAttribute="trailing" constant="20" id="XJj-8N-9ji"/>
                             <constraint firstItem="krY-6A-FoM" firstAttribute="centerX" secondItem="79l-RX-fy2" secondAttribute="centerX" id="aLl-ez-RcR"/>
                             <constraint firstItem="VW6-pE-hvK" firstAttribute="leading" secondItem="Zss-RX-Yem" secondAttribute="leading" id="b9R-dT-HtS"/>
                             <constraint firstAttribute="bottom" secondItem="VW6-pE-hvK" secondAttribute="bottom" id="dhQ-zx-Xmy"/>
@@ -628,7 +612,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addNoteButton" destination="hkZ-m6-pfu" id="HLM-Dn-Uli"/>
                         <outlet property="gradientView" destination="C7S-Qq-q64" id="g7x-V2-oHU"/>
                         <outlet property="lastNoteDate" destination="zEt-7J-p8l" id="S9b-hf-w7Q"/>
                         <outlet property="mainTitle" destination="3IX-qp-Hw2" id="qeZ-Vc-LV6"/>
@@ -1257,7 +1240,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BSu-0j-XEG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="BSu-0j-XEG">
                                 <rect key="frame" x="182" y="423" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LgG-Ck-Wl8"/>
@@ -1753,6 +1736,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="550" height="550"/>
         <image name="Question No" width="25" height="25"/>
         <image name="StreakCircle" width="266.5" height="266.5"/>
         <image name="Time Icon" width="25" height="25"/>
@@ -1771,9 +1755,7 @@
         <image name="learningNow" width="116" height="80"/>
         <image name="lightBackground" width="393" height="852"/>
         <image name="loading" width="22" height="22"/>
-        <image name="logo" width="550" height="550"/>
         <image name="pencil.line" catalog="system" width="128" height="117"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="qrFrame" width="1024" height="1024"/>
         <image name="randomQRBlack" width="100" height="100"/>
         <image name="randomQRWhite" width="100" height="100"/>
