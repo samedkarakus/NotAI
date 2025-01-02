@@ -16,4 +16,7 @@ struct Constants {
     
     static let ErrorTopicCellNibName = "ErrorTopicCell"
     static let ErrorTopicCellIdentifier = "ReusableErrorTopicCell"
+    
+    static let noteCellNibName = "NoteCell"
+    static let noteCellIdentifier = "ReusableNoteCell"
 }

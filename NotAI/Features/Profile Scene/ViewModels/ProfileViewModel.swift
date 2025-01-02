@@ -15,7 +15,7 @@ class ProfileViewModel {
     init() {
         sections = [
             [
-                ProfileItem(icon: "barcode", title: "Arkadaşlık Kodu"),
+                ProfileItem(icon: "note.text", title: "Notlarım"),
                 ProfileItem(icon: "flame", title: "Streak Sayısı"),
                 ProfileItem(icon: "bolt", title: "Arkadaşlık Aktivitesi"),
                 ProfileItem(icon: "clock", title: "Son Aktivite")

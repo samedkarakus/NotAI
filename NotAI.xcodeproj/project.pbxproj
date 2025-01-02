@@ -122,6 +122,11 @@
 			path = "QR Scene";
 			sourceTree = "<group>";
 		};
+		94D1266D2D25B2830087EF6F /* Note Details Scene */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Note Details Scene";
+			sourceTree = "<group>";
+		};
 		94D5580E2D062D7E00268595 /* Loading Scene */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Loading Scene";
@@ -206,16 +211,17 @@
 		94DBED1D2CF907220042C49E /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				942681062D164AB400467FF3 /* Streak Scene */,
 				94FEA6C62D0B7A3400FBB4F0 /* Onboarding Scene */,
-				948D9A7E2D0B42000070462A /* QR Scene */,
-				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
-				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94DBED462CF90E340042C49E /* Home Scene */,
-				94EA7CF32D02F59200ED9CB7 /* Profile Scene */,
 				94DBED1E2CF907340042C49E /* Note Scene */,
 				94DBED3C2CF90E330042C49E /* Quiz Scene */,
 				94DBED502CF90E4B0042C49E /* Result Scene */,
+				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
+				942681062D164AB400467FF3 /* Streak Scene */,
+				94EA7CF32D02F59200ED9CB7 /* Profile Scene */,
+				94D1266D2D25B2830087EF6F /* Note Details Scene */,
+				948D9A7E2D0B42000070462A /* QR Scene */,
+				94D5580E2D062D7E00268595 /* Loading Scene */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				942681062D164AB400467FF3 /* Streak Scene */,
 				942684722D1AD38200467FF3 /* Cell */,
 				948D9A7E2D0B42000070462A /* QR Scene */,
+				94D1266D2D25B2830087EF6F /* Note Details Scene */,
 				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
 				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,

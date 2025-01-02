@@ -126,6 +126,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         let item = viewModel.sections[indexPath.section][indexPath.row]
         
         switch item.title {
+        case "Notlarım":
+            if let targetVC = storyboard?.instantiateViewController(withIdentifier: "NoteDetailsController") {
+                targetVC.modalPresentationStyle = .automatic
+                present(targetVC, animated: true, completion: nil)
+            }
+
         case "Instagram'da Bizi Takip Edin":
             openURL("https://www.instagram.com")
             
@@ -139,9 +145,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             print("Geri bildirim vermek için yönlendirme yapılabilir.")
             
         case "Çıkış Yap":
-            if let mainVC = storyboard?.instantiateViewController(withIdentifier: "OnboardingViewController") {
-                mainVC.modalPresentationStyle = .fullScreen
-                present(mainVC, animated: true, completion: nil)
+            if let targetVC = storyboard?.instantiateViewController(withIdentifier: "OnboardingViewController") {
+                targetVC.modalPresentationStyle = .fullScreen
+                present(targetVC, animated: true, completion: nil)
             }
             print("Çıkış yapılıyor.")
             

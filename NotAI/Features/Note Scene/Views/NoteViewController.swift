@@ -104,10 +104,9 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         
     }
     func callChatGPTAPI(with input: String, completion: @escaping (String) -> Void) {
-            // OpenAI API URL
-            let url = URL(string: "https://api.openai.com/v1/chat/completions")!
+
+        let url = URL(string: "https://api.openai.com/v1/chat/completions")!
             
-            // İstek için parametreler
         let dersNotlari = input
             let parameters: [String: Any] = [
                 "model": "gpt-3.5-turbo",
@@ -145,17 +144,14 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                 "temperature": 0.6
             ]
             
-            // JSON veri yapısı
             let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
             
-            // İstek yapılandırması
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
             request.httpBody = jsonData
             
-            // URLSession ile istek yap
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let error = error {
                     print("Hata: \(error.localizedDescription)")
@@ -169,7 +165,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                     return
                 }
                 
-                // Gelen cevabı işleme
                 if let json = try? JSONSerialization.jsonObject(with: data, options: []),
                    let dict = json as? [String: Any],
                    let choices = dict["choices"] as? [[String: Any]],

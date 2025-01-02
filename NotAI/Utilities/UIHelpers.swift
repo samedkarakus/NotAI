@@ -173,3 +173,14 @@ func editModelBackground(for view: UIView) {
     viewsToAddBlurredBackgroundToPressed.forEach { addBlurredBackgroundToPressedButton($0) }
 }
 
+func activateLightModeForSearchBar(to searchBar: UISearchBar) {
+    if #available(iOS 13.0, *) {
+        searchBar.overrideUserInterfaceStyle = .light
+    }
+}
+
+func editLine(to line: UIImageView, color: UIColor) {
+    line.backgroundColor = color
+    line.layer.cornerRadius = line.frame.width / 2
+    line.clipsToBounds = true
+}

@@ -26,8 +26,10 @@ class LearnerViewController: UIViewController, UITableViewDelegate, UISearchBarD
         learnerTableView.register(UINib(nibName: Constants.LearnerCellNibName, bundle: nil), forCellReuseIdentifier: Constants.LearnerCellIdentifier)
         learnerTableView.backgroundColor = .clear
         learnerTableView.showsVerticalScrollIndicator = false
+        activateLightModeForSearchBar(to: searchBar)
         
         if let searchTextField = searchBar.value(forKey: "searchField") as? UITextField {
+            searchBar.barStyle = .default
             searchTextField.font = UIFont.systemFont(ofSize: 14)
         }
         setupNavigationBar()
@@ -58,10 +60,12 @@ extension LearnerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = learnerTableView.dequeueReusableCell(withIdentifier: Constants.LearnerCellIdentifier, for: indexPath) as! LearnerCell
         let learner = viewModel.filteredLearners[indexPath.row]
+        
         cell.learnerUserName.text = learner.username
         cell.learnerEmoji.image = learner.memoji
         cell.learnerTopic.text = learner.topic
         cell.similarityPercentage.text = String(learner.similarityPercentage)
+        
         return cell
     }
 }
