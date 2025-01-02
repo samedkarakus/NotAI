@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct ChatGPTRequest: Encodable {
     let model: String
     let messages: [Message]

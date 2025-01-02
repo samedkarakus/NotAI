@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class OnboardingViewController: UIViewController {
 
@@ -28,6 +29,7 @@ class OnboardingViewController: UIViewController {
     
     var step: Int = 0
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +52,31 @@ class OnboardingViewController: UIViewController {
 
     }
     
+    func loginUser(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print("Giriş Hatası: \(error.localizedDescription)")
+                return
+            }
+            print("Kullanıcı başarıyla giriş yaptı: \(authResult?.user.email ?? "Bilinmiyor")")
+        }
+    }
+    
+    func registerUser(email: String, password: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print("Kayıt Hatası: \(error.localizedDescription)")
+                return
+            }
+            print("Kullanıcı başarıyla kaydedildi: \(authResult?.user.email ?? "Bilinmiyor")")
+        }
+    }
+    
     @IBAction func appleButtonPressed(_ sender: UIButton) {
+        
+        var emailAA = "alpaltan540@gmail.com"
+        var Sifre = "Admin123"
+        loginUser(email: emailAA, password: Sifre)
         if let mainVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
             mainVC.modalPresentationStyle = .fullScreen
             present(mainVC, animated: true, completion: nil)

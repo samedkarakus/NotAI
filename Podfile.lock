@@ -1157,6 +1157,9 @@ PODS:
     - FirebaseAuth (~> 11.5.0)
   - Firebase/CoreOnly (11.5.0):
     - FirebaseCore (= 11.5.0)
+  - Firebase/Database (11.5.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 11.5.0)
   - Firebase/Firestore (11.5.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 11.5.0)
@@ -1179,6 +1182,12 @@ PODS:
     - FirebaseCore (= 11.5)
   - FirebaseCoreInternal (11.5.0):
     - "GoogleUtilities/NSData+zlib (~> 8.0)"
+  - FirebaseDatabase (11.5.0):
+    - FirebaseAppCheckInterop (~> 11.0)
+    - FirebaseCore (= 11.5)
+    - FirebaseSharedSwift (~> 11.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - leveldb-library (~> 1.22)
   - FirebaseFirestore (11.5.0):
     - FirebaseCore (= 11.5)
     - FirebaseCoreExtension (= 11.5)
@@ -1219,6 +1228,9 @@ PODS:
     - GoogleUtilities/Privacy
   - GoogleUtilities/Privacy (8.0.2)
   - GoogleUtilities/Reachability (8.0.2):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/UserDefaults (8.0.2):
     - GoogleUtilities/Logger
     - GoogleUtilities/Privacy
   - "gRPC-C++ (1.65.5)":
@@ -1364,6 +1376,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.5)
   - Firebase/Auth
+  - Firebase/Database
   - Firebase/Firestore
   - IQKeyboardManagerSwift
   - lottie-ios
@@ -1380,6 +1393,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreExtension
     - FirebaseCoreInternal
+    - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseFirestoreInternal
     - FirebaseSharedSwift
@@ -1411,6 +1425,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 93abc05437f8064cd2bc0a53b768fb0bc5a1d006
   FirebaseCoreExtension: ddb2eb987f736b714d30f6386795b52c4670439e
   FirebaseCoreInternal: f47dd28ae7782e6a4738aad3106071a8fe0af604
+  FirebaseDatabase: 49600b40ee3ecd8711bf37e6cbf3a26cf87f7297
   FirebaseFirestore: 3f59cb7b6f62b362886743d4c92e83a66b5e0a5d
   FirebaseFirestoreInternal: d8d71a7f27834573404834172886183f1cd48c3d
   FirebaseSharedSwift: 302ac5967857ad7e7388b15382d705b8c8d892aa
@@ -1431,6 +1446,6 @@ SPEC CHECKSUMS:
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
 
-PODFILE CHECKSUM: 2badf23fe56792ad75ce94b16fe1a68a83820afe
+PODFILE CHECKSUM: 274bba88e2595e49f9988e136eeeea05d7e4bd3f
 
 COCOAPODS: 1.16.2
