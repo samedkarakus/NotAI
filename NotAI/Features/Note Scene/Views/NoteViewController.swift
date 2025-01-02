@@ -101,6 +101,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     }
     
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
+        
         navigationController?.popViewController(animated: true)
     }
     
