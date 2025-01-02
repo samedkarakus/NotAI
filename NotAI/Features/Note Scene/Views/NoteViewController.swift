@@ -31,11 +31,13 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     var isGradientAdded: Bool = false
     let titlePlaceholder = "Konu başlığı"
     let bodyPlaceholder = "Detaylar.."
-    let ref = Database.database().reference()
-    
-    func updateQuestionsInViewModel(with questions: [Question]) {
-            quizViewModel?.updateQuestions(with: questions)
-        }
+
+    func formatCurrentDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let currentDate = Date()
+        return dateFormatter.string(from: currentDate)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,46 +104,8 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func confirmBtnPressed(_ sender: UIButton) {
-        
-        
+    
 
-        let newUserRef = ref.child("users").child("user3")
-        newUserRef.setValue([
-            "info": [
-                "userId": "3",
-                "userName": "kullanici3",
-                "email": "kullanici3@notai.com",
-                "name": "Kullanici Üç",
-                "streak": "5"
-            ],
-            "notes": [
-                "note1": [
-                    "notId": "1",
-                    "title": "Yeni Not 1",
-                    "text": "Yeni Not 1 içeriği...",
-                    "lastUpdate": "01.01.2025"
-                ],
-                "note2": [
-                    "notId": "2",
-                    "title": "Yeni Not 2",
-                    "text": "Yeni Not 2 içeriği...",
-                    "lastUpdate": "01.01.2025"
-                ]
-            ]
-        ]) { error, _ in
-            if let error = error {
-                print("Hata oluştu: \(error.localizedDescription)")
-            } else {
-                print("Yeni kullanıcı başarıyla eklendi.")
-            }
-        }
-
-
-        navigationController?.popViewController(animated: true)
-
-
-    }
     func callChatGPTAPI(with input: String, completion: @escaping (String) -> Void) {
 
         let url = URL(string: "https://api.openai.com/v1/chat/completions")!
@@ -219,7 +183,124 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             task.resume()
         }
     
-    
+    @IBAction func confirmBtnPressed(_ sender: UIButton) {
+        guard let userInput = noteBodyTextView.text, !userInput.isEmpty else {
+            print("Lütfen bir metin girin.")
+            return
+        }
+        
+        print("API çağrısı başlatılıyor...")
+        
+        let startTime = Date()
+        
+        func updateQuestionsInViewModel(with questions: [Question]) {
+                quizViewModel?.updateQuestions(with: questions)
+            }
+        
+        callChatGPTAPI(with: userInput) { [weak self] response in
+            DispatchQueue.main.async {
+                let endTime = Date()
+                let elapsedTime = endTime.timeIntervalSince(startTime)
+                print("İşlem süresi: \(elapsedTime) saniye")
+                
+                // Gelen cevabı kontrol ediyoruz
+                if let jsonData = response.data(using: .utf8) {
+                    let decoder = JSONDecoder()
+                    do {
+                        let questions = try decoder.decode([Question].self, from: jsonData)
+                        updateQuestionsInViewModel(with: questions)
+                        
+                        // API cevabından sonra diğer işlemlere devam ediyoruz
+                        self?.continueAfterAPIResponse()
+                    } catch {
+                        print("JSON çözümleme hatası: \(error)")
+                    }
+                } else {
+                    print("Gelen veri dönüştürülemedi.")
+                }
+            }
+        }
+    }
+
+    // API çağrısı sonrası işlemleri burada tanımlayın
+    func continueAfterAPIResponse() {
+        print("API cevabından sonra işlemler devam ediyor...")
+        
+        // Firebase'den veri çekmek
+        let databaseRef = Database.database().reference()
+        let usersRef = databaseRef.child("users")
+        
+        usersRef.observe(.value) { snapshot in
+            if let value = snapshot.value as? [String: Any] {
+                print(value)
+            }
+        }
+        
+        let formattedDate = formatCurrentDate()
+        
+
+        func addUserToFirebase() {
+            let usersRef = Database.database().reference().child("users")
+
+            // Kullanıcı sayısını al
+            usersRef.observeSingleEvent(of: .value) { snapshot in
+            
+                // Kullanıcı sayısını belirlemek için snapshot içindeki veriyi kontrol et
+                let userCount = snapshot.childrenCount
+
+                // Yeni kullanıcıyı eklemek için doğru user id'sini oluştur
+                let userKey = "user\(userCount + 1)"
+
+                let noteTitle = self.noteTitleTextView.text ?? ""  // Optional kontrolü
+                let noteBody = self.noteBodyTextView.text ?? ""   // Optional kontrolü
+
+
+                // Kullanıcı verisini oluştur
+                let newUser: [String: Any] = [
+                    "info": [
+                        "userId": "\(userCount + 1)",
+                        "userName": "alp",
+                        "email": "alp@notai.com",
+                        "name": "Alp Altan",
+                        "streak": "15"
+                    ],
+                    "userNotes": [
+                        "note1": [
+                            "notId": "1",
+                            "title": "\(noteTitle)",
+                            "text": "\(noteBody)",
+                            "lastUpdate": "\(formattedDate)"
+                        ]
+                    ]
+                ]
+
+                // Veriyi belirli bir anahtara (user1, user2, ...) ekle
+                usersRef.child(userKey).setValue(newUser) { error, _ in
+                    if let error = error {
+                        print("Veri eklenirken hata oluştu: \(error.localizedDescription)")
+                    } else {
+                        print("Veri başarıyla eklendi.")
+                    }
+                }
+            }
+        }
+        
+        addUserToFirebase()
+        // Son olarak ekranı geri döndürme
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+            // Storyboard ID'ye göre ViewController'ı oluştur
+            if let quizVC = storyboard.instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController {
+            // ViewController'ı göster
+            quizVC.modalPresentationStyle = .fullScreen // İhtiyaca göre değiştirin
+            self.present(quizVC, animated: true, completion: nil)
+            } else {
+                print("QuizViewController bulunamadı!")
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
     @IBAction func photoBtnPressed(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Fotoğraf Seç", message: "Fotoğraf çek veya galeriden seç", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Kamerayı Aç", style: .default, handler: { _ in
@@ -238,34 +319,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         documentPicker.allowsMultipleSelection = false
         present(documentPicker, animated: true)
         
-        guard let userInput = noteBodyTextView.text, !userInput.isEmpty else {
-                   print("Lütfen bir metin girin.")
-                   return
-        }
         
-        let startTime = Date()
-           
-        callChatGPTAPI(with: userInput) { [weak self] response in
-            DispatchQueue.main.async {
-                let endTime = Date()
-                let elapsedTime = endTime.timeIntervalSince(startTime)
-                print("İşlem süresi: \(elapsedTime) saniye")
-                print("Gelen Cevap:\(response)")
-                if let jsonData = response.data(using: .utf8) {
-                    let decoder = JSONDecoder()
-                    do {
-                        let questions = try decoder.decode([Question].self, from: jsonData)
-                        self?.updateQuestionsInViewModel(with: questions)
-                    } catch {
-                        print("Error decoding JSON: \(error)")
-                    }
-                } else {
-                    print("Error: Unable to convert string to data")
-                }
-            }
-            
-        }
-
         
     }
     
