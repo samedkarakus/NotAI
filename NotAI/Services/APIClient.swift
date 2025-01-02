@@ -31,6 +31,27 @@ struct MessageContent: Decodable {
     let content: String
 }
 
+struct User: Codable {
+    let info: UserInfo
+    let notes: [userNotes]
+}
+
+struct UserInfo: Codable {
+    let userId: String
+    let userName: String
+    let email: String
+    let name: String
+    let streak: String
+}
+
+struct userNotes: Codable {
+    let notId: String
+    let title: String
+    let text: String
+    let lastUpdate: String
+}
+
+
 func sendChatGPTRequest(prompt: String, completion: @escaping (String?) -> Void) {
     let apiKey = "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"
     let url = URL(string: "https://api.openai.com/v1/chat/completions")!

@@ -835,7 +835,7 @@
                                     <imageReference key="image" image="checkmark" catalog="system" symbolScale="small"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CvK-EV-4pV" kind="show" identifier="ToQuestionSegue" id="6kV-Oh-bdl"/>
+                                    <action selector="confirmBtnPressed:" destination="j0Y-mt-sdx" eventType="touchUpInside" id="8as-gZ-4lF"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jwc-Mq-epB">

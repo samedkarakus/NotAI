@@ -66,13 +66,15 @@ class QuizViewController: UIViewController {
         viewModel.checkAnswer(answer)
         
         sender.backgroundColor = UIColor.white.withAlphaComponent(0.6)
-
+        
+      
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if self.viewModel.nextQuestion() {
                 self.setupUIElements()
             } else {
                 if let resultViewController = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
-                    self.navigationController?.pushViewController(resultViewController, animated: true)
+                    self.present(resultViewController, animated: true, completion: nil)
                 } else {
                     print("ResultViewController bulunamadı.")
                 }
