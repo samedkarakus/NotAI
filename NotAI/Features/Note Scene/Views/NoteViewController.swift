@@ -31,10 +31,13 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     var isGradientAdded: Bool = false
     let titlePlaceholder = "Konu başlığı"
     let bodyPlaceholder = "Detaylar.."
-    
 
-    
-   
+    func formatCurrentDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let currentDate = Date()
+        return dateFormatter.string(from: currentDate)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -233,6 +236,56 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             }
         }
         
+        let formattedDate = formatCurrentDate()
+        
+
+        func addUserToFirebase() {
+            let usersRef = Database.database().reference().child("users")
+
+            // Kullanıcı sayısını al
+            usersRef.observeSingleEvent(of: .value) { snapshot in
+            
+                // Kullanıcı sayısını belirlemek için snapshot içindeki veriyi kontrol et
+                let userCount = snapshot.childrenCount
+
+                // Yeni kullanıcıyı eklemek için doğru user id'sini oluştur
+                let userKey = "user\(userCount + 1)"
+
+                let noteTitle = self.noteTitleTextView.text ?? ""  // Optional kontrolü
+                let noteBody = self.noteBodyTextView.text ?? ""   // Optional kontrolü
+
+
+                // Kullanıcı verisini oluştur
+                let newUser: [String: Any] = [
+                    "info": [
+                        "userId": "\(userCount + 1)",
+                        "userName": "alp",
+                        "email": "alp@notai.com",
+                        "name": "Alp Altan",
+                        "streak": "15"
+                    ],
+                    "userNotes": [
+                        "note1": [
+                            "notId": "1",
+                            "title": "\(noteTitle)",
+                            "text": "\(noteBody)",
+                            "lastUpdate": "\(formattedDate)"
+                        ]
+                    ]
+                ]
+
+                // Veriyi belirli bir anahtara (user1, user2, ...) ekle
+                usersRef.child(userKey).setValue(newUser) { error, _ in
+                    if let error = error {
+                        print("Veri eklenirken hata oluştu: \(error.localizedDescription)")
+                    } else {
+                        print("Veri başarıyla eklendi.")
+                    }
+                }
+            }
+        }
+        
+        addUserToFirebase()
         // Son olarak ekranı geri döndürme
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
