@@ -9,7 +9,10 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 class OnboardingViewController: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var adImageView: UIImageView!
     @IBOutlet weak var adGrayView: UIView!
@@ -22,8 +25,8 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var progressViewCenter: UIProgressView!
     @IBOutlet weak var progressViewLeading: UIProgressView!
     
-    @IBOutlet weak var appleSignInButton: UIButton!
-    @IBOutlet weak var googleSignInButton: UIButton!
+    //@IBOutlet weak var appleSignInButton: UIButton!
+    //@IBOutlet weak var googleSignInButton: UIButton!
     
     @IBOutlet weak var infoTextView: UITextView!
     
@@ -47,40 +50,54 @@ class OnboardingViewController: UIViewController {
         featuresView.layer.cornerRadius = 10
         adGrayView.layer.cornerRadius = 8
         
-        configureTextView()
+        configureBottomTextView()
         adjustConstraintsForInterfaceIdiom(in: contentView)
-
+        configureEmailPasswordTextFields()
     }
+    
     
     func loginUser(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                print("Giriş Hatası: \(error.localizedDescription)")
+                print("Sign-in Error: \(error.localizedDescription)")
                 return
+            } else {
+                print("Successfully logged in: \(authResult?.user.email ?? "Unknown")")
+                if let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
+                    mainVC.modalPresentationStyle = .fullScreen
+                    self.present(mainVC, animated: true, completion: nil)
+                }
             }
-            print("Kullanıcı başarıyla giriş yaptı: \(authResult?.user.email ?? "Bilinmiyor")")
         }
     }
     
     func registerUser(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                print("Kayıt Hatası: \(error.localizedDescription)")
+                print("User creation error: \(error.localizedDescription)")
                 return
+            } else {
+                print("Successfully signed in: \(authResult?.user.email ?? "Unknown")")
+                if let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
+                    mainVC.modalPresentationStyle = .fullScreen
+                    self.present(mainVC, animated: true, completion: nil)
+                }
             }
-            print("Kullanıcı başarıyla kaydedildi: \(authResult?.user.email ?? "Bilinmiyor")")
         }
     }
     
-    @IBAction func appleButtonPressed(_ sender: UIButton) {
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        let email = emailTextField.text ?? "Email is empty."
+        let password = passwordTextField.text ?? "Password is empty."
         
-        var emailAA = "alpaltan540@gmail.com"
-        var Sifre = "Admin123"
-        loginUser(email: emailAA, password: Sifre)
-        if let mainVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
-            mainVC.modalPresentationStyle = .fullScreen
-            present(mainVC, animated: true, completion: nil)
-        }
+        loginUser(email: email, password: password)
+    }
+    
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        let email = emailTextField.text ?? "Email is empty."
+        let password = passwordTextField.text ?? "Password is empty."
+        
+        registerUser(email: email, password: password)
     }
     
     func adjustConstraintsForInterfaceIdiom(in view: UIView) {
@@ -95,9 +112,17 @@ class OnboardingViewController: UIViewController {
             }
         }
     }
+    
+    func configureEmailPasswordTextFields() {
+        [emailTextField, passwordTextField].forEach { textField in
+            makeCircular(view: textField!)
+            textField?.layer.cornerRadius = 10
+            textField?.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        }
+    }
 
     
-    func configureTextView() {
+    func configureBottomTextView() {
         let fullText = "Kayıt olarak Hizmet Şartlarımızı ve Gizlilik Politikamızı kabul ettiğinizi beyan etmiş olursunuz."
         let hizmetSartlariText = "Hizmet Şartlarımızı"
         let gizlilikPolitikasiText = "Gizlilik Politikamızı"
@@ -112,7 +137,7 @@ class OnboardingViewController: UIViewController {
 
         if let gizlilikRange = fullText.range(of: gizlilikPolitikasiText) {
             let nsRange = NSRange(gizlilikRange, in: fullText)
-            attributedString.addAttribute(.link, value: "https://example.com/gizlilik-politikasi", range: nsRange)
+            attributedString.addAttribute(.link, value: "https://example.com/gizlilik-politikas.foreachi", range: nsRange)
         }
 
         infoTextView.attributedText = attributedString

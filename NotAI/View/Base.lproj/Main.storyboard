@@ -1292,47 +1292,115 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ozl-mq-pHE">
-                                        <rect key="frame" x="20" y="651" width="374" height="98"/>
+                                        <rect key="frame" x="30" y="558" width="354" height="161"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsc-eD-weO">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="7tW-a5-bk5"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Sign in with Apple" image="apple">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <buttonConfiguration key="configuration" style="plain" image="apple" title="Apple ile devam et" imagePadding="10">
-                                                    <backgroundConfiguration key="background" cornerRadius="10">
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="appleButtonPressed:" destination="4Q4-MD-ALB" eventType="touchUpInside" id="RKC-Tg-P4P"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zva-cH-rQT">
-                                                <rect key="frame" x="0.0" y="53" width="374" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="4OB-WJ-6v3"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Sign in with Apple" image="apple">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <buttonConfiguration key="configuration" style="plain" image="google" title="Google ile devam et" imagePadding="10">
-                                                    <backgroundConfiguration key="background" cornerRadius="10">
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="niL-dI-h1O">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="161"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-rY-nlW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="98"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail adresi" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-w4-NEs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="Gjy-PY-LyI"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Pi-Aqm">
+                                                                <rect key="frame" x="0.0" y="53" width="354" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="H9k-wy-2AX"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2l8-9W-Ztv">
+                                                        <rect key="frame" x="0.0" y="107" width="354" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="uEt-on-7Nl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Sign in with Apple" image="apple">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <buttonConfiguration key="configuration" style="plain" image="apple" title="Apple ile devam et" imagePadding="10">
+                                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-NJ-YYf">
+                                                        <rect key="frame" x="0.0" y="116" width="354" height="45"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpH-xH-9zk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="173" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="ZUQ-Fr-gWR"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Sign in with Apple" image="apple">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Giriş yap">
+                                                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="loginButtonPressed:" destination="4Q4-MD-ALB" eventType="touchUpInside" id="A6e-kK-ECu"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTz-qv-bCr">
+                                                                <rect key="frame" x="181" y="0.0" width="173" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="QRx-fh-kIW"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Sign in with Apple" image="apple"/>
+                                                                <buttonConfiguration key="configuration" style="tinted" title="Kaydol">
+                                                                    <backgroundConfiguration key="background" cornerRadius="10"/>
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="signUpButtonPressed:" destination="4Q4-MD-ALB" eventType="touchUpInside" id="GzI-Ay-Ipd"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9e-sN-OFl">
+                                                        <rect key="frame" x="0.0" y="161" width="354" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="S3m-qK-gCu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Sign in with Apple" image="apple">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <buttonConfiguration key="configuration" style="plain" image="google" title="Google ile devam et" imagePadding="10">
+                                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g2F-gV-R5b">
@@ -1368,7 +1436,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fSz-FL-G3t">
-                                        <rect key="frame" x="40" y="281.5" width="334" height="251"/>
+                                        <rect key="frame" x="40" y="242" width="334" height="251"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjw-GW-uJT">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="115"/>
@@ -1494,10 +1562,9 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="NTO-dM-yB7" secondAttribute="bottom" id="0M0-BB-BAG"/>
                                     <constraint firstItem="uO8-z5-k3f" firstAttribute="top" secondItem="g2F-gV-R5b" secondAttribute="bottom" constant="70" id="0ks-7P-4vY"/>
-                                    <constraint firstAttribute="trailing" secondItem="ozl-mq-pHE" secondAttribute="trailing" constant="20" id="3j9-Tb-UEm"/>
-                                    <constraint firstItem="fSz-FL-G3t" firstAttribute="centerY" secondItem="J7S-n1-zci" secondAttribute="centerY" id="F6G-Qo-GLF"/>
-                                    <constraint firstItem="ozl-mq-pHE" firstAttribute="leading" secondItem="J7S-n1-zci" secondAttribute="leading" constant="20" id="FZb-Qs-TLZ"/>
-                                    <constraint firstItem="NTO-dM-yB7" firstAttribute="top" secondItem="ozl-mq-pHE" secondAttribute="bottom" constant="20" id="d7z-1e-KSv"/>
+                                    <constraint firstAttribute="trailing" secondItem="ozl-mq-pHE" secondAttribute="trailing" constant="30" id="3j9-Tb-UEm"/>
+                                    <constraint firstItem="ozl-mq-pHE" firstAttribute="leading" secondItem="J7S-n1-zci" secondAttribute="leading" constant="30" id="FZb-Qs-TLZ"/>
+                                    <constraint firstItem="NTO-dM-yB7" firstAttribute="top" secondItem="ozl-mq-pHE" secondAttribute="bottom" constant="50" id="d7z-1e-KSv"/>
                                     <constraint firstAttribute="trailing" secondItem="uO8-z5-k3f" secondAttribute="trailing" constant="20" id="dP6-B9-7sQ"/>
                                     <constraint firstItem="g2F-gV-R5b" firstAttribute="centerX" secondItem="J7S-n1-zci" secondAttribute="centerX" id="e9l-o0-AeF"/>
                                     <constraint firstItem="uO8-z5-k3f" firstAttribute="leading" secondItem="J7S-n1-zci" secondAttribute="leading" constant="20" id="gmU-Ey-ffo"/>
@@ -1509,6 +1576,7 @@
                                     <constraint firstAttribute="trailing" secondItem="NTO-dM-yB7" secondAttribute="trailing" constant="20" id="oPf-Ue-4c9"/>
                                     <constraint firstItem="uO8-z5-k3f" firstAttribute="centerX" secondItem="J7S-n1-zci" secondAttribute="centerX" id="p2o-rP-iWR"/>
                                     <constraint firstItem="g2F-gV-R5b" firstAttribute="top" secondItem="J7S-n1-zci" secondAttribute="top" constant="20" id="rwd-NA-m27"/>
+                                    <constraint firstItem="ozl-mq-pHE" firstAttribute="top" secondItem="fSz-FL-G3t" secondAttribute="bottom" constant="65" id="slx-TK-W2e"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1531,12 +1599,12 @@
                         <outlet property="adGrayView" destination="4fa-HK-8bi" id="1M6-lc-Pdj"/>
                         <outlet property="adImageView" destination="rb8-hy-NFl" id="B7Q-gV-cdn"/>
                         <outlet property="adView" destination="bjw-GW-uJT" id="V0u-rI-XBY"/>
-                        <outlet property="appleSignInButton" destination="Wsc-eD-weO" id="Cm2-q6-4dQ"/>
                         <outlet property="contentView" destination="J7S-n1-zci" id="E4N-tS-ctT"/>
+                        <outlet property="emailTextField" destination="AdB-w4-NEs" id="W5j-Oa-1Fn"/>
                         <outlet property="featuresView" destination="POj-p9-AVN" id="w8d-r1-Oqz"/>
-                        <outlet property="googleSignInButton" destination="Zva-cH-rQT" id="fc5-yw-uUo"/>
                         <outlet property="infoTextView" destination="NTO-dM-yB7" id="gck-51-uJL"/>
                         <outlet property="onboardingLabel" destination="uO8-z5-k3f" id="1GZ-iQ-KuD"/>
+                        <outlet property="passwordTextField" destination="8na-Pi-Aqm" id="sUK-VY-OJ5"/>
                         <outlet property="progressViewCenter" destination="7rP-gJ-rlF" id="QcH-CT-AeL"/>
                         <outlet property="progressViewLeading" destination="Sc5-zN-kYI" id="k0Q-sE-p2m"/>
                         <outlet property="progressViewTrailing" destination="c2e-jh-QM9" id="dn6-Gc-zXx"/>
