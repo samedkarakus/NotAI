@@ -22,6 +22,7 @@
 		9489B75B2D1477CB0080466F /* TextRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489B75A2D1477CB0080466F /* TextRecognitionService.swift */; };
 		949321122CE6A89C00C8666C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321112CE6A89C00C8666C /* Constants.swift */; };
 		949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321132CF3D2B100C8666C /* ResultViewController.swift */; };
+		94D551B62D298A5D00B7A17D /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 94D551B52D298A5D00B7A17D /* loading.json */; };
 		94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED112CF8DE3F0042C49E /* TimerManager.swift */; };
 		94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */; };
 		94DBED1A2CF8E0F00042C49E /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */; };
@@ -80,6 +81,7 @@
 		9489B75A2D1477CB0080466F /* TextRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionService.swift; sourceTree = "<group>"; };
 		949321112CE6A89C00C8666C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		949321132CF3D2B100C8666C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		94D551B52D298A5D00B7A17D /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		94DBED112CF8DE3F0042C49E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				942681172D1664AC00467FF3 /* yellowFire.json */,
 				942681192D1665AA00467FF3 /* purpleFire.json */,
+				94D551B52D298A5D00B7A17D /* loading.json */,
 				9426811B2D166B4300467FF3 /* grayFire.json */,
 				94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */,
 			);
@@ -546,6 +549,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D551B62D298A5D00B7A17D /* loading.json in Resources */,
 				94E837E42CB9AE7C00EBC9D4 /* LaunchScreen.storyboard in Resources */,
 				94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */,
 				9426811A2D1665AA00467FF3 /* purpleFire.json in Resources */,

@@ -13,6 +13,7 @@ struct Constants {
     
     static let CompletedStreakAnimation = "yellowFire"
     static let UncompletedStreakAnimation = "grayFire"
+    static let LoadingAnimation = "loading"
     
     static let ErrorTopicCellNibName = "ErrorTopicCell"
     static let ErrorTopicCellIdentifier = "ReusableErrorTopicCell"

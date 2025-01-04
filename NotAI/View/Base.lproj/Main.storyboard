@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Czq-Cc-2z9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UwX-1S-vUY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -904,6 +904,40 @@
             </objects>
             <point key="canvasLocation" x="1768.6363636363637" y="-2.510460251046025"/>
         </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="Mno-2K-pnm">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="UwX-1S-vUY" customClass="LoadingViewController" customModule="NotAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jjn-H2-ULd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SL0-sP-NdB">
+                                <rect key="frame" x="134" y="421.5" width="146" height="53"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2Fm-0c-fMn">
+                                        <rect key="frame" x="63" y="0.0" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorular Hazırlanıyor..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3el-B0-wiF">
+                                        <rect key="frame" x="0.0" y="35" width="146" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jJa-ai-4Br"/>
+                        <constraints>
+                            <constraint firstItem="SL0-sP-NdB" firstAttribute="centerY" secondItem="Jjn-H2-ULd" secondAttribute="centerY" id="fY2-Xf-lmE"/>
+                            <constraint firstItem="SL0-sP-NdB" firstAttribute="centerX" secondItem="Jjn-H2-ULd" secondAttribute="centerX" id="zwD-UE-qHq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWA-09-Uvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2139.130434782609" y="-682.36607142857144"/>
+        </scene>
         <!--Quiz View Controller-->
         <scene sceneID="qSg-O0-fW7">
             <objects>
@@ -1240,7 +1274,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="BSu-0j-XEG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BSu-0j-XEG">
                                 <rect key="frame" x="182" y="423" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LgG-Ck-Wl8"/>
@@ -1283,7 +1317,7 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notlarınızı bir adım öteye taşıyın!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO8-z5-k3f">
-                                        <rect key="frame" x="20" y="94" width="374" height="86"/>
+                                        <rect key="frame" x="20" y="84" width="374" height="86"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="86" id="fjL-2Y-C11"/>
                                         </constraints>
@@ -1436,25 +1470,25 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fSz-FL-G3t">
-                                        <rect key="frame" x="40" y="242" width="334" height="251"/>
+                                        <rect key="frame" x="30" y="242" width="354" height="251"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjw-GW-uJT">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="115"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="115"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ogP-gZ-PMb">
-                                                        <rect key="frame" x="20" y="10" width="294" height="95"/>
+                                                        <rect key="frame" x="20" y="10" width="314" height="95"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="bb0-Wf-60O">
-                                                                <rect key="frame" x="0.0" y="26" width="207" height="43"/>
+                                                                <rect key="frame" x="0.0" y="26" width="227" height="43"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeynep Yılmaz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVs-Jc-gg0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="227" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-HK-8bi">
-                                                                        <rect key="frame" x="0.0" y="31" width="207" height="12"/>
+                                                                        <rect key="frame" x="0.0" y="31" width="227" height="12"/>
                                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098111548013244995" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="12" id="l7y-y4-bZr"/>
@@ -1463,7 +1497,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoji_3" translatesAutoresizingMaskIntoConstraints="NO" id="rb8-hy-NFl">
-                                                                <rect key="frame" x="219" y="10" width="75" height="75"/>
+                                                                <rect key="frame" x="239" y="10" width="75" height="75"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="75" id="DWc-QM-hU2"/>
                                                                     <constraint firstAttribute="width" constant="75" id="nbg-DV-poZ"/>
@@ -1481,7 +1515,7 @@
                                                 </constraints>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POj-p9-AVN">
-                                                <rect key="frame" x="0.0" y="127" width="334" height="124"/>
+                                                <rect key="frame" x="0.0" y="127" width="354" height="124"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2fQ-sD-p2O">
                                                         <rect key="frame" x="20" y="20" width="228.5" height="84"/>
@@ -1561,7 +1595,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="NTO-dM-yB7" secondAttribute="bottom" id="0M0-BB-BAG"/>
-                                    <constraint firstItem="uO8-z5-k3f" firstAttribute="top" secondItem="g2F-gV-R5b" secondAttribute="bottom" constant="70" id="0ks-7P-4vY"/>
+                                    <constraint firstItem="uO8-z5-k3f" firstAttribute="top" secondItem="g2F-gV-R5b" secondAttribute="bottom" constant="60" id="0ks-7P-4vY"/>
                                     <constraint firstAttribute="trailing" secondItem="ozl-mq-pHE" secondAttribute="trailing" constant="30" id="3j9-Tb-UEm"/>
                                     <constraint firstItem="ozl-mq-pHE" firstAttribute="leading" secondItem="J7S-n1-zci" secondAttribute="leading" constant="30" id="FZb-Qs-TLZ"/>
                                     <constraint firstItem="NTO-dM-yB7" firstAttribute="top" secondItem="ozl-mq-pHE" secondAttribute="bottom" constant="50" id="d7z-1e-KSv"/>
@@ -1569,8 +1603,8 @@
                                     <constraint firstItem="g2F-gV-R5b" firstAttribute="centerX" secondItem="J7S-n1-zci" secondAttribute="centerX" id="e9l-o0-AeF"/>
                                     <constraint firstItem="uO8-z5-k3f" firstAttribute="leading" secondItem="J7S-n1-zci" secondAttribute="leading" constant="20" id="gmU-Ey-ffo"/>
                                     <constraint firstItem="fSz-FL-G3t" firstAttribute="centerX" secondItem="J7S-n1-zci" secondAttribute="centerX" id="hbL-cN-bTj"/>
-                                    <constraint firstItem="fSz-FL-G3t" firstAttribute="leading" secondItem="J7S-n1-zci" secondAttribute="leading" constant="40" id="kUj-c5-yHx"/>
-                                    <constraint firstAttribute="trailing" secondItem="fSz-FL-G3t" secondAttribute="trailing" constant="40" id="lvj-rg-iVp"/>
+                                    <constraint firstItem="fSz-FL-G3t" firstAttribute="leading" secondItem="J7S-n1-zci" secondAttribute="leading" constant="30" id="kUj-c5-yHx"/>
+                                    <constraint firstAttribute="trailing" secondItem="fSz-FL-G3t" secondAttribute="trailing" constant="30" id="lvj-rg-iVp"/>
                                     <constraint firstItem="NTO-dM-yB7" firstAttribute="leading" secondItem="J7S-n1-zci" secondAttribute="leading" constant="20" id="mIz-Ua-qNS"/>
                                     <constraint firstItem="uO8-z5-k3f" firstAttribute="centerX" secondItem="J7S-n1-zci" secondAttribute="centerX" id="o8f-Xt-vpP"/>
                                     <constraint firstAttribute="trailing" secondItem="NTO-dM-yB7" secondAttribute="trailing" constant="20" id="oPf-Ue-4c9"/>
@@ -1804,7 +1838,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="550" height="550"/>
         <image name="Question No" width="25" height="25"/>
         <image name="StreakCircle" width="266.5" height="266.5"/>
         <image name="Time Icon" width="25" height="25"/>
@@ -1823,6 +1856,7 @@
         <image name="learningNow" width="116" height="80"/>
         <image name="lightBackground" width="393" height="852"/>
         <image name="loading" width="22" height="22"/>
+        <image name="mainLogo" width="550" height="550"/>
         <image name="pencil.line" catalog="system" width="128" height="117"/>
         <image name="qrFrame" width="1024" height="1024"/>
         <image name="randomQRBlack" width="100" height="100"/>
@@ -1836,7 +1870,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
