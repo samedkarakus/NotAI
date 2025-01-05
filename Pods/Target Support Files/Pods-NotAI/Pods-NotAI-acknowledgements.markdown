@@ -3525,6 +3525,14 @@ FirestoreEncoder
    limitations under the License.
 
 
+## Google-Mobile-Ads-SDK
+
+Copyright 2024 Google LLC
+
+## GoogleUserMessagingPlatform
+
+Copyright 2024 Google LLC
+
 ## GoogleUtilities
 
 

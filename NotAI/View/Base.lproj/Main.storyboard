@@ -322,6 +322,7 @@
                         <outlet property="inviteButton" destination="R8t-KY-iTp" id="Fg2-GE-QWH"/>
                         <outlet property="learningLabelView" destination="8cg-9N-tyk" id="bmX-te-vOO"/>
                         <outlet property="learningNowView" destination="rhZ-L4-25I" id="PQn-cd-Yuk"/>
+                        <outlet property="noteTitle" destination="6uK-fZ-uNl" id="mP8-7W-ykS"/>
                         <outlet property="notificationView" destination="szr-DF-RzK" id="Lf6-18-DCU"/>
                         <outlet property="streakCircleView" destination="iC7-Gn-z6s" id="SDI-on-dRw"/>
                         <outlet property="streakLabelView" destination="h2B-CY-ihj" id="3jb-gE-eCr"/>
@@ -910,40 +911,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HY5-sn-nsm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1768.6363636363637" y="-2.510460251046025"/>
-        </scene>
-        <!--Loading View Controller-->
-        <scene sceneID="Mno-2K-pnm">
-            <objects>
-                <viewController storyboardIdentifier="LoadingViewController" id="UwX-1S-vUY" customClass="LoadingViewController" customModule="NotAI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jjn-H2-ULd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SL0-sP-NdB">
-                                <rect key="frame" x="134" y="421.5" width="146" height="53"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2Fm-0c-fMn">
-                                        <rect key="frame" x="63" y="0.0" width="20" height="20"/>
-                                    </activityIndicatorView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorular Hazırlanıyor..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3el-B0-wiF">
-                                        <rect key="frame" x="0.0" y="35" width="146" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="jJa-ai-4Br"/>
-                        <constraints>
-                            <constraint firstItem="SL0-sP-NdB" firstAttribute="centerY" secondItem="Jjn-H2-ULd" secondAttribute="centerY" id="fY2-Xf-lmE"/>
-                            <constraint firstItem="SL0-sP-NdB" firstAttribute="centerX" secondItem="Jjn-H2-ULd" secondAttribute="centerX" id="zwD-UE-qHq"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AWA-09-Uvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2139.130434782609" y="-682.36607142857144"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="qSg-O0-fW7">

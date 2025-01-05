@@ -16,11 +16,11 @@
 		9438105C2CC567E500AC74B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105B2CC567E500AC74B0 /* Question.swift */; };
 		943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */; };
 		945368982CBA87E3003DC7DB /* ShadowView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 945368962CBA87E3003DC7DB /* ShadowView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		948946072D2B092F00B38A1C /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948946062D2B092F00B38A1C /* AdManager.swift */; };
 		9489B7592D1477AE0080466F /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489B7582D1477AE0080466F /* FileManagerService.swift */; };
 		9489B75B2D1477CB0080466F /* TextRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489B75A2D1477CB0080466F /* TextRecognitionService.swift */; };
 		949321122CE6A89C00C8666C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321112CE6A89C00C8666C /* Constants.swift */; };
 		949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321132CF3D2B100C8666C /* ResultViewController.swift */; };
-		94D551B62D298A5D00B7A17D /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 94D551B52D298A5D00B7A17D /* loading.json */; };
 		94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED112CF8DE3F0042C49E /* TimerManager.swift */; };
 		94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */; };
 		94DBED1A2CF8E0F00042C49E /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */; };
@@ -60,9 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		204BDDE46F289702AF999EC7 /* Pods-zap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.release.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.release.xcconfig"; sourceTree = "<group>"; };
 		5026301D741BE4A6B105466A /* Pods-NotAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotAI.release.xcconfig"; path = "Target Support Files/Pods-NotAI/Pods-NotAI.release.xcconfig"; sourceTree = "<group>"; };
-		5B382C447E90D3BAFFE5D708 /* Pods-zap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zap.debug.xcconfig"; path = "Target Support Files/Pods-zap/Pods-zap.debug.xcconfig"; sourceTree = "<group>"; };
 		9402DEE92D0C7AF4002EA923 /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
 		9408AD3F2CA9BECF00AB70D3 /* NotAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942681172D1664AC00467FF3 /* yellowFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = yellowFire.json; sourceTree = "<group>"; };
@@ -73,11 +71,11 @@
 		9438105B2CC567E500AC74B0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		945368962CBA87E3003DC7DB /* ShadowView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShadowView.framework; path = Carthage/Build/Mac/ShadowView.framework; sourceTree = "<group>"; };
+		948946062D2B092F00B38A1C /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 		9489B7582D1477AE0080466F /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		9489B75A2D1477CB0080466F /* TextRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionService.swift; sourceTree = "<group>"; };
 		949321112CE6A89C00C8666C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		949321132CF3D2B100C8666C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		94D551B52D298A5D00B7A17D /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		94DBED112CF8DE3F0042C49E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
@@ -125,6 +123,11 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		9489463A2D2B1C8F00B38A1C /* Loading Scene */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Loading Scene";
+			sourceTree = "<group>";
+		};
 		948D9A7E2D0B42000070462A /* QR Scene */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "QR Scene";
@@ -133,11 +136,6 @@
 		94D1266D2D25B2830087EF6F /* Note Details Scene */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Note Details Scene";
-			sourceTree = "<group>";
-		};
-		94D5580E2D062D7E00268595 /* Loading Scene */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Loading Scene";
 			sourceTree = "<group>";
 		};
 		94EA7CF62D02F5DD00ED9CB7 /* ViewModels */ = {
@@ -201,7 +199,6 @@
 			children = (
 				942681172D1664AC00467FF3 /* yellowFire.json */,
 				942681192D1665AA00467FF3 /* purpleFire.json */,
-				94D551B52D298A5D00B7A17D /* loading.json */,
 				9426811B2D166B4300467FF3 /* grayFire.json */,
 				94E837DF2CB9AE7C00EBC9D4 /* Assets.xcassets */,
 			);
@@ -220,6 +217,7 @@
 		94DBED1D2CF907220042C49E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				9489463A2D2B1C8F00B38A1C /* Loading Scene */,
 				94FEA6C62D0B7A3400FBB4F0 /* Onboarding Scene */,
 				94DBED462CF90E340042C49E /* Home Scene */,
 				94DBED1E2CF907340042C49E /* Note Scene */,
@@ -230,7 +228,6 @@
 				94EA7CF32D02F59200ED9CB7 /* Profile Scene */,
 				94D1266D2D25B2830087EF6F /* Note Details Scene */,
 				948D9A7E2D0B42000070462A /* QR Scene */,
-				94D5580E2D062D7E00268595 /* Loading Scene */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -285,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				94DBED242CF907E10042C49E /* APIClient.swift */,
+				948946062D2B092F00B38A1C /* AdManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -450,8 +448,6 @@
 		A63FE4CD82E0C20C40EA93A1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5B382C447E90D3BAFFE5D708 /* Pods-zap.debug.xcconfig */,
-				204BDDE46F289702AF999EC7 /* Pods-zap.release.xcconfig */,
 				B2B841F0231B1DC9FFA2D0B4 /* Pods-NotAI.debug.xcconfig */,
 				5026301D741BE4A6B105466A /* Pods-NotAI.release.xcconfig */,
 			);
@@ -480,6 +476,7 @@
 				9408AD3D2CA9BECF00AB70D3 /* Resources */,
 				945368992CBA87E3003DC7DB /* Embed Frameworks */,
 				433F07959C8375478A19A3BA /* [CP] Embed Pods Frameworks */,
+				9B1394C1538C64EA84A9230E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -490,9 +487,9 @@
 				942684722D1AD38200467FF3 /* Cell */,
 				9489459B2D2AF0F600B38A1C /* Models */,
 				9489459C2D2AF10100B38A1C /* ViewModels */,
+				9489463A2D2B1C8F00B38A1C /* Loading Scene */,
 				948D9A7E2D0B42000070462A /* QR Scene */,
 				94D1266D2D25B2830087EF6F /* Note Details Scene */,
-				94D5580E2D062D7E00268595 /* Loading Scene */,
 				94EA7CF62D02F5DD00ED9CB7 /* ViewModels */,
 				94F17F4F2D0A1DAE0077C202 /* Learner Scene */,
 				94FEA6C62D0B7A3400FBB4F0 /* Onboarding Scene */,
@@ -541,7 +538,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D551B62D298A5D00B7A17D /* loading.json in Resources */,
 				94E837E42CB9AE7C00EBC9D4 /* LaunchScreen.storyboard in Resources */,
 				94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */,
 				9426811A2D1665AA00467FF3 /* purpleFire.json in Resources */,
@@ -570,6 +566,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B1394C1538C64EA84A9230E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotAI/Pods-NotAI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9C91DCEBBB5F9839EA49C6D /* [CP] Check Pods Manifest.lock */ = {
@@ -601,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948946072D2B092F00B38A1C /* AdManager.swift in Sources */,
 				94E837E92CB9AE7C00EBC9D4 /* HomeViewController.swift in Sources */,
 				94DBED1A2CF8E0F00042C49E /* UITextView+Extensions.swift in Sources */,
 				94DBED552CF90F6D0042C49E /* HomeModel.swift in Sources */,

@@ -10,4 +10,5 @@ target 'NotAI' do
   pod 'Alamofire', '~> 5.5'
   pod 'lottie-ios'
   pod 'Firebase/Database'
+  pod 'Google-Mobile-Ads-SDK'
 end

@@ -11,7 +11,9 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     var viewModel: HomeViewModel!
+    var timer: Timer?
 
+    @IBOutlet weak var noteTitle: UILabel!
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var titleLabelView: UIStackView!
     @IBOutlet weak var balloonView: UIImageView!
@@ -34,6 +36,7 @@ class HomeViewController: UIViewController {
         setupUIElements()
         startTimerIfNeeded()
         startBubbleAnimationsIfNeeded()
+        startChangingTopics()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -48,9 +51,21 @@ class HomeViewController: UIViewController {
 
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
+        timer?.invalidate()
     }
     
     // MARK: - Setup Methods
+    private func startChangingTopics() {
+        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+            self.updateLabelWithRandomTopic()
+        }
+    }
+    
+    func updateLabelWithRandomTopic() {
+        let randomTopic = Constants.topics.randomElement() ?? "No Topic"
+        noteTitle.text = randomTopic
+    }
+    
     private func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
