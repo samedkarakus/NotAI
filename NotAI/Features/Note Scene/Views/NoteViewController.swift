@@ -31,6 +31,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     var isGradientAdded: Bool = false
     let titlePlaceholder = "Konu başlığı"
     let bodyPlaceholder = "Detaylar.."
+    var loadingAnimation: UIView!
 
     func formatCurrentDate() -> String {
         let dateFormatter = DateFormatter()
@@ -63,7 +64,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         super.viewWillDisappear(animated)
         TimerManager.shared.stopTimer()
     }
-
+    
     private func setupTextViews() {
         noteTitleTextView.delegate = self
         noteBodyTextView.delegate = self
@@ -101,11 +102,8 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     }
     
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
-        
         navigationController?.popViewController(animated: true)
     }
-    
-    
 
     func callChatGPTAPI(with input: String, completion: @escaping (String) -> Void) {
 
@@ -190,6 +188,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             return
         }
         
+        loadingAnimationSetup()
         print("API çağrısı başlatılıyor...")
         
         let startTime = Date()
@@ -287,21 +286,85 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         }
         
         addUserToFirebase()
-        // Son olarak ekranı geri döndürme
+        loadingAnimation.removeFromSuperview()
+        
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
-            // Storyboard ID'ye göre ViewController'ı oluştur
             if let quizVC = storyboard.instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController {
-            // ViewController'ı göster
-            quizVC.modalPresentationStyle = .fullScreen // İhtiyaca göre değiştirin
-            self.present(quizVC, animated: true, completion: nil)
+                quizVC.modalPresentationStyle = .fullScreen
+                self.present(quizVC, animated: true, completion: nil)
             } else {
                 print("QuizViewController bulunamadı!")
             }
+            
             self.navigationController?.popViewController(animated: true)
         }
     }
+    
+    
+    //MARK: - Loading Setup
+    
+    private func loadingAnimationSetup() {
+        loadingAnimation = UIView(frame: view.bounds)
+        loadingAnimation.backgroundColor = UIColor(white: 0, alpha: 0.75)
+        
+        let activityIndicator = UIActivityIndicatorView(style: .medium)
+        activityIndicator.color = .white
+        activityIndicator.center = CGPoint(x: view.center.x, y: view.center.y - 20)
+        activityIndicator.startAnimating()
+        loadingAnimation.addSubview(activityIndicator)
+        
+        let loadingLabel = UILabel()
+        loadingLabel.textColor = .white
+        loadingLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        loadingLabel.textAlignment = .center
+        loadingLabel.frame = CGRect(x: 20, y: activityIndicator.frame.maxY + 10, width: view.bounds.width - 40, height: 30)
+        loadingLabel.text = "Sorularınız hazırlanıyor"
+        loadingAnimation.addSubview(loadingLabel)
+        
+        var dotCount = 0
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
+            dotCount = (dotCount + 1) % 4
+            let dots = String(repeating: ".", count: dotCount)
+            loadingLabel.text = "Sorularınız hazırlanıyor\(dots)"
+        }
+        
+        func createGradientLayer(for frame: CGRect) -> CAGradientLayer {
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = frame
+            gradientLayer.colors = [
+                UIColor.brand.cgColor,
+                UIColor.clear.cgColor,
+                UIColor.brand.cgColor
+            ]
+            gradientLayer.locations = [0.0, 0.5, 1.0]
+            
+            let fadeAnimation = CABasicAnimation(keyPath: "opacity")
+            fadeAnimation.fromValue = 0.0
+            fadeAnimation.toValue = 1.0
+            fadeAnimation.duration = 2.0
+            fadeAnimation.autoreverses = true
+            fadeAnimation.repeatCount = .infinity
+            gradientLayer.add(fadeAnimation, forKey: "gradientFade")
+            
+            return gradientLayer
+        }
+        
+        let topGradient = createGradientLayer(for: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
+        let bottomGradient = createGradientLayer(for: CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: view.bounds.height))
+        
+        loadingAnimation.layer.addSublayer(topGradient)
+        loadingAnimation.layer.addSublayer(bottomGradient)
+        
+        view.addSubview(loadingAnimation)
+    }
+
+
+
+    
+//MARK: - File&Image Functions
+    
     @IBAction func photoBtnPressed(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Fotoğraf Seç", message: "Fotoğraf çek veya galeriden seç", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Kamerayı Aç", style: .default, handler: { _ in
@@ -319,9 +382,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         documentPicker.delegate = self
         documentPicker.allowsMultipleSelection = false
         present(documentPicker, animated: true)
-        
-        
-        
     }
     
     func textViewDidChange(_ textView: UITextView) {

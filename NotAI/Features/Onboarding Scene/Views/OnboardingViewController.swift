@@ -59,7 +59,9 @@ class OnboardingViewController: UIViewController {
     func loginUser(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                print("Sign-in Error: \(error.localizedDescription)")
+                let alert = UIAlertController(title: "Giriş Hatası", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
                 return
             } else {
                 print("Successfully logged in: \(authResult?.user.email ?? "Unknown")")
@@ -70,11 +72,14 @@ class OnboardingViewController: UIViewController {
             }
         }
     }
+
     
     func registerUser(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                print("User creation error: \(error.localizedDescription)")
+                let alert = UIAlertController(title: "Kayıt Hatası", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
                 return
             } else {
                 print("Successfully signed in: \(authResult?.user.email ?? "Unknown")")
@@ -117,7 +122,6 @@ class OnboardingViewController: UIViewController {
         [emailTextField, passwordTextField].forEach { textField in
             makeCircular(view: textField!)
             textField?.layer.cornerRadius = 10
-            textField?.backgroundColor = UIColor(white: 1, alpha: 0.5)
         }
     }
 

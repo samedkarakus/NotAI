@@ -17,7 +17,7 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(white: 0, alpha: 0.5)
-        //loadDataAndTransition()
+        loadDataAndTransition()
         //setupAnimation(to: LottieAnimationView)
     }
 
@@ -32,9 +32,9 @@ class LoadingViewController: UIViewController {
     }
     
     private func transitionToMainScreen() {
-        if let quizVC = storyboard?.instantiateViewController(withIdentifier: "QuizViewController") {
-            quizVC.modalPresentationStyle = .fullScreen
-            present(quizVC, animated: true, completion: nil)
+        if let mainVC = storyboard?.instantiateViewController(withIdentifier: "OnboardingViewController") {
+            mainVC.modalPresentationStyle = .fullScreen
+            present(mainVC, animated: true, completion: nil)
         }
     }
     

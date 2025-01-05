@@ -57,7 +57,13 @@ class QuizViewController: UIViewController {
     }
 
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        if let noteVC = self.storyboard?.instantiateViewController(withIdentifier: "NoteViewController") as? NoteViewController {
+            noteVC.modalPresentationStyle = .fullScreen
+
+            self.present(noteVC, animated: true, completion: nil)
+        } else {
+            print("NoteViewController bulunamadı.")
+        }
         viewModel.resetQuiz()
     }
 

@@ -33,6 +33,7 @@ class ResultViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func getMoreQuestionButtonPressed(_ sender: UIButton) {
+        //Baştan API çalışırılcak!!!!
         if let quizVC = self.storyboard?.instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController {
             quizVC.modalPresentationStyle = .fullScreen
             self.present(quizVC, animated: true)

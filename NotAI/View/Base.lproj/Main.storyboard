@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UwX-1S-vUY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Czq-Cc-2z9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -163,7 +163,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                                 <connections>
-                                                    <segue destination="j0Y-mt-sdx" kind="show" identifier="" id="01j-Nr-mfl"/>
+                                                    <segue destination="j0Y-mt-sdx" kind="show" id="ADk-l1-qbs"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -214,7 +214,10 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                                 <connections>
-                                                    <segue destination="bU3-VM-WHr" kind="show" id="oDk-CB-E78"/>
+                                                    <segue destination="bU3-VM-WHr" kind="show" id="oDk-CB-E78">
+                                                        <segue key="commit" inheritsFrom="parent" id="YUJ-4n-OmC"/>
+                                                        <segue key="preview" inheritsFrom="commit" id="0Xj-I5-N2f"/>
+                                                    </segue>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -248,6 +251,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8t-KY-iTp">
                                 <rect key="frame" x="25" y="812" width="100" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.19793046353576155" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8ZU-eZ-B5q"/>
                                     <constraint firstAttribute="width" constant="100" id="GQh-wv-YfU"/>
@@ -257,6 +261,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="yt0-Vi-BwL" kind="presentation" id="ikf-SB-8OO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqk-GN-sNv" userLabel="Profile Button">
                                 <rect key="frame" x="334" y="812" width="40" height="40"/>
@@ -1334,8 +1341,9 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-rY-nlW">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="98"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail adresi" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-w4-NEs">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="samed@notai.com" borderStyle="roundedRect" placeholder="Mail adresi" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-w4-NEs">
                                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Gjy-PY-LyI"/>
                                                                 </constraints>
@@ -1343,8 +1351,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Pi-Aqm">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin123" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Pi-Aqm">
                                                                 <rect key="frame" x="0.0" y="53" width="354" height="45"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="H9k-wy-2AX"/>
                                                                 </constraints>
@@ -1837,6 +1846,10 @@
             <point key="canvasLocation" x="3249.275362318841" y="719.86607142857144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ikf-SB-8OO"/>
+        <segue reference="YUJ-4n-OmC"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Question No" width="25" height="25"/>
         <image name="StreakCircle" width="266.5" height="266.5"/>
@@ -1870,7 +1883,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

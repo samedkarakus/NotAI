@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
     }
-
+    
     // MARK: - Setup Methods
     private func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
 
     private func setupUIElements() {
         let circularViews: [UIView] = [notificationView, inviteButton, learningNowView, streakView]
-        let blurredViews: [UIView] = [notificationView, inviteButton, learningNowView, streakView]
+        let blurredViews: [UIView] = [notificationView, learningNowView, streakView]
 
         circularViews.forEach { makeCircular(view: $0) }
         blurredViews.forEach { addBlurredBackground($0) }
