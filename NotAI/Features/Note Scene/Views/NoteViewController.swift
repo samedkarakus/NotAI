@@ -32,7 +32,8 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     let titlePlaceholder = "Konu başlığı"
     let bodyPlaceholder = "Detaylar.."
     var loadingAnimation: UIView!
-
+    var girisEkrani: OnboardingViewController?
+    
     func formatCurrentDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
@@ -228,20 +229,13 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         
         // Firebase'den veri çekmek
         let databaseRef = Database.database().reference()
-        let usersRef = databaseRef.child("users")
-        
-        usersRef.observe(.value) { snapshot in
-            if let value = snapshot.value as? [String: Any] {
-                print(value)
-            }
-        }
         
         let formattedDate = formatCurrentDate()
         
 
         func addUserToFirebase() {
             let usersRef = Database.database().reference().child("users")
-
+            
             // Kullanıcı sayısını al
             usersRef.observeSingleEvent(of: .value) { snapshot in
             
@@ -253,15 +247,15 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
 
                 let noteTitle = self.noteTitleTextView.text ?? ""  // Optional kontrolü
                 let noteBody = self.noteBodyTextView.text ?? ""   // Optional kontrolü
-
+                let emailAdresi = self.girisEkrani?.girisYapilanMailAdresi
 
                 // Kullanıcı verisini oluştur
                 let newUser: [String: Any] = [
                     "info": [
                         "userId": "\(userCount + 1)",
-                        "userName": "alp",
-                        "email": "alp@notai.com",
-                        "name": "Alp Altan",
+                        "userName": "kullaniciadi",
+                        "email": "\(emailAdresi ?? "noteai@noteai.com")",
+                        "name": "Ad Soyad",
                         "streak": "15"
                     ],
                     "userNotes": [

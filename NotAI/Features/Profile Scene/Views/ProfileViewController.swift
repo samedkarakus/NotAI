@@ -13,19 +13,25 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var editButtonView: UIButton!
     @IBOutlet weak var memojiView: UIView!
     @IBOutlet weak var settingsTableView: UITableView!
-
+    @IBOutlet weak var AdSoyadLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     private let viewModel = ProfileViewModel()
     private var qrViewModel: QRViewModel!
+    private var adSoyad: String = "Ad Soyad"
+    private var username: String = "kullaniciadi"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
+        
         makeCircular(view: memojiView)
         addBlurredBackground(memojiView)
         makeCircular(view: editButtonView)
         addBlurredBackgroundToPressedButton(editButtonView)
-    
+        AdSoyadLabel.text = adSoyad
+        usernameLabel.text = username
         qrViewModel = QRViewModel(qrData: "https://www.instagram.com")
         configureQRCode()
         
@@ -41,6 +47,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButtonImage
         
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for: .default)
+        
     }
     
     private func configureQRCode() {

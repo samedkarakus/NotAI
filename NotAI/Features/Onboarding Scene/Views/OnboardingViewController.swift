@@ -31,7 +31,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var infoTextView: UITextView!
     
     var step: Int = 0
-    
+    var girisYapilanMailAdresi: String = ""
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +65,7 @@ class OnboardingViewController: UIViewController {
                 return
             } else {
                 print("Successfully logged in: \(authResult?.user.email ?? "Unknown")")
+                self.girisYapilanMailAdresi = (authResult?.user.email ?? "Unknown")
                 if let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
                     mainVC.modalPresentationStyle = .fullScreen
                     self.present(mainVC, animated: true, completion: nil)
@@ -83,6 +84,7 @@ class OnboardingViewController: UIViewController {
                 return
             } else {
                 print("Successfully signed in: \(authResult?.user.email ?? "Unknown")")
+                self.girisYapilanMailAdresi = (authResult?.user.email ?? "Unknown")
                 if let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
                     mainVC.modalPresentationStyle = .fullScreen
                     self.present(mainVC, animated: true, completion: nil)
