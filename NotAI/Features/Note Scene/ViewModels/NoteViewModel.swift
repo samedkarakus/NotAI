@@ -51,7 +51,6 @@ class NoteViewModel {
             self?.onTextUpdate?(text)
         }
     }
-
     
     func processPDF(url: URL) {
         if let text = fileManagerService.extractTextFromPDF(url: url) {

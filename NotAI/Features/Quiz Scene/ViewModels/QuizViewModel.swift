@@ -10,15 +10,14 @@ import Foundation
 class QuizViewModel {
     
     var currentIndex: Int = 0
-    
+    var incorrectAnswerwedQuestions: [IncorrectQuestions] = []
 
     func updateQuestions(with newQuestions: [Question]) {
         questions = newQuestions
-        //print("Sorular güncellendi: \(questions)")
     }
     
     var currentQuestion: Question {
-         questions[currentIndex]
+        questions[currentIndex]
     }
 
     var questionNumber: Int {
@@ -30,16 +29,21 @@ class QuizViewModel {
     }
 
     func checkAnswer(_ answer: String) -> Bool {
-        var pressedAnswer : String = answer
-        if (pressedAnswer == currentQuestion.correctAnswer )
-        {
+        let pressedAnswer: String = answer
+        if pressedAnswer == currentQuestion.correctAnswer {
             score += 1
             return true
+        } else {
+            let incorrectQuestion = IncorrectQuestions(
+                question: currentQuestion.question,
+                userAnswer: pressedAnswer,
+                correctAnswer: currentQuestion.correctAnswer
+            )
+            incorrectAnsweredQuestions.append(incorrectQuestion)
+            return false
         }
-        else
-        {return false}
-        
     }
+
 
     func nextQuestion() -> Bool {
         if currentIndex + 1 < questions.count {

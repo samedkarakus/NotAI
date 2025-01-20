@@ -10,7 +10,8 @@ import UIKit
 class ErrorTopicCell: UITableViewCell {
 
     @IBOutlet weak var errorTitle: UILabel!
-    @IBOutlet weak var errorDescription: UILabel!
+    @IBOutlet weak var errorUserAnswer: UILabel!
+    @IBOutlet weak var errorCorrectAnswer: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +21,4 @@ class ErrorTopicCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }

@@ -16,6 +16,7 @@
 		9438105C2CC567E500AC74B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105B2CC567E500AC74B0 /* Question.swift */; };
 		943810602CC8F83D00AC74B0 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */; };
 		945368982CBA87E3003DC7DB /* ShadowView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 945368962CBA87E3003DC7DB /* ShadowView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9472DDAF2D329D7700F21B86 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472DDAE2D329D7700F21B86 /* FirebaseService.swift */; };
 		948946072D2B092F00B38A1C /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948946062D2B092F00B38A1C /* AdManager.swift */; };
 		9489B7592D1477AE0080466F /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489B7582D1477AE0080466F /* FileManagerService.swift */; };
 		9489B75B2D1477CB0080466F /* TextRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489B75A2D1477CB0080466F /* TextRecognitionService.swift */; };
@@ -71,6 +72,7 @@
 		9438105B2CC567E500AC74B0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9438105F2CC8F83D00AC74B0 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		945368962CBA87E3003DC7DB /* ShadowView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShadowView.framework; path = Carthage/Build/Mac/ShadowView.framework; sourceTree = "<group>"; };
+		9472DDAE2D329D7700F21B86 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		948946062D2B092F00B38A1C /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 		9489B7582D1477AE0080466F /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		9489B75A2D1477CB0080466F /* TextRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionService.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				94DBED242CF907E10042C49E /* APIClient.swift */,
 				948946062D2B092F00B38A1C /* AdManager.swift */,
+				9472DDAE2D329D7700F21B86 /* FirebaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				94E837EB2CB9AE7C00EBC9D4 /* AppDelegate.swift in Sources */,
 				94DBED332CF908C80042C49E /* NoteViewModel.swift in Sources */,
 				9438105C2CC567E500AC74B0 /* Question.swift in Sources */,
+				9472DDAF2D329D7700F21B86 /* FirebaseService.swift in Sources */,
 				94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */,
 				9489B7592D1477AE0080466F /* FileManagerService.swift in Sources */,
 				94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */,

@@ -32,7 +32,9 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     let titlePlaceholder = "Konu başlığı"
     let bodyPlaceholder = "Detaylar.."
     var loadingAnimation: UIView!
-    var girisEkrani: OnboardingViewController?
+    var onboardingVC: OnboardingViewController?
+    let noteDetailsViewModel: NoteDetailsViewModel? = nil
+    let firebaseService: FirebaseService? = nil
     
     func formatCurrentDate() -> String {
         let dateFormatter = DateFormatter()
@@ -105,113 +107,37 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-
-    func callChatGPTAPI(with input: String, completion: @escaping (String) -> Void) {
-
-        let url = URL(string: "https://api.openai.com/v1/chat/completions")!
-            
-        let dersNotlari = input
-        let parameters: [String: Any] = [
-            "model": "gpt-3.5-turbo",
-            "messages": [
-                        [
-                            "role": "user",
-                            "content": """
-                            \(dersNotlari)
-                            Bu ders notlarını sana aşağıda verdiğim kriterlere göre işle.
-
-                            struct Question: Codable {
-                                var question: String
-                                var answer: [String]
-                                var correctAnswer: String
-                            }
-                            ve
-                            var questions: [Question] = [] oldugunu bil. 
-                            Ders Notlarını kullanarak yukarıdaki kurallara uygun ve aşağıdaki örnek formata göre bana 10 adet soru hazırla. Bana yollayacağın çıktı sadece aşağıdaki formatta dönen bir JSON dizisi olsun. Ekstra açıklama, başlık ya da yorum ekleme. Sorular birbirinden ve aşağıdakilerden farklı olsun.
-                            questions = [
-                                        Question(
-                                            question: "Aşağıdakilerden hangisi bir sözleşmenin 'geçersiz' olmasına sebep olabilir?",
-                                            answer: ["Sözleşmenin yazılı yapılması.", "Taraflardan birinin ehliyetsiz olması.", "Sözleşmenin noter huzurunda yapılması.", "Tarafların mutabakata varması."],
-                                            correctAnswer: "Taraflardan birinin ehliyetsiz olması."
-                                        ),
-                                        Question(
-                                            question: "Aşağıdakilerden hangisi medeni hukukun dallarından biridir?",
-                                            answer: ["Ceza hukuku.", "Vergi hukuku.", "Aile hukuku.", "İdari hukuk."],
-                                            correctAnswer: "Aile hukuku."
-                                        )
-                            ]
-                            
-                            """
-                        ]
-            ],
-            "temperature": 0.6
-        ]
-        
-        let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
-        request.httpBody = jsonData
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                print("Hata: \(error.localizedDescription)")
-                completion("Bir hata oluştu.")
-                return
-            }
-            
-            guard let data = data else {
-                print("Veri alınamadı.")
-                completion("Bir hata oluştu.")
-                return
-            }
-            
-            if let json = try? JSONSerialization.jsonObject(with: data, options: []),
-               let dict = json as? [String: Any],
-               let choices = dict["choices"] as? [[String: Any]],
-               let message = choices.first?["message"] as? [String: Any],
-               let content = message["content"] as? String {
-                completion(content)
-            } else {
-                print("JSON çözümleme hatası.")
-                completion("Bir hata oluştu.")
-            }
-        }
-        
-        task.resume()
-    }
+    
     
     @IBAction func confirmBtnPressed(_ sender: UIButton) {
         guard let userInput = noteBodyTextView.text, !userInput.isEmpty else {
-            print("Lütfen bir metin girin.")
+            let alert = UIAlertController(title: "Hata", message: "Lütfen bir metin girin.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return
         }
-        
+
+        noteDetailsViewModel?.addNote(title: noteTitleTextView.text, body: noteBodyTextView.text)
         loadingAnimationSetup()
-        print("API çağrısı başlatılıyor...")
+        print("API call is being initiated...")
         
         let startTime = Date()
         
         func updateQuestionsInViewModel(with questions: [Question]) {
-                quizViewModel?.updateQuestions(with: questions)
-            }
+            quizViewModel?.updateQuestions(with: questions)
+        }
         
-        callChatGPTAPI(with: userInput) { [weak self] response in
+        callChatGPTAPIForQuestionGeneration(with: userInput) { [weak self] response in
             DispatchQueue.main.async {
                 let endTime = Date()
                 let elapsedTime = endTime.timeIntervalSince(startTime)
                 print("İşlem süresi: \(elapsedTime) saniye")
                 
-                // Gelen cevabı kontrol ediyoruz
                 if let jsonData = response.data(using: .utf8) {
                     let decoder = JSONDecoder()
                     do {
                         let questions = try decoder.decode([Question].self, from: jsonData)
                         updateQuestionsInViewModel(with: questions)
-                        
-                        // API cevabından sonra diğer işlemlere devam ediyoruz
                         self?.continueAfterAPIResponse()
                     } catch {
                         print("JSON çözümleme hatası: \(error)")
@@ -223,63 +149,32 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         }
     }
 
-    // API çağrısı sonrası işlemleri burada tanımlayın
+    
+    //MARK: - API Response
+    
     func continueAfterAPIResponse() {
-        print("API cevabından sonra işlemler devam ediyor...")
+        print("Operations continue after the API response...")
         
-        // Firebase'den veri çekmek
-        let databaseRef = Database.database().reference()
-        
-        let formattedDate = formatCurrentDate()
-        
+        guard let noteTitle = noteTitleTextView.text, !noteTitle.isEmpty else {
+            print("Please enter a title.")
+            return
+        }
 
-        func addUserToFirebase() {
-            let usersRef = Database.database().reference().child("users")
-            
-            // Kullanıcı sayısını al
-            usersRef.observeSingleEvent(of: .value) { snapshot in
-            
-                // Kullanıcı sayısını belirlemek için snapshot içindeki veriyi kontrol et
-                let userCount = snapshot.childrenCount
-
-                // Yeni kullanıcıyı eklemek için doğru user id'sini oluştur
-                let userKey = "user\(userCount + 1)"
-
-                let noteTitle = self.noteTitleTextView.text ?? ""  // Optional kontrolü
-                let noteBody = self.noteBodyTextView.text ?? ""   // Optional kontrolü
-                let emailAdresi = self.girisEkrani?.girisYapilanMailAdresi
-
-                // Kullanıcı verisini oluştur
-                let newUser: [String: Any] = [
-                    "info": [
-                        "userId": "\(userCount + 1)",
-                        "userName": "kullaniciadi",
-                        "email": "\(emailAdresi ?? "noteai@noteai.com")",
-                        "name": "Ad Soyad",
-                        "streak": "15"
-                    ],
-                    "userNotes": [
-                        "note1": [
-                            "notId": "1",
-                            "title": "\(noteTitle)",
-                            "text": "\(noteBody)",
-                            "lastUpdate": "\(formattedDate)"
-                        ]
-                    ]
-                ]
-
-                // Veriyi belirli bir anahtara (user1, user2, ...) ekle
-                usersRef.child(userKey).setValue(newUser) { error, _ in
-                    if let error = error {
-                        print("Veri eklenirken hata oluştu: \(error.localizedDescription)")
-                    } else {
-                        print("Veri başarıyla eklendi.")
-                    }
-                }
-            }
+        guard let noteBody = noteBodyTextView.text, !noteBody.isEmpty else {
+            print("Please enter the note body.")
+            return
         }
         
-        addUserToFirebase()
+        let note = Note(title:noteTitle, body: noteBody, createdDate: Date())
+    
+        firebaseService?.addUserToFirebase(note: note, email: onboardingVC?.mailTextView ?? "", completion: { success in
+            if success {
+                print("Successfully added to firebase")
+            } else {
+                print("Failed to add user to firebase")
+            }
+        })
+        
         loadingAnimation.removeFromSuperview()
         
         DispatchQueue.main.async {
@@ -317,13 +212,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         loadingLabel.text = "Sorularınız hazırlanıyor"
         loadingAnimation.addSubview(loadingLabel)
         
-        /*var dotCount = 0
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
-            dotCount = (dotCount + 1) % 4
-            let dots = String(repeating: ".", count: dotCount)
-            loadingLabel.text = "Sorularınız hazırlanıyor\(dots)"
-        }*/
-        
         func createGradientLayer(for frame: CGRect) -> CAGradientLayer {
             let gradientLayer = CAGradientLayer()
             gradientLayer.frame = frame
@@ -355,9 +243,8 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     }
 
 
-
     
-//MARK: - File&Image Functions
+    //MARK: - File&Image Functions
     
     @IBAction func photoBtnPressed(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Fotoğraf Seç", message: "Fotoğraf çek veya galeriden seç", preferredStyle: .actionSheet)
@@ -458,7 +345,7 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             
             textView.text = fullText
         } else {
-            print("PDF açılamadı.")
+            print("PDF could not be opened.")
         }
     }
     
@@ -469,6 +356,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
-        print("Kullanıcı dosya seçim ekranını iptal etti.")
+        print("The user canceled the file selection screen.")
     }
 }

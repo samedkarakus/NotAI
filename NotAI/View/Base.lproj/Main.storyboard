@@ -1104,10 +1104,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Ql-G6-pqe">
-                                <rect key="frame" x="25" y="361" width="364" height="426"/>
+                                <rect key="frame" x="25" y="371" width="364" height="416"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="0.10088990066225166" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBE-po-09B">
-                                <rect key="frame" x="127" y="161" width="160" height="160"/>
+                                <rect key="frame" x="127" y="181" width="160" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XB6-gp-P78">
                                         <rect key="frame" x="48" y="51.5" width="64" height="57.5"/>
@@ -1145,12 +1147,12 @@
                                     <constraint firstAttribute="width" constant="160" id="wEb-eB-obP"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bu ay 60 küçük sınavı başarıyla tamamladın !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbc-kZ-n6Q">
-                                <rect key="frame" x="57" y="73" width="300" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yanlış sorularına tıkla, konu tekrarını yap!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbc-kZ-n6Q">
+                                <rect key="frame" x="57" y="98" width="300" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="seg-Bd-YC4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1202,10 +1204,10 @@
                             <constraint firstItem="RBj-Ub-iWe" firstAttribute="centerX" secondItem="eXl-Eu-oFY" secondAttribute="centerX" id="cC9-jH-HgA"/>
                             <constraint firstItem="8Ql-G6-pqe" firstAttribute="centerX" secondItem="eXl-Eu-oFY" secondAttribute="centerX" id="cyI-sA-SOd"/>
                             <constraint firstItem="zym-ze-jxf" firstAttribute="bottom" secondItem="xOi-D3-cwk" secondAttribute="bottom" constant="10" id="dCI-hY-TXO"/>
-                            <constraint firstItem="8Ql-G6-pqe" firstAttribute="top" secondItem="lBE-po-09B" secondAttribute="bottom" constant="40" id="efq-bW-dAh"/>
-                            <constraint firstItem="lBE-po-09B" firstAttribute="top" secondItem="Vbc-kZ-n6Q" secondAttribute="bottom" constant="40" id="gb6-hI-1SB"/>
+                            <constraint firstItem="8Ql-G6-pqe" firstAttribute="top" secondItem="lBE-po-09B" secondAttribute="bottom" constant="30" id="efq-bW-dAh"/>
+                            <constraint firstItem="lBE-po-09B" firstAttribute="top" secondItem="Vbc-kZ-n6Q" secondAttribute="bottom" constant="30" id="gb6-hI-1SB"/>
                             <constraint firstItem="RBj-Ub-iWe" firstAttribute="leading" secondItem="eXl-Eu-oFY" secondAttribute="leading" id="lq5-9N-7WH"/>
-                            <constraint firstItem="Vbc-kZ-n6Q" firstAttribute="top" secondItem="zym-ze-jxf" secondAttribute="top" constant="25" id="nV7-Jh-uoT"/>
+                            <constraint firstItem="Vbc-kZ-n6Q" firstAttribute="top" secondItem="zym-ze-jxf" secondAttribute="top" constant="50" id="nV7-Jh-uoT"/>
                             <constraint firstItem="xOi-D3-cwk" firstAttribute="leading" secondItem="zym-ze-jxf" secondAttribute="leading" constant="25" id="o9S-WH-jGr"/>
                             <constraint firstItem="8Ql-G6-pqe" firstAttribute="bottom" secondItem="zym-ze-jxf" secondAttribute="bottom" constant="-75" id="rRn-mR-xJn"/>
                             <constraint firstItem="RBj-Ub-iWe" firstAttribute="centerY" secondItem="eXl-Eu-oFY" secondAttribute="centerY" id="yLP-8T-DWq"/>
@@ -1214,9 +1216,9 @@
                     <navigationItem key="navigationItem" id="Otu-J2-nOF"/>
                     <connections>
                         <outlet property="endQuizButtonView" destination="xOi-D3-cwk" id="YPM-BG-KJ9"/>
-                        <outlet property="errorTopicsTableView" destination="8Ql-G6-pqe" id="zln-a6-dUD"/>
                         <outlet property="finalScoreView" destination="lBE-po-09B" id="Nq8-vv-run"/>
                         <outlet property="getMoreQuestionButtonView" destination="DRY-vl-VPG" id="isF-Lv-B8s"/>
+                        <outlet property="incorrectQuestionsTableView" destination="8Ql-G6-pqe" id="zln-a6-dUD"/>
                         <outlet property="scoreLabel" destination="aL9-Zd-L7D" id="5GT-Os-NHw"/>
                     </connections>
                 </viewController>
@@ -1320,7 +1322,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin123" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Pi-Aqm">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="demo123" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8na-Pi-Aqm">
                                                                 <rect key="frame" x="0.0" y="53" width="354" height="45"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -1852,7 +1854,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -11,11 +11,12 @@ class ResultViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var finalScoreView: UIView!
-    @IBOutlet weak var errorTopicsTableView: UITableView!
+    @IBOutlet weak var incorrectQuestionsTableView: UITableView!
     @IBOutlet weak var endQuizButtonView: UIButton!
     @IBOutlet weak var getMoreQuestionButtonView: UIButton!
     
-    var viewModel = ErrorTopicViewModel()
+    private var viewModel = IncorrectQuestionsViewModel()
+    private var incorrectAnswers: [Question] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class ResultViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func getMoreQuestionButtonPressed(_ sender: UIButton) {
-        //Baştan API çalışırılcak!!!!
+        // Yeni sorulara geçiş için yeni API çağrılacak
         if let quizVC = self.storyboard?.instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController {
             quizVC.modalPresentationStyle = .fullScreen
             self.present(quizVC, animated: true)
@@ -43,11 +44,15 @@ class ResultViewController: UIViewController, UITableViewDelegate {
     }
     
     func setupView() {
-        errorTopicsTableView.dataSource = self
-        errorTopicsTableView.delegate = self
-        errorTopicsTableView.register(UINib(nibName: Constants.ErrorTopicCellNibName, bundle: nil), forCellReuseIdentifier: Constants.ErrorTopicCellIdentifier)
-        errorTopicsTableView.backgroundColor = .clear
-        errorTopicsTableView.showsVerticalScrollIndicator = false
+        viewModel.incorrectAnsweredQuestions = incorrectAnsweredQuestions
+        incorrectQuestionsTableView.dataSource = self
+        incorrectQuestionsTableView.delegate = self
+        incorrectQuestionsTableView.register(UINib(nibName: Constants.IncorrectQuestionCellNibName, bundle: nil),
+            forCellReuseIdentifier: Constants.IncorrectQuestionCellIdentifier
+        )
+        incorrectQuestionsTableView.backgroundColor = .clear
+        incorrectQuestionsTableView.showsVerticalScrollIndicator = false
+        incorrectQuestionsTableView.reloadData()
         
         [endQuizButtonView, getMoreQuestionButtonView].enumerated().forEach { index, button in
             button?.isUserInteractionEnabled = true
@@ -72,20 +77,35 @@ class ResultViewController: UIViewController, UITableViewDelegate {
             progressView.widthAnchor.constraint(equalTo: finalScoreView.widthAnchor),
             progressView.heightAnchor.constraint(equalTo: finalScoreView.heightAnchor)
         ])
-        
     }
 }
 
 extension ResultViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.errors.count
+        return viewModel.getAllIncorrectQuestions().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = errorTopicsTableView.dequeueReusableCell(withIdentifier: Constants.ErrorTopicCellIdentifier, for: indexPath) as! ErrorTopicCell
-        let error = viewModel.errors[indexPath.row]
-        cell.errorTitle.text = error.topicTitle
-        cell.errorDescription.text = error.topicDescription
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: Constants.IncorrectQuestionCellIdentifier,
+            for: indexPath
+        ) as? ErrorTopicCell else {
+            return UITableViewCell()
+        }
+        
+        let incorrect = viewModel.getAllIncorrectQuestions()[indexPath.row]
+        cell.errorTitle.text = incorrect.question
+        cell.errorUserAnswer.attributedText = formatText(fullText: "Cevabınız: \(incorrect.userAnswer)", highlightText: "\(incorrect.userAnswer)")
+        cell.errorCorrectAnswer.attributedText = formatText(fullText: "Doğru Cevap: \(incorrect.correctAnswer)", highlightText: "\(incorrect.correctAnswer)")
         return cell
     }
+}
+
+private func formatText(fullText: String, highlightText: String) -> NSAttributedString {
+    let attributedText = NSMutableAttributedString(string: fullText)
+    if let range = fullText.range(of: highlightText) {
+        let nsRange = NSRange(range, in: fullText)
+        attributedText.addAttribute(.foregroundColor, value: UIColor.darkGray, range: nsRange)
+    }
+    return attributedText
 }

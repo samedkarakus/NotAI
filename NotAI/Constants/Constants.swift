@@ -14,8 +14,8 @@ struct Constants {
     static let CompletedStreakAnimation = "yellowFire"
     static let UncompletedStreakAnimation = "grayFire"
     
-    static let ErrorTopicCellNibName = "ErrorTopicCell"
-    static let ErrorTopicCellIdentifier = "ReusableErrorTopicCell"
+    static let IncorrectQuestionCellNibName = "ErrorTopicCell"
+    static let IncorrectQuestionCellIdentifier = "ReusableErrorTopicCell"
     
     static let noteCellNibName = "NoteCell"
     static let noteCellIdentifier = "ReusableNoteCell"

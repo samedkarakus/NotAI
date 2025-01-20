@@ -71,7 +71,7 @@ class QuizViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if self.viewModel.nextQuestion() {
                 self.questionCounter += 1
-                if self.questionCounter % 4 == 0 {
+                if self.questionCounter == 9 {
                     self.adManager.showAd(from: self)
                 }
                 self.setupUIElements()
