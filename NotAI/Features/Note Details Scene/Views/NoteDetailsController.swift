@@ -10,7 +10,6 @@ import UIKit
 
 class NoteDetailsController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
     
-    
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var lastNoteDate: UILabel!
@@ -19,6 +18,7 @@ class NoteDetailsController: UIViewController, UITableViewDelegate, UISearchBarD
     @IBOutlet weak var noteDetailsTableView: UITableView!
     
     var viewModel = NoteDetailsViewModel()
+    var userID: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +31,22 @@ class NoteDetailsController: UIViewController, UITableViewDelegate, UISearchBarD
         addLastNoteDate()
         activateLightModeForSearchBar(to: noteSearchBar)
         editTitle()
+        loadNotes()
     }
     
+    func loadNotes() {
+        viewModel.fetchNotes(for: userID) { [weak self] in
+            DispatchQueue.main.async {
+                self?.noteDetailsTableView.reloadData()
+                self?.addLastNoteDate()
+                self?.editTitle()
+            }
+        }
+    }
     
     func editTitle() {
-        let title = viewModel.filteredNotes.count
-        mainTitle.text = "Notlarım (\(title))"
+        let titleCount = viewModel.filteredNotes.count
+        mainTitle.text = "Notlarım (\(titleCount))"
     }
     
     func addLastNoteDate() {
@@ -73,7 +83,6 @@ class NoteDetailsController: UIViewController, UITableViewDelegate, UISearchBarD
         viewModel.filteredNotes(by: searchText)
         noteDetailsTableView.reloadData()
     }
-    
 }
 
 extension NoteDetailsController: UITableViewDataSource {
@@ -82,7 +91,7 @@ extension NoteDetailsController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = noteDetailsTableView.dequeueReusableCell(withIdentifier: Constants.noteCellIdentifier, for: indexPath) as! NoteCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.noteCellIdentifier, for: indexPath) as! NoteCell
         let note = viewModel.filteredNotes[indexPath.row]
         
         cell.noteTitle.text = "# \(note.title)"
@@ -94,20 +103,39 @@ extension NoteDetailsController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            viewModel.filteredNotes.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            let deletedNote = viewModel.filteredNotes[indexPath.row]
+            viewModel.deleteNoteFromFirebase(note: deletedNote, for: userID) { success in
+                if success {
+                    DispatchQueue.main.async {
+                        self.viewModel.filteredNotes.remove(at: indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: .automatic)
+                    }
+                } else {
+                    print("Error deleting note.")
+                }
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { (action, view, completionHandler) in
-            self.viewModel.filteredNotes.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-            completionHandler(true)
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
+            let deletedNote = self.viewModel.filteredNotes[indexPath.row]
+            self.viewModel.deleteNoteFromFirebase(note: deletedNote, for: self.userID) { success in
+                if success {
+                    DispatchQueue.main.async {
+                        self.viewModel.filteredNotes.remove(at: indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: .automatic)
+                        completionHandler(true)
+                    }
+                } else {
+                    print("Error deleting note.")
+                    completionHandler(false)
+                }
+            }
         }
         
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         return configuration
     }
 }
-

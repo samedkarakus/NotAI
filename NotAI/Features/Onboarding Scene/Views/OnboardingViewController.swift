@@ -1,14 +1,14 @@
 //
-//  SignInViewController.swift
+//  OnboardingViewController.swift
 //  NotAI
 //
 //  Created by Samed Karakuş on 14.12.2024.
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
-import FirebaseDatabase
-
+import FirebaseFirestore
 
 class OnboardingViewController: UIViewController {
     
@@ -34,6 +34,7 @@ class OnboardingViewController: UIViewController {
     
     var step: Int = 0
     var mailTextView: String = ""
+    let userID = UUID().uuidString
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,8 +86,21 @@ class OnboardingViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
                 return
             } else {
-                print("Successfully signed in: \(authResult?.user.email ?? "Unknown")")
-                self.mailTextView = (authResult?.user.email ?? "Unknown")
+                guard let userEmail = authResult?.user.email else { return }
+                print("Successfully signed in: \(userEmail)")
+                
+                // Firestore'a veri ekleme işlemi
+                let db = Firestore.firestore()
+                db.collection("users").document(userEmail).setData([
+                    "userID": UUID().uuidString // Yeni bir userID ekliyoruz
+                ]) { error in
+                    if let error = error {
+                        print("Error adding document: \(error)")
+                    } else {
+                        print("Document successfully added!")
+                    }
+                }
+                
                 if let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
                     mainVC.modalPresentationStyle = .fullScreen
                     self.present(mainVC, animated: true, completion: nil)

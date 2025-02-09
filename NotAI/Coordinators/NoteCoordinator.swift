@@ -17,10 +17,12 @@ class NoteCoordinator {
     }
     
     func start(note: Note? = nil) {
-        let noteViewController = NoteViewController()
-        let noteViewModel = NoteViewModel(note: note)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let noteViewController = storyboard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
         
+        let noteViewModel = NoteViewModel(note: note)
         noteViewController.viewModel = noteViewModel
+        
         navigationController.pushViewController(noteViewController, animated: true)
     }
 }

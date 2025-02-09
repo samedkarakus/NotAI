@@ -22,6 +22,9 @@
 		9489B75B2D1477CB0080466F /* TextRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9489B75A2D1477CB0080466F /* TextRecognitionService.swift */; };
 		949321122CE6A89C00C8666C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321112CE6A89C00C8666C /* Constants.swift */; };
 		949321142CF3D2B100C8666C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949321132CF3D2B100C8666C /* ResultViewController.swift */; };
+		94B913CF2D3E8D0400941E2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94B913CE2D3E8D0400941E2F /* GoogleService-Info.plist */; };
+		94B914392D46510F00941E2F /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B914382D46510F00941E2F /* ImageCacheManager.swift */; };
+		94B9143B2D46552100941E2F /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9143A2D46552100941E2F /* UIView+Animations.swift */; };
 		94DBED122CF8DE3F0042C49E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED112CF8DE3F0042C49E /* TimerManager.swift */; };
 		94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */; };
 		94DBED1A2CF8E0F00042C49E /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */; };
@@ -42,7 +45,6 @@
 		94E837EC2CB9AE7C00EBC9D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */; };
 		94EA7CF82D02F64B00ED9CB7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA7CF72D02F64B00ED9CB7 /* ProfileViewController.swift */; };
 		94EA7CFE2D03286100ED9CB7 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA7CFD2D03286100ED9CB7 /* ProfileItem.swift */; };
-		A3635D972D26C9AF0017484E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3635D962D26C9AF0017484E /* GoogleService-Info.plist */; };
 		BDFC25BBC628B8604537745E /* Pods_NotAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A806AC7C0C4F2E7384E4D2CA /* Pods_NotAI.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,9 @@
 		9489B75A2D1477CB0080466F /* TextRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionService.swift; sourceTree = "<group>"; };
 		949321112CE6A89C00C8666C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		949321132CF3D2B100C8666C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		94B913CE2D3E8D0400941E2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94B914382D46510F00941E2F /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		94B9143A2D46552100941E2F /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		94DBED112CF8DE3F0042C49E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
@@ -99,7 +104,6 @@
 		94E837E22CB9AE7C00EBC9D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		94EA7CF72D02F64B00ED9CB7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		94EA7CFD2D03286100ED9CB7 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
-		A3635D962D26C9AF0017484E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A806AC7C0C4F2E7384E4D2CA /* Pods_NotAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B841F0231B1DC9FFA2D0B4 /* Pods-NotAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotAI.debug.xcconfig"; path = "Target Support Files/Pods-NotAI/Pods-NotAI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +196,7 @@
 			children = (
 				94DBED172CF8E0DF0042C49E /* UIView+Extensions.swift */,
 				94DBED192CF8E0F00042C49E /* UITextView+Extensions.swift */,
+				94B9143A2D46552100941E2F /* UIView+Animations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				94DBED112CF8DE3F0042C49E /* TimerManager.swift */,
 				94DBED592CF910200042C49E /* UIHelpers.swift */,
 				9402DEE92D0C7AF4002EA923 /* QRCodeGenerator.swift */,
+				94B914382D46510F00941E2F /* ImageCacheManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -417,7 +423,7 @@
 				94E837DD2CB9AE7C00EBC9D4 /* View */,
 				94DBED2B2CF9083B0042C49E /* Constants */,
 				94E837E02CB9AE7C00EBC9D4 /* Info.plist */,
-				A3635D962D26C9AF0017484E /* GoogleService-Info.plist */,
+				94B913CE2D3E8D0400941E2F /* GoogleService-Info.plist */,
 			);
 			path = NotAI;
 			sourceTree = "<group>";
@@ -545,7 +551,7 @@
 				94E837E52CB9AE7C00EBC9D4 /* Main.storyboard in Resources */,
 				9426811A2D1665AA00467FF3 /* purpleFire.json in Resources */,
 				94E837E62CB9AE7C00EBC9D4 /* Assets.xcassets in Resources */,
-				A3635D972D26C9AF0017484E /* GoogleService-Info.plist in Resources */,
+				94B913CF2D3E8D0400941E2F /* GoogleService-Info.plist in Resources */,
 				9426811C2D166B4300467FF3 /* grayFire.json in Resources */,
 				942681182D1664AC00467FF3 /* yellowFire.json in Resources */,
 			);
@@ -618,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				948946072D2B092F00B38A1C /* AdManager.swift in Sources */,
+				94B9143B2D46552100941E2F /* UIView+Animations.swift in Sources */,
 				94E837E92CB9AE7C00EBC9D4 /* HomeViewController.swift in Sources */,
 				94DBED1A2CF8E0F00042C49E /* UITextView+Extensions.swift in Sources */,
 				94DBED552CF90F6D0042C49E /* HomeModel.swift in Sources */,
@@ -628,6 +635,7 @@
 				94E837EA2CB9AE7C00EBC9D4 /* NoteViewController.swift in Sources */,
 				94DBED312CF908AD0042C49E /* Note.swift in Sources */,
 				94DBED282CF908140042C49E /* AppCoordinator.swift in Sources */,
+				94B914392D46510F00941E2F /* ImageCacheManager.swift in Sources */,
 				9438105A2CC2AE5F00AC74B0 /* QuizViewController.swift in Sources */,
 				94DBED182CF8E0DF0042C49E /* UIView+Extensions.swift in Sources */,
 				94EA7CFE2D03286100ED9CB7 /* ProfileItem.swift in Sources */,

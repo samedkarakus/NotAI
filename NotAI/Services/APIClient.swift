@@ -32,7 +32,7 @@ struct MessageContent: Decodable {
 
 struct User: Codable {
     let info: UserInfo
-    let notes: [userNotes]
+    let notes: [UserNote]
 }
 
 struct UserInfo: Codable {
@@ -43,8 +43,8 @@ struct UserInfo: Codable {
     let streak: String
 }
 
-struct userNotes: Codable {
-    let notId: String
+struct UserNote: Codable {
+    let noteId: String
     let title: String
     let text: String
     let lastUpdate: String
@@ -97,42 +97,40 @@ func sendChatGPTRequest(prompt: String, completion: @escaping (String?) -> Void)
 }
 
 func callChatGPTAPIForQuestionGeneration(with input: String, completion: @escaping (String) -> Void) {
-
     let url = URL(string: "https://api.openai.com/v1/chat/completions")!
-        
+    
     let dersNotlari = input
     let parameters: [String: Any] = [
         "model": "gpt-3.5-turbo",
         "messages": [
-                    [
-                        "role": "user",
-                        "content": """
-                        \(dersNotlari)
-                        Bu ders notlarını sana aşağıda verdiğim kriterlere göre işle.
+            [
+                "role": "user",
+                "content": """
+                \(dersNotlari)
+                Bu ders notlarını sana aşağıda verdiğim kriterlere göre işle.
 
-                        struct Question: Codable {
-                            var question: String
-                            var answer: [String]
-                            var correctAnswer: String
-                        }
-                        ve
-                        var questions: [Question] = [] oldugunu bil. 
-                        Ders Notlarını kullanarak yukarıdaki kurallara uygun ve aşağıdaki örnek formata göre bana 10 adet soru hazırla. Bana yollayacağın çıktı sadece aşağıdaki formatta dönen bir JSON dizisi olsun. Ekstra açıklama, başlık ya da yorum ekleme. Sorular birbirinden ve aşağıdakilerden farklı olsun.
-                        questions = [
-                                    Question(
-                                        question: "Aşağıdakilerden hangisi bir sözleşmenin 'geçersiz' olmasına sebep olabilir?",
-                                        answer: ["Sözleşmenin yazılı yapılması.", "Taraflardan birinin ehliyetsiz olması.", "Sözleşmenin noter huzurunda yapılması.", "Tarafların mutabakata varması."],
-                                        correctAnswer: "Taraflardan birinin ehliyetsiz olması."
-                                    ),
-                                    Question(
-                                        question: "Aşağıdakilerden hangisi medeni hukukun dallarından biridir?",
-                                        answer: ["Ceza hukuku.", "Vergi hukuku.", "Aile hukuku.", "İdari hukuk."],
-                                        correctAnswer: "Aile hukuku."
-                                    )
-                        ]
-                        
-                        """
-                    ]
+                struct Question: Codable {
+                    var question: String
+                    var answer: [String]
+                    var correctAnswer: String
+                }
+                ve
+                var questions: [Question] = [] oldugunu bil. 
+                Ders Notlarını kullanarak yukarıdaki kurallara uygun ve aşağıdaki örnek formata göre bana 10 adet soru hazırla. Bana yollayacağın çıktı sadece aşağıdaki formatta dönen bir JSON dizisi olsun. Ekstra açıklama, başlık ya da yorum ekleme. Sorular birbirinden ve aşağıdakilerden farklı olsun.
+                questions = [
+                            Question(
+                                question: "Aşağıdakilerden hangisi bir sözleşmenin 'geçersiz' olmasına sebep olabilir?",
+                                answer: ["Sözleşmenin yazılı yapılması.", "Taraflardan birinin ehliyetsiz olması.", "Sözleşmenin noter huzurunda yapılması.", "Tarafların mutabakata varması."],
+                                correctAnswer: "Taraflardan birinin ehliyetsiz olması."
+                            ),
+                            Question(
+                                question: "Aşağıdakilerden hangisi medeni hukukun dallarından biridir?",
+                                answer: ["Ceza hukuku.", "Vergi hukuku.", "Aile hukuku.", "İdari hukuk."],
+                                correctAnswer: "Aile hukuku."
+                            )
+                ]
+                """
+            ]
         ],
         "temperature": 0.6
     ]
@@ -158,18 +156,21 @@ func callChatGPTAPIForQuestionGeneration(with input: String, completion: @escapi
             return
         }
         
-        if let json = try? JSONSerialization.jsonObject(with: data, options: []),
-           let dict = json as? [String: Any],
-           let choices = dict["choices"] as? [[String: Any]],
-           let message = choices.first?["message"] as? [String: Any],
-           let content = message["content"] as? String {
-            completion(content)
-        } else {
-            print("JSON çözümleme hatası.")
+        do {
+            let decodedResponse = try JSONDecoder().decode(ChatGPTResponse.self, from: data)
+            if let content = decodedResponse.choices.first?.message.content {
+                completion(content)
+            } else {
+                print("Mesaj bulunamadı.")
+                completion("Bir hata oluştu.")
+            }
+        } catch {
+            print("JSON çözümleme hatası: \(error)")
             completion("Bir hata oluştu.")
         }
     }
     
     task.resume()
 }
+
 

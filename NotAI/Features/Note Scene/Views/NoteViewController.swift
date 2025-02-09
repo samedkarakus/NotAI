@@ -24,7 +24,6 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     @IBOutlet weak var noteBodyTextView: UITextView!
     @IBOutlet weak var noteTitleTextView: UITextView!
     
-    
     var timer: Timer?
     var viewModel: NoteViewModel?
     var quizViewModel: QuizViewModel?
@@ -32,9 +31,16 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     let titlePlaceholder = "Konu başlığı"
     let bodyPlaceholder = "Detaylar.."
     var loadingAnimation: UIView!
-    var onboardingVC: OnboardingViewController?
-    let noteDetailsViewModel: NoteDetailsViewModel? = nil
-    let firebaseService: FirebaseService? = nil
+    var noteDetailsViewModel: NoteDetailsViewModel
+    
+    let firebaseService: FirebaseService
+    private let db = Database.database().reference()
+    
+    required init?(coder: NSCoder) {
+        self.noteDetailsViewModel = NoteDetailsViewModel()
+        self.firebaseService = FirebaseService()
+        super.init(coder: coder)
+    }
     
     func formatCurrentDate() -> String {
         let dateFormatter = DateFormatter()
@@ -111,13 +117,39 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     
     @IBAction func confirmBtnPressed(_ sender: UIButton) {
         guard let userInput = noteBodyTextView.text, !userInput.isEmpty else {
-            let alert = UIAlertController(title: "Hata", message: "Lütfen bir metin girin.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Hata", message: "Lütfen bir içerik girin.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
+        
+        guard let userInput = noteTitleTextView.text, !userInput.isEmpty else {
+            let alert = UIAlertController(title: "Hata", message: "Lütfen bir başlık girin.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        guard let noteTitle = noteTitleTextView.text, !noteTitle.isEmpty else {
+            print("Please enter a title.")
+            return
+        }
 
-        noteDetailsViewModel?.addNote(title: noteTitleTextView.text, body: noteBodyTextView.text)
+        guard let noteBody = noteBodyTextView.text, !noteBody.isEmpty else {
+            print("Please enter the note body.")
+            return
+        }
+        
+        firebaseService.addNewNote(title: noteTitle, body: noteBody) { success, error in
+            if success {
+                print("Note successfully added.")
+            } else {
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        }
+        
         loadingAnimationSetup()
         print("API call is being initiated...")
         
@@ -155,41 +187,22 @@ class NoteViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     func continueAfterAPIResponse() {
         print("Operations continue after the API response...")
         
-        guard let noteTitle = noteTitleTextView.text, !noteTitle.isEmpty else {
-            print("Please enter a title.")
-            return
-        }
-
-        guard let noteBody = noteBodyTextView.text, !noteBody.isEmpty else {
-            print("Please enter the note body.")
-            return
-        }
-        
-        let note = Note(title:noteTitle, body: noteBody, createdDate: Date())
-    
-        firebaseService?.addUserToFirebase(note: note, email: onboardingVC?.mailTextView ?? "", completion: { success in
-            if success {
-                print("Successfully added to firebase")
-            } else {
-                print("Failed to add user to firebase")
-            }
-        })
-        
         loadingAnimation.removeFromSuperview()
         
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                
+            
             if let quizVC = storyboard.instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController {
                 quizVC.modalPresentationStyle = .fullScreen
                 self.present(quizVC, animated: true, completion: nil)
             } else {
                 print("QuizViewController bulunamadı!")
             }
-            
+
             self.navigationController?.popViewController(animated: true)
         }
     }
+
     
     
     //MARK: - Loading Setup

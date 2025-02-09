@@ -1,5 +1,5 @@
 //
-//  AppCoordinator.swift
+//  NoteViewModel.swift
 //  NotAI
 //
 //  Created by Samed Karakuş on 28.11.2024.
@@ -32,7 +32,7 @@ class NoteViewModel {
         if let note = note {
             self.note = note
         } else {
-            self.note = Note(title: "", body: "", createdDate: Date())
+            self.note = Note(id: "", title: "", body: "", createdDate: Date())
         }
     }
     
